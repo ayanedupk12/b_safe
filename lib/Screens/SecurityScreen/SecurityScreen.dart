@@ -7,7 +7,7 @@ import '../HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenControlle
 
 class SecurityScreen extends StatelessWidget {
   SecurityScreen({super.key});
-  final GlobalController globalController = Get.find<GlobalController>();
+  final SideDrewerController sideDrewerController = Get.find<SideDrewerController>();
 
   List<Color> colorList = [
     Color(0xff1158AA).withOpacity(.8),
@@ -58,9 +58,7 @@ class SecurityScreen extends StatelessWidget {
                       )),
                       trailing: InkWell(
                         onTap: (){
-                          globalController.val=false;
-                          globalController.updateSwitch(false);
-                          globalController.update();
+                          sideDrewerController.updateSwite();
                         },
                           child: const Icon(
                         Icons.sunny,

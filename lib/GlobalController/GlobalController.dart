@@ -1,5 +1,6 @@
 
 import 'dart:ui';
+import 'package:b_safe/Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -8,9 +9,8 @@ import '../Screens/HomeMainScreen/HomeMainScreen.dart';
 import '../Screens/SecurityScreen/SecurityScreen.dart';
 
 class GlobalController extends GetxController{
- 
-  bool isSecurebool=false;
-  bool val = false;
+  SideDrewerController SD =Get.put(SideDrewerController());
+
   int initialIndex=0;
 
   List<String> selectedLanguageList1=[
@@ -21,7 +21,7 @@ class GlobalController extends GetxController{
   List<String> selectedLanguageList2=[
     "US",
     "PL"
-    "SK"
+        "SK"
   ];
   void selectLanguage(val){
     if(val == "Polish"){
@@ -41,32 +41,23 @@ class GlobalController extends GetxController{
     );
   }
 
+  void IsSecureModeokorNot(){
+    if(SD.switchValue==false){
+      Get.to(HomeMainScreen());
+    }else{
+      Get.to(SecurityScreen());
+    }
+  }
+
   Future<void> callPolice() async {
     const phoneNumber = '112'; // Your desired phone number
     const url = 'tel:$phoneNumber';
     {
       final URL = Uri.parse(url);
       if (!await launchUrl(URL)) {
-    throw Exception('Could not launch $URL');
+        throw Exception('Could not launch $URL');
+      }
     }
   }
-  }
-
-  Future<void> updateSwitch(bool value) async {
-    // final SharedPreferences prefs = await SharedPreferences.getInstance();
-    // val = value;
-    // if(value==true){
-    //   prefs.setBool("isok", value);
-    //   Get.to(SecurityScreen());
-    //   print(value);
-    // }else{
-    //   Get.to(HomeMainScreen());
-    //   prefs.setBool("isok", value);
-    //   print(value);
-    // }
-    // update();
-    // print(value);
-  }
-
 
 }

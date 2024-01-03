@@ -17,9 +17,9 @@ import 'SideDrawerAnditsScreenController.dart';
 class MyDrawerWidget extends StatelessWidget {
   MyDrawerWidget({super.key});
 
-  final SideDrewerController sideDrewerController =Get.put(SideDrewerController());
 
   final GlobalController globalController = Get.find<GlobalController>();
+  final SideDrewerController sideDrewerController  = Get.put(SideDrewerController());
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +130,7 @@ class MyDrawerWidget extends StatelessWidget {
                         trailing: Transform.scale(
                           scale: .8,
                           child: CupertinoSwitch(
-                            value: sideDrewerController.val,
+                            value: __.switchValue,
                             activeColor: Colors.grey,
                             onChanged: (value) {
                              sideDrewerController.updateSwite();

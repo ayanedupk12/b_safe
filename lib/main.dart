@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import 'GlobalController/GlobalController.dart';
 import 'Routs/RoutsNames.dart';
+import 'Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
 
 void main() {
   Get.put(GlobalController());
