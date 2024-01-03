@@ -130,10 +130,10 @@ class MyDrawerWidget extends StatelessWidget {
                         trailing: Transform.scale(
                           scale: .8,
                           child: CupertinoSwitch(
-                            value: globalController.val,
+                            value: sideDrewerController.val,
                             activeColor: Colors.grey,
                             onChanged: (value) {
-                             globalController.updateSwitch(value);
+                             sideDrewerController.updateSwite();
                             },
                           ),
                         ),
