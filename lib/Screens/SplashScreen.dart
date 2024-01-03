@@ -14,15 +14,12 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
 
-  void Condition(){
 
-  }
 
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      // Get.to(SecurityScreen());
       Get.toNamed(RouteNames.languageOrCountrySelectionScreen);
     });
   }
