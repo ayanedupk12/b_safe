@@ -45,7 +45,7 @@ class MTCscreenWidget extends StatelessWidget {
                 subtitle,
                 style: CustomTextStyles.hintTextStyle,
               ),
-              trailing: IconButton(onPressed: onTap, icon: Icon(Icons.edit_note)),
+              trailing: IconButton(onPressed: onTap, icon: Icon(Icons.edit_calendar_rounded)),
             ),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/GlobalWidget/MyButton.dart';
+import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
@@ -63,7 +64,7 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                     ),
                     CustomDropdownFormField(
                       onChange: (val) {
-                        __.selectLanguage(val);
+
                       },
                       text: LCscreenConstantsE.languageHintText.tr,
                       actionsList:  [
@@ -77,11 +78,10 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                       height: Get.height * .08,
                     ),
                     MyButton(
+                      borderRadios: 5,
                       height: Get.height * .05,
                       onPress: () {
-                        Get.offAllNamed(RouteNames.homeMainScreen);
-                        __.updateLocale();
-                        // Get.to(const SecurityScreen());
+                        Get.to(LogInScreen());
                       },
                       title:
                           LCscreenConstantsE.buttonText.tr,

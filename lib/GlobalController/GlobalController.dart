@@ -1,53 +1,73 @@
-
 import 'dart:ui';
+import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
 import 'package:b_safe/Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
+import 'package:b_safe/Screens/LanguageOrCountrySelectionScreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../Screens/HomeMainScreen/HomeMainScreen.dart';
 import '../Screens/SecurityScreen/SecurityScreen.dart';
 
-class GlobalController extends GetxController{
-  SideDrawerController SD =Get.put(SideDrawerController());
+class GlobalController extends GetxController {
 
-  int initialIndex=0;
+  FirebaseAuth auth = FirebaseAuth.instance;
 
-  List<String> selectedLanguageList1=[
-    "en",
-    "pl",
-    "sk"
-  ];
-  List<String> selectedLanguageList2=[
-    "US",
-    "PL"
-        "SK"
-  ];
-  void selectLanguage(val){
-    if(val == "Polish"){
-      initialIndex=1;
-      update();
-    }else{
-      initialIndex==0;
-      update();
-    }
+  bool switchValue = false;
+  bool firstTime = false;
+
+  @override
+  void onInit() {
+    super.onInit();
+    swithboolFromSharedpreference();
+    checkappOpenFirstTimeOrnot();
   }
-  void updateLocale(){
-    Get.updateLocale(
-        Locale(
-          selectedLanguageList1[initialIndex],
-          selectedLanguageList2[initialIndex],
-        )
-    );
+  void swithboolFromSharedpreference() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    switchValue = pref.getBool('isSecure') ?? false;
   }
 
-  void IsSecureModeokorNot(){
-    if(SD.switchValue==false){
+  void checkappOpenFirstTimeOrnot() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    firstTime = pref.getBool('firstTime') ?? false;
+  }
+
+  void splashServices() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    if (firstTime == false) {
+      firstTime == pref.setBool('firstTime', true);
+      Get.to(const LanguageOrCountrySelectionScreen());
+    } else if (auth.currentUser == null) {
+      Get.to(LogInScreen());
+    } else if (switchValue == false) {
       Get.to(HomeMainScreen());
-    }else{
+    } else {
       Get.to(SecurityScreen());
     }
+    update();
   }
+
+  void securityModeCheck() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    bool currentSwitchValue = pref.getBool('isSecure') ?? false;
+
+    bool updatedSwitchValue = !currentSwitchValue;
+
+    pref.setBool('isSecure', updatedSwitchValue);
+
+    switchValue = updatedSwitchValue;
+
+    if (updatedSwitchValue == true) {
+      Get.offAll(SecurityScreen())?.then((_) {
+        update();
+      });
+    } else {
+      Get.offAll(HomeMainScreen())?.then((_) {
+        update();
+      });
+    }
+  }
+
 
   Future<void> callPolice() async {
     const phoneNumber = '112'; // Your desired phone number
@@ -59,5 +79,4 @@ class GlobalController extends GetxController{
       }
     }
   }
-
 }

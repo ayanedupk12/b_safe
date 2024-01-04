@@ -91,11 +91,11 @@ class MyJournalConstantsP{
   static const title1="Kiedy to się stało?";
   static const title2="Co się stało?";
   static const title3="Jak to się stało?";
-  static const title4="Upload Image Or Video";
-  static const title5="Record Audio";
-  static const button1="Upload";
-  static const button2="Start";
-  static const button3="Submit";
+  static const title4="Prześlij obraz lub wideo";
+  static const title5="Nagrać dźwięk";
+  static const button1="Przesyłać";
+  static const button2="Początek";
+  static const button3="Prześlij";
 }
 
 ///SGBVscreenConstantsP///

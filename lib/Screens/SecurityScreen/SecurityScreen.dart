@@ -3,11 +3,10 @@ import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
 
 class SecurityScreen extends StatelessWidget {
   SecurityScreen({super.key});
-  final SideDrawerController sideDrewerController = Get.find<SideDrawerController>();
+  final GlobalController globalController = Get.find<GlobalController>();
 
   List<Color> colorList = [
     Color(0xff1158AA).withOpacity(.8),
@@ -58,7 +57,7 @@ class SecurityScreen extends StatelessWidget {
                       )),
                       trailing: InkWell(
                         onTap: (){
-                          sideDrewerController.updateSwite();
+                          globalController.securityModeCheck();
                         },
                           child: const Icon(
                         Icons.sunny,

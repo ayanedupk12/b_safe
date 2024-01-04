@@ -6,6 +6,7 @@ import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../Utils/AppConstants/English/LanguageAndCountrySelectionConstantsE.dart';
 import '../../../Utils/AppConstants/English/SideDrawerConstantsE.dart';
 import 'DrawerScreen/AboutBesafeScreen.dart';
@@ -19,12 +20,11 @@ class MyDrawerWidget extends StatelessWidget {
 
 
   final GlobalController globalController = Get.find<GlobalController>();
-  final SideDrawerController sideDrawerController  = Get.put(SideDrawerController());
 
   @override
   Widget build(BuildContext context) {
     String image = 'assets/images/logo.png';
-    return GetBuilder<SideDrawerController>(
+    return GetBuilder<GlobalController>(
       builder: (__) {
         return Drawer(
           backgroundColor: const Color(0xffF4F7FA),
@@ -126,7 +126,7 @@ class MyDrawerWidget extends StatelessWidget {
                             value: __.switchValue,
                             activeColor: Colors.grey,
                             onChanged: (value) {
-                             sideDrawerController.updateSwite();
+                              globalController.securityModeCheck();
                             },
                           ),
                         ),

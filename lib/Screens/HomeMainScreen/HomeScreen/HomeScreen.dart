@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Text(
                 HomeScreenConstantsE.selectAnyOption.tr,
-                style: CustomTextStyles.descriptionTextStyle,
+                style: CustomTextStyles.topicTextStyle,
               ),
               HomeScreenWidget(
                 text: HomeScreenConstantsE.myTrustedContacts.tr,
