@@ -21,7 +21,8 @@ class CustomDropdownFormField<T> extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      // color: ,
       width: width??Get.width*0.25,
       height: height??Get.height*0.05,
       child: DropdownButtonFormField(
@@ -46,7 +47,7 @@ class CustomDropdownFormField<T> extends StatelessWidget {
           isDense: true,
 
           contentPadding: EdgeInsets.all(8),
-          fillColor: Color(0xffF9F9F9),
+          fillColor: Colors.transparent,
           filled: true,
           enabled: true,
           focusedBorder: OutlineInputBorder(

@@ -6,7 +6,7 @@ import 'package:b_safe/Screens/SecurityScreen/SecurityScreen.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SideDrewerController extends GetxController{
+class SideDrawerController extends GetxController{
 
    bool switchValue=false;
   void swithboolFromSharedpreference() async {

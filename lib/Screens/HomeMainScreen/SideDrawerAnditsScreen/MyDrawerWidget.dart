@@ -19,12 +19,12 @@ class MyDrawerWidget extends StatelessWidget {
 
 
   final GlobalController globalController = Get.find<GlobalController>();
-  final SideDrewerController sideDrewerController  = Get.put(SideDrewerController());
+  final SideDrawerController sideDrawerController  = Get.put(SideDrawerController());
 
   @override
   Widget build(BuildContext context) {
     String image = 'assets/images/logo.png';
-    return GetBuilder<SideDrewerController>(
+    return GetBuilder<SideDrawerController>(
       builder: (__) {
         return Drawer(
           backgroundColor: const Color(0xffF4F7FA),
@@ -38,7 +38,6 @@ class MyDrawerWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   height5(),
-
                   ///logo///////
                   Center(
                     child: Hero(
@@ -50,7 +49,6 @@ class MyDrawerWidget extends StatelessWidget {
                     ),
                   ),
                   height2(),
-
                   ///Call Police/////////////
                   DrawerSubWidget(
                     iconPath: AppIcons.callicon,
@@ -59,7 +57,6 @@ class MyDrawerWidget extends StatelessWidget {
                       globalController.callPolice();
                     },
                   ),
-
                   ///Safety Advice////////////
                   DrawerSubWidget(
                     onTap: () {
@@ -70,7 +67,6 @@ class MyDrawerWidget extends StatelessWidget {
                     iconPath: AppIcons.safetyadviceicon,
                     title: SideDrawerConstantsE.safetyButton.tr,
                   ),
-
                   ///About Bsafe/////////////
                   DrawerSubWidget(
                     iconPath: AppIcons.abouticon,
@@ -82,7 +78,6 @@ class MyDrawerWidget extends StatelessWidget {
                       ));
                     },
                   ),
-
                   ///Privacy Policy///////////
                   DrawerSubWidget(
                     iconPath: AppIcons.privacypolicyicon,
@@ -106,14 +101,12 @@ class MyDrawerWidget extends StatelessWidget {
                     },
                   ),
                   height2(),
-
                   ///setting text ///
                   Text(
                     SideDrawerConstantsE.seetingText.tr,
                     style: CustomTextStyles.logoStyle,
                   ),
                   height2(),
-
                   ///security Mode////
                   SizedBox(
                     child: Card(
@@ -128,19 +121,18 @@ class MyDrawerWidget extends StatelessWidget {
                           style: CustomTextStyles.buttonTextStyleB,
                         ),
                         trailing: Transform.scale(
-                          scale: .8,
+                          scale: .7,
                           child: CupertinoSwitch(
                             value: __.switchValue,
                             activeColor: Colors.grey,
                             onChanged: (value) {
-                             sideDrewerController.updateSwite();
+                             sideDrawerController.updateSwite();
                             },
                           ),
                         ),
                       ),
                     ),
                   ),
-
                   ///Choose language//////
                   SizedBox(
                     child: Card(
@@ -169,7 +161,6 @@ class MyDrawerWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   ///Choose country///
                   SizedBox(
                     child: Card(

@@ -9,7 +9,7 @@ import '../Screens/HomeMainScreen/HomeMainScreen.dart';
 import '../Screens/SecurityScreen/SecurityScreen.dart';
 
 class GlobalController extends GetxController{
-  SideDrewerController SD =Get.put(SideDrewerController());
+  SideDrawerController SD =Get.put(SideDrawerController());
 
   int initialIndex=0;
 

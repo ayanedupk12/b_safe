@@ -23,7 +23,7 @@ class PAscreenWidget extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(bottom: Get.height * .02),
         child: Container(
-          height: 130,
+          height: 100,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
           child: Row(

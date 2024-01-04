@@ -69,7 +69,9 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
               Text(OSscreenConstantsE.phoneText1.tr,
                 style: CustomTextStyles.descriptionTextStyle,),
               size1(),
-              Text(OSscreenConstantsE.phoneBulluetTitle,style: CustomTextStyles.logoStyle,),
+              Text(OSscreenConstantsE.phoneBulluetTitle,
+                style: CustomTextStyles.topicTextStyle,
+              ),
               ///phoneBullet////
               OnlineSafetBulletWidget(text: OSscreenConstantsE.phoneBulluetText1.tr),
               OnlineSafetBulletWidget(text: OSscreenConstantsE.phoneBulluetText2.tr),

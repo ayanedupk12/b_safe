@@ -38,6 +38,8 @@ dependencies:
   get: ^4.6.6
   url_launcher: ^6.2.2
   shared_preferences: ^2.2.2
+  google_fonts: ^6.1.0
+  social_media_recorder: ^1.1.12
 
 dev_dependencies:
   flutter_test:
@@ -77,14 +79,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Montserrat
-      fonts:
-        - asset: fonts/Montserrat-Bold.ttf
-        - asset: fonts/Montserrat-Regular.ttf
-        - asset: fonts/Montserrat-Medium.ttf
-        - asset: fonts/Montserrat-SemiBold.ttf
-          style: italic
+#  fonts:
+#    - family: Montserrat
+#      fonts:
+#        - asset: fonts/Montserrat-Bold.ttf
+#        - asset: fonts/Montserrat-Regular.ttf
+#        - asset: fonts/Montserrat-Medium.ttf
+#        - asset: fonts/Montserrat-SemiBold.ttf
+#          style: italic
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

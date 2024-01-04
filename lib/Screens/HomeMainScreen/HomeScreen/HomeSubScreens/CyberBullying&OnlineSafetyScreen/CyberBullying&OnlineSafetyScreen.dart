@@ -43,7 +43,7 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
               children: [
                 Text(
                   CB_OSmainScreenConstantsE.mainTitle.tr,
-                  style: CustomTextStyles.topicTextStyle,
+                  style: CustomTextStyles.descriptionTextStyleB,
                 ),
                 const SizedBox(
                   height: 20,

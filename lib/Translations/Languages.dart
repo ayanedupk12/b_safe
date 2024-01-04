@@ -27,8 +27,10 @@ class Language extends Translations{
       CB_OSmainScreenConstantsE.mainTitle:CB_OSmainScreenConstantsE.mainTitle,
       CB_OSmainScreenConstantsE.container1:CB_OSmainScreenConstantsE.container1,
       CB_OSmainScreenConstantsE.container2:CB_OSmainScreenConstantsE.container2,
+
       ///cybber bullying detail///
       CBscreenConstantsE.title:CBscreenConstantsE.title,
+
       ///online safety detail///
       OSscreenConstantsE.mainTitle:OSscreenConstantsE.mainTitle,
       OSscreenConstantsE.socialMedia:OSscreenConstantsE.socialMedia,
@@ -57,13 +59,13 @@ class Language extends Translations{
       HomeMainScreenContantsE.splashscreenConstants:HomeMainScreenContantsE.splashscreenConstants,
       HomeMainScreenContantsE.journalAppBarText:HomeMainScreenContantsE.journalAppBarText,
       HomeMainScreenContantsE.localSupportAppBarText:HomeMainScreenContantsE.localSupportAppBarText,
-      ///HomeScreenContantsP///
-      HomeScreenContantsE.Text:HomeScreenContantsE.Text,
-      HomeScreenContantsE.button1:HomeScreenContantsE.button1,
-      HomeScreenContantsE.button2:HomeScreenContantsE.button2,
-      HomeScreenContantsE.button3:HomeScreenContantsE.button3,
-      HomeScreenContantsE.button4:HomeScreenContantsE.button4,
-      HomeScreenContantsE.button5:HomeScreenContantsE.button5,
+      ///HomeScreenConstantsP///
+      HomeScreenConstantsE.selectAnyOption:HomeScreenConstantsE.selectAnyOption,
+      HomeScreenConstantsE.myTrustedContacts:HomeScreenConstantsE.myTrustedContacts,
+      HomeScreenConstantsE.practicalAdvice:HomeScreenConstantsE.practicalAdvice,
+      HomeScreenConstantsE.typesOfSupport:HomeScreenConstantsE.typesOfSupport,
+      HomeScreenConstantsE.cyberBullying:HomeScreenConstantsE.cyberBullying,
+      HomeScreenConstantsE.callPolice:HomeScreenConstantsE.callPolice,
       ///LanguageAndCountrySelectionConstantsP///
       LCscreenConstantsE.title:LCscreenConstantsE.title,
       LCscreenConstantsE.languageHintText:LCscreenConstantsE.languageHintText,
@@ -221,12 +223,12 @@ class Language extends Translations{
       HomeMainScreenContantsE.journalAppBarText:HomeMainScreenContantsP.journalAppBarText,
       HomeMainScreenContantsE.localSupportAppBarText:HomeMainScreenContantsP.localSupportAppBarText,
       ///HomeScreenContantsP///
-      HomeScreenContantsE.Text:HomeScreenContantsP.Text,
-      HomeScreenContantsE.button1:HomeScreenContantsP.button1,
-      HomeScreenContantsE.button2:HomeScreenContantsP.button2,
-      HomeScreenContantsE.button3:HomeScreenContantsP.button3,
-      HomeScreenContantsE.button4:HomeScreenContantsP.button4,
-      HomeScreenContantsE.button5:HomeScreenContantsP.button5,
+      HomeScreenConstantsE.selectAnyOption:HomeScreenContantsP.Text,
+      HomeScreenConstantsE.myTrustedContacts:HomeScreenContantsP.button1,
+      HomeScreenConstantsE.practicalAdvice:HomeScreenContantsP.button2,
+      HomeScreenConstantsE.typesOfSupport:HomeScreenContantsP.button3,
+      HomeScreenConstantsE.cyberBullying:HomeScreenContantsP.button4,
+      HomeScreenConstantsE.callPolice:HomeScreenContantsP.button5,
       ///LanguageAndCountrySelectionConstantsP///
       LCscreenConstantsE.title:LCscreenConstantsP.title,
       LCscreenConstantsE.languageHintText:LCscreenConstantsP.languageHintText,

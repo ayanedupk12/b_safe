@@ -24,39 +24,39 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                HomeScreenContantsE.Text.tr,
-                style: CustomTextStyles.topicTextStyle,
+                HomeScreenConstantsE.selectAnyOption.tr,
+                style: CustomTextStyles.descriptionTextStyle,
               ),
               HomeScreenWidget(
-                text: HomeScreenContantsE.button1.tr,
+                text: HomeScreenConstantsE.myTrustedContacts.tr,
                 iconPath: AppIcons.trustedcontactIcon,
                 onTap: () {
                   Get.toNamed(RouteNames.myTrustedContactsScreen);
                 },
               ),
               HomeScreenWidget(
-                text: HomeScreenContantsE.button2.tr,
+                text: HomeScreenConstantsE.practicalAdvice.tr,
                 iconPath: AppIcons.adviceIcon,
                 onTap: () {
                   Get.toNamed(RouteNames.practicalAdviceScreen);
                 },
               ),
               HomeScreenWidget(
-                text: HomeScreenContantsE.button3.tr,
+                text: HomeScreenConstantsE.typesOfSupport.tr,
                 iconPath: AppIcons.typeOfSupportIcon,
                 onTap: () {
                  Get.toNamed(RouteNames.typeOfSupportScreen);
                 },
               ),
               HomeScreenWidget(
-                text: HomeScreenContantsE.button4.tr,
+                text: HomeScreenConstantsE.cyberBullying.tr,
                 iconPath: AppIcons.bullyingicon,
                 onTap: () {
                   Get.toNamed(RouteNames.cyberBullyingAndOnlineSafetyScreen);
                 },
               ),
               HomeScreenWidget(
-                text: HomeScreenContantsE.button5.tr,
+                text: HomeScreenConstantsE.callPolice.tr,
                 iconPath: AppIcons.callicon,
                 onTap: () {
                   globalController.callPolice();
@@ -81,9 +81,7 @@ class HomeScreenWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding:  const EdgeInsets.symmetric(
-          vertical: 10
-        ),
+        padding:  const EdgeInsets.symmetric(vertical: 5),
         child: Card(
           elevation: 2,
           surfaceTintColor: Colors.white,

@@ -1,13 +1,21 @@
+import 'dart:io';
+
 import 'package:b_safe/GlobalWidget/MyButton.dart';
+import 'package:b_safe/Screens/HomeMainScreen/MyJournalScreen/MyJournalController.dart';
 import 'package:b_safe/Utils/AppConstants/English/MyJournalConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:social_media_recorder/audio_encoder_type.dart';
+import 'package:social_media_recorder/screen/social_media_recorder.dart';
 import '../../../GlobalWidget/MyTextField.dart';
 import '../../../Utils/Textstyles.dart';
 import 'JournalWidget.dart';
 
+
+
 class MyJournalScreen extends StatelessWidget {
-  const MyJournalScreen({super.key});
+  MyJournalScreen({super.key});
+  final controller=Get.put(MyJournalController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +31,7 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Text(
               MyJournalConstantsE.title.tr,
-              style: CustomTextStyles.descriptionTextStyle
-                  .copyWith(fontWeight: FontWeight.w700),
-            ),
+              style: CustomTextStyles.descriptionTextStyle,),
             height2(),
             Text(
               MyJournalConstantsE.title1.tr,
@@ -81,25 +87,27 @@ class MyJournalScreen extends StatelessWidget {
               MyJournalConstantsE.title5.tr,
               style: CustomTextStyles.descriptionTextStyleB,
             ),
-            Center(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: Get.width * .25),
-                child: MyButton(
-                    borderRadios: 10,
-                    height: Get.height * .05,
-                    title: MyJournalConstantsE.button2.tr,
-                    onPress: () {}),
-              ),
-            ),
+            // Center(
+            //   child: Padding(
+            //     padding: EdgeInsets.symmetric(horizontal: Get.width * .25),
+            //     child: MyButton(
+            //         borderRadios: 10,
+            //         height: Get.height * .05,
+            //         title: MyJournalConstantsE.button2.tr,
+            //         onPress: () {}),
+            //   ),
+            // ),
             height2(),
-            Container(
-              height: 100,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
+            Center(
+              child: SizedBox(
+                width: Get.width*0.8,
+                child: SocialMediaRecorder(
+                  sendButtonIcon:Icon(Icons.arrow_downward,color: Colors.white,),
+                  encode: AudioEncoderType.AAC, sendRequestFunction: (File soundFile, String time) {
+                    print(soundFile.path);
+                },
+                ),
               ),
-              child: Text(''),
             ),
             height2(),
             MyButton(

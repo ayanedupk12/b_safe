@@ -20,7 +20,7 @@ class C_BandO_Swidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: Get.height * .25,
+        height: Get.height * .23,
         width: double.infinity,
         decoration: BoxDecoration(
           boxShadow:  [
@@ -48,17 +48,16 @@ class C_BandO_Swidget extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: Get.width * .2,
-                  vertical: Get.height * .02),
+            SizedBox(
+              width: 200,
               child: Text(
                 text,
                 maxLines: 2,
                 textAlign: TextAlign.center,
                 style: CustomTextStyles.descriptionTextStyleB,
               ),
-            )
+            ),
+            SizedBox(height: 2,)
           ],
         ),
       ),

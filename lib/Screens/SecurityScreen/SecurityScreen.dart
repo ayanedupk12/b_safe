@@ -7,7 +7,7 @@ import '../HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenControlle
 
 class SecurityScreen extends StatelessWidget {
   SecurityScreen({super.key});
-  final SideDrewerController sideDrewerController = Get.find<SideDrewerController>();
+  final SideDrawerController sideDrewerController = Get.find<SideDrawerController>();
 
   List<Color> colorList = [
     Color(0xff1158AA).withOpacity(.8),
