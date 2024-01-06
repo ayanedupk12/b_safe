@@ -1,13 +1,15 @@
+import 'package:b_safe/Screens/AuthScreens/ForGotPassword/ForGotPasswordScreen.dart';
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LogInController.dart';
 import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpScreen.dart';
+import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:b_safe/Utils/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../GlobalWidget/MyButton.dart';
 import '../../../GlobalWidget/MyTextField.dart';
-import '../../../Routs/RoutsNames.dart';
 import '../../../Utils/Colors.dart';
+
 
 class LogInScreen extends StatelessWidget {
   LogInScreen({super.key});
@@ -23,6 +25,7 @@ class LogInScreen extends StatelessWidget {
           backgroundColor: AppColors.backGroundColor,
           resizeToAvoidBottomInset: false,
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.transparent,
             elevation: 0,
             centerTitle: true,
@@ -30,10 +33,6 @@ class LogInScreen extends StatelessWidget {
               "Log In",
               style: CustomTextStyles.appBarTextStyle,
             ),
-            leading: IconButton(
-                onPressed: () {
-                },
-                icon: Center(child: Icon(Icons.arrow_back_ios))),
           ),
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: Get.width * .1),
@@ -48,13 +47,13 @@ class LogInScreen extends StatelessWidget {
                 Center(
                   child: Text(
                     'Sign In To Continue',
-                    style: CustomTextStyles.topicTextStyle,
+                    style: CustomTextStyles.appBarTextStyle,
                   ),
                 ),
                 height5(),
                 Text(
                   'Enter Email',
-                  style: CustomTextStyles.buttonTextStyleB,
+                  style: CustomTextStyles.descriptionTextStyleB,
                 ),
                 MyTextField(
                   controller: __.logEmail,
@@ -65,7 +64,7 @@ class LogInScreen extends StatelessWidget {
                 height2(),
                 Text(
                   'Enter Password',
-                  style: CustomTextStyles.buttonTextStyleB,
+                  style: CustomTextStyles.descriptionTextStyleB,
                 ),
                 MyTextField(
                   controller: __.logPassword,
@@ -83,21 +82,24 @@ class LogInScreen extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: InkWell(
                     onTap: () {
-
+                      Get.to(ForGotPasswordScreen());
                     },
                     child: Text(
                       'Forgot Password?',
                       textAlign: TextAlign.end,
-                      style: CustomTextStyles.topicTextStyle.copyWith(color: AppColors.main2Coclor),
+                      style: CustomTextStyles.descriptionTextStyleB.copyWith(color: AppColors.main2Coclor),
                     ),
                   ),
                 ),
                 height5(),
+                height5(),
                 MyButton(
+                  loading: __.isLoading,
                   borderRadios: 5,
                   height: Get.height * .05,
                   onPress: () {
-                    __.loginUserWithEmailAndPassword();
+                    Get.to(HomeMainScreen());
+                   /// __.loginUserWithEmailAndPassword();
                   },
                   title:"LogIn",
                 ),

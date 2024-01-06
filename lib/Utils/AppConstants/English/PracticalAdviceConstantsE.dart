@@ -39,7 +39,7 @@ class PracTicalAdviceConstantsE{
   static const mainTitleE="If you are a victim of sexual violence here are some steps you can take:";
   static const titleE1="Stay in a safe place";
   static const titleE2="Contact a trusted person";
-  static const titleE3="Visit a gynecologists'";
+  static const titleE3="Visit a gynecologist";
   static const titleE4="Consider reporting to the police";
   static const titleE5="Seek professional help";
   static const titleE6="Don't let it go";

@@ -3,6 +3,7 @@ import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpScreen.dart';
 import 'package:b_safe/Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
+import 'package:b_safe/Screens/LanguageOrCountrySelectionScreen.dart';
 import 'package:b_safe/Screens/SecurityScreen/SecurityScreen.dart';
 import 'package:b_safe/Utils/AppConstants/English/HomeMainScreenConstantsE.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +27,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-   globalController.splashServices();
+      ///todo
+      Get.to(const LanguageOrCountrySelectionScreen());
+   ///globalController.splashServices();
     });
   }
 

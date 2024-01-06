@@ -145,6 +145,7 @@ class MyDrawerWidget extends StatelessWidget {
                         ),
                         title: CustomDropdownFormField(
                           onChange: (val) {
+                            print("value");
                             print(val);
                           },
                           text: SideDrawerConstantsE.chooseLan.tr,
@@ -186,6 +187,12 @@ class MyDrawerWidget extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ),
+                  DrawerSubWidget(
+                    iconPath: AppIcons.callicon,
+                    title: "Log Out",
+                    onTap: () {
+                    },
                   ),
                 ],
               ),

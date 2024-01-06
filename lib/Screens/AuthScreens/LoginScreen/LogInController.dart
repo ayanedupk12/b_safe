@@ -13,7 +13,6 @@ class LogInController extends GetxController{
 
   bool isLoading= false;
 
-
   Future<void> loginUserWithEmailAndPassword() async {
     isLoading = true;
     try {
@@ -45,6 +44,8 @@ class LogInController extends GetxController{
     } catch (e) {
       print('Error: $e');
       isLoading = false;
+      print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+      print(e);
       showMessage('Error: $e');
     }
 }

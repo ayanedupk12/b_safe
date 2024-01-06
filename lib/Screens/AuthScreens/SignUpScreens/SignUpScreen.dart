@@ -1,5 +1,6 @@
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
 import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpController.dart';
+import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:b_safe/Utils/TextStyles.dart';
 import 'package:flutter/material.dart';
@@ -46,14 +47,14 @@ class SignUpScreen extends StatelessWidget {
               Center(
                 child: Text(
                   'Welcome to BSafe',
-                  style: CustomTextStyles.topicTextStyle,
+                  style: CustomTextStyles.appBarTextStyle,
                 ),
               ),
               height5(),
               height5(),
               Text(
                 'Email',
-                style: CustomTextStyles.buttonTextStyleB,
+                style: CustomTextStyles.descriptionTextStyleB,
               ),
               MyTextField(
                 controller: __.sEmail,
@@ -64,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
               height2(),
               Text(
                 'Password',
-                style: CustomTextStyles.buttonTextStyleB,
+                style: CustomTextStyles.descriptionTextStyleB,
               ),
               MyTextField(
                 controller: __.sPassword,
@@ -78,20 +79,6 @@ class SignUpScreen extends StatelessWidget {
                 hintText: 'Alex1234567',
               ),
               height2(),
-              Text(
-                'Confirm Password',
-                style: CustomTextStyles.buttonTextStyleB,
-              ),
-              MyTextField(
-                obSecure: true,
-                height: Get.height * .06,
-                prefixIcon: const Icon(Icons.lock),
-                suffixIcon: InkWell(
-                  onTap: () {},
-                  child: const Icon(Icons.remove_red_eye),
-                ),
-                hintText: 'Alex1234567',
-              ),
               height5(),
               height5(),
               MyButton(
@@ -99,7 +86,8 @@ class SignUpScreen extends StatelessWidget {
                 borderRadios: 5,
                 height: Get.height * .05,
                 onPress: () {
-                  __.confirmEmailAndCreateUser();
+                  Get.to(HomeMainScreen());
+                  ///__.confirmEmailAndCreateUser();
                 },
                 title: "Signup",
               ),
@@ -131,7 +119,6 @@ class SignUpScreen extends StatelessWidget {
     });
   }
 }
-
 height2() {
   return SizedBox(
     height: Get.height * .02,

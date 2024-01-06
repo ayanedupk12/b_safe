@@ -27,6 +27,7 @@ class HomeScreen extends StatelessWidget {
                 HomeScreenConstantsE.selectAnyOption.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
+              ///trusted contacts////
               HomeScreenWidget(
                 text: HomeScreenConstantsE.myTrustedContacts.tr,
                 iconPath: AppIcons.trustedcontactIcon,
@@ -34,6 +35,7 @@ class HomeScreen extends StatelessWidget {
                   Get.toNamed(RouteNames.myTrustedContactsScreen);
                 },
               ),
+              ///practical advice////
               HomeScreenWidget(
                 text: HomeScreenConstantsE.practicalAdvice.tr,
                 iconPath: AppIcons.adviceIcon,
@@ -41,6 +43,7 @@ class HomeScreen extends StatelessWidget {
                   Get.toNamed(RouteNames.practicalAdviceScreen);
                 },
               ),
+              ///type of support////
               HomeScreenWidget(
                 text: HomeScreenConstantsE.typesOfSupport.tr,
                 iconPath: AppIcons.typeOfSupportIcon,
@@ -48,6 +51,7 @@ class HomeScreen extends StatelessWidget {
                  Get.toNamed(RouteNames.typeOfSupportScreen);
                 },
               ),
+              ///cyber bullying and online safety///
               HomeScreenWidget(
                 text: HomeScreenConstantsE.cyberBullying.tr,
                 iconPath: AppIcons.bullyingicon,
@@ -55,6 +59,7 @@ class HomeScreen extends StatelessWidget {
                   Get.toNamed(RouteNames.cyberBullyingAndOnlineSafetyScreen);
                 },
               ),
+              ///call police///
               HomeScreenWidget(
                 text: HomeScreenConstantsE.callPolice.tr,
                 iconPath: AppIcons.callicon,

@@ -8,7 +8,7 @@ class LCscreenConstantsE{
   static const languageHintText="Select Language";
   static const buttonText="Done";
   static const poland="Poland";
-  static const zcechC="Zcech Republic";
+  static const zcechC="Czech Republic";
   static const slovakia="Slovakia";
   static const english="English";
   static const polish="Polish";
