@@ -1,3 +1,4 @@
+import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Screens/AuthScreens/ForGotPassword/ForGotPasswordScreen.dart';
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LogInController.dart';
 import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpScreen.dart';
@@ -82,7 +83,7 @@ class LogInScreen extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: InkWell(
                     onTap: () {
-                      Get.to(ForGotPasswordScreen());
+                      Get.toNamed(RouteNames.forgotPasswordScreen);
                     },
                     child: Text(
                       'Forgot Password?',
@@ -98,7 +99,7 @@ class LogInScreen extends StatelessWidget {
                   borderRadios: 5,
                   height: Get.height * .05,
                   onPress: () {
-                    Get.to(HomeMainScreen());
+                    Get.offAllNamed(RouteNames.homeMainScreen);
                    /// __.loginUserWithEmailAndPassword();
                   },
                   title:"LogIn",
@@ -107,7 +108,7 @@ class LogInScreen extends StatelessWidget {
                 Center(
                   child: InkWell(
                     onTap: () {
-                      Get.to(SignUpScreen());
+                      Get.toNamed(RouteNames.signUpScreen);
                     },
                     child: RichText(
                       text: TextSpan(

@@ -26,7 +26,7 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              Get.toNamed(RouteNames.practicalAdviceScreen);
+              Get.offAllNamed(RouteNames.practicalAdviceScreen);
             },
             icon: Center(child: Icon(Icons.arrow_back_ios))),
       ),

@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../GlobalWidget/MyButton.dart';
 import '../../../GlobalWidget/MyTextField.dart';
+import '../../../Routs/RoutsNames.dart';
 import '../../../Utils/Colors.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -86,7 +87,7 @@ class SignUpScreen extends StatelessWidget {
                 borderRadios: 5,
                 height: Get.height * .05,
                 onPress: () {
-                  Get.to(HomeMainScreen());
+                  Get.offAllNamed(RouteNames.homeMainScreen);
                   ///__.confirmEmailAndCreateUser();
                 },
                 title: "Signup",
@@ -95,7 +96,7 @@ class SignUpScreen extends StatelessWidget {
               Center(
                 child: InkWell(
                   onTap: () {
-                    Get.to(LogInScreen());
+                    Get.offAllNamed(RouteNames.loginScreen);
                   },
                   child: RichText(
                     text: TextSpan(

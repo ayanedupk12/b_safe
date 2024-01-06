@@ -25,8 +25,7 @@ class SGBVDifferentFormsDetailScreen extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              Get.toNamed(RouteNames.practicalAdviceScreen);
-            },
+              Get.offAllNamed(RouteNames.practicalAdviceScreen);            },
             icon: const Center(child: Icon(Icons.arrow_back_ios))),
       ),
       body: Padding(

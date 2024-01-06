@@ -5,18 +5,14 @@ import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../Routs/RoutsNames.dart';
-import '../../../HomeMainScreen.dart';
 import '../../../HomeMainScreenController.dart';
 import 'C_BandO_Swidget.dart';
-import 'DetailScreens/CyberBullyingDetailScreen/CyberBullyingDetailScreen.dart';
-import 'DetailScreens/OnlineSafetyDetailScreen/OnlineSafetyDetailScreen.dart';
 
 class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
   const CyberBullyingAndOnlineSafetyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return GetBuilder<HomeMainScreenController>(builder: (__) {
       return Scaffold(
         backgroundColor: AppColors.backGroundColor,
@@ -49,8 +45,8 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
                   height: 20,
                 ),
                 C_BandO_Swidget(
-                  onTap: (){
-                    Get.to(CyberBullyingDetailScreen());
+                  onTap: () {
+                    Get.toNamed(RouteNames.cybberbullyingDetailScreen);
                   },
                   text: CB_OSmainScreenConstantsE.container1.tr,
                   image: ImagesPaths.cybberbullyingimage,
@@ -59,13 +55,15 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
                   height: 20,
                 ),
                 C_BandO_Swidget(
-                  onTap: (){
-                    Get.to(const OnlineSafetyDetailScreen());
+                  onTap: () {
+                    Get.toNamed(RouteNames.onlineSafetyDetailScreen);
                   },
-                   text: CB_OSmainScreenConstantsE.container2.tr,
-                   image: ImagesPaths.onlinesafetyimage,
+                  text: CB_OSmainScreenConstantsE.container2.tr,
+                  image: ImagesPaths.onlinesafetyimage,
                 ),
-                const SizedBox(height: 30,)
+                const SizedBox(
+                  height: 30,
+                )
               ],
             ),
           ),
@@ -74,5 +72,3 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
     });
   }
 }
-
-

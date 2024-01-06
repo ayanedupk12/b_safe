@@ -47,28 +47,21 @@ class PracticalAdviceScreen extends StatelessWidget {
               ),
               PAscreenWidget(
                 onTap: () {
-                  Get.to(SexualGenderVoilenceScreen(
-                    appBarText: PractivcalAdvsMainConstantsE.appBarText.tr,
-                    title: PractivcalAdvsMainConstantsE.sexualgebdebaseButontext.tr,
-                  ));
+                  Get.toNamed(RouteNames.sexualGenderVoilenceScreen);
                 },
                 text: PractivcalAdvsMainConstantsE.sexualgebdebaseButontext.tr,
                 image: ImagesPaths.practicalAdviceImage1,
               ),
               PAscreenWidget(
                 onTap: () {
-                  Get.to(SGBVDifferentFormsDetailScreen(
-                    appBarText: PractivcalAdvsMainConstantsE.appBarText.tr,
-                  ));
+                  Get.toNamed(RouteNames.sGBVDifferentFormsDetailScreen);
                 },
                 text: PractivcalAdvsMainConstantsE.SGBVformButontext.tr,
                 image: ImagesPaths.practicalAdviceImage2,
               ),
               PAscreenWidget(
                 onTap: () {
-                  Get.to(PracticalAdviceDetailScreen(
-                    appBarText: PractivcalAdvsMainConstantsE.appBarText.tr,
-                  ));
+                  Get.toNamed(RouteNames.practicalAdviceDetailScreen);
                 },
                 text: PractivcalAdvsMainConstantsE.appBarText.tr,
                 image: ImagesPaths.practicalAdviceImage3,

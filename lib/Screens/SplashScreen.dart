@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(const Duration(seconds: 2), () {
       ///todo
-      Get.to(const LanguageOrCountrySelectionScreen());
+      Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
    ///globalController.splashServices();
     });
   }

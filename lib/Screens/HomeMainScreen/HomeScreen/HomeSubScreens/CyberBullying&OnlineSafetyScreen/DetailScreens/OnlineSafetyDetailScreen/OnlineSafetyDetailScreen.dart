@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../../../../../Routs/RoutsNames.dart';
 import '../../../../../../../Utils/Colors.dart';
 import '../../../../../../../Utils/Textstyles.dart';
 import '../../../../../HomeMainScreen.dart';
@@ -30,7 +31,7 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              Get.to(CyberBullyingAndOnlineSafetyScreen());
+              Get.offAllNamed(RouteNames.cyberBullyingAndOnlineSafetyScreen);
             },
             icon: Center(child: Icon(Icons.arrow_back_ios))),
       ),

@@ -1,5 +1,6 @@
 
 
+import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/CyberBullying&OnlineSafetyScreen/CyberBullying&OnlineSafetyScreen.dart';
 import 'package:b_safe/Utils/AppConstants/English/CyberBullyingAndOnlineSafetyConstantsE.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,7 +26,7 @@ class CyberBullyingDetailScreen extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              Get.to(CyberBullyingAndOnlineSafetyScreen());
+              Get.offAllNamed(RouteNames.cyberBullyingAndOnlineSafetyScreen);
             },
             icon: const Center(child: Icon(Icons.arrow_back_ios))),
       ),
