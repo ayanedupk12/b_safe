@@ -72,8 +72,8 @@ class ForGotPasswordScreen extends StatelessWidget {
                     borderRadios: 5,
                     height: Get.height * .05,
                     onPress: () {
-                      ///Get.to(LogInScreen());
-                      __.sendPasswordResetEmail();
+                      Get.offAllNamed(RouteNames.loginScreen);
+                      ///__.sendPasswordResetEmail();
                     },
                     title:"Send Reset Email",
                   ),

@@ -36,12 +36,19 @@ class CustomTextStyles {
     )
   );
 
-  static TextStyle descriptionTextStyle =
-  GoogleFonts.montserrat(
+  static TextStyle descriptionTextStyle = GoogleFonts.montserrat(
       textStyle:
       TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.normal,
+        color: Colors.black,
+      )
+  );
+  static TextStyle phoneNumbr = GoogleFonts.montserrat(
+      textStyle:
+      TextStyle(
+        fontSize: 15,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
       )
   );

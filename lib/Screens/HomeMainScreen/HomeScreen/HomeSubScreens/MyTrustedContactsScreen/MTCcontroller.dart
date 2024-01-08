@@ -31,8 +31,11 @@ class MTCcontroller extends GetxController {
         if (name.text.isEmpty) {
           name.text = 'Add Name'; // Set default text if name is empty
         }
-        if (phoneNumber.isNotEmpty && phoneNumber.length >= 11 && int.tryParse(phoneNumber) != null) {
-          // Ensure phone is not empty, is at least 11 digits, and is a valid integer
+
+        // Regular expression for a valid 11-digit phone number
+        RegExp phoneNumberRegExp = RegExp(r'^[0-9]{11}$');
+        if (phoneNumber.isNotEmpty && phoneNumberRegExp.hasMatch(phoneNumber)) {
+          // Ensure phone is not empty and matches the 11-digit format
           await FirebaseFirestore.instance
               .collection("User")
               .doc(user.uid)

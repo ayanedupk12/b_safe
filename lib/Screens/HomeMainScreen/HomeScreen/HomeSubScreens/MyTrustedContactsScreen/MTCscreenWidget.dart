@@ -39,7 +39,7 @@ class MTCscreenWidget extends StatelessWidget {
               ),
               title: Text(
                 title,
-                style: CustomTextStyles.dropDownTextStyle,
+                style: CustomTextStyles.phoneNumbr,
               ),
               subtitle: Text(
                 subtitle,

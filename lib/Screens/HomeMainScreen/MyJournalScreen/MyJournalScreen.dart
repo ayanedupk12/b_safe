@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:b_safe/GlobalWidget/MyButton.dart';
 import 'package:b_safe/Screens/HomeMainScreen/MyJournalScreen/MyJournalController.dart';
 import 'package:b_safe/Utils/AppConstants/English/MyJournalConstantsE.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:social_media_recorder/audio_encoder_type.dart';
@@ -84,28 +85,20 @@ class MyJournalScreen extends StatelessWidget {
               MyJournalConstantsE.title5.tr,
               style: CustomTextStyles.topicTextStyle,
             ),
-            // Center(
-            //   child: Padding(
-            //     padding: EdgeInsets.symmetric(horizontal: Get.width * .25),
-            //     child: MyButton(
-            //         borderRadios: 10,
-            //         height: Get.height * .05,
-            //         title: MyJournalConstantsE.button2.tr,
-            //         onPress: () {}),
-            //   ),
-            // ),
             height2(),
             Center(
               child: SizedBox(
                 width: Get.width * 0.8,
                 child: SocialMediaRecorder(
-                  sendButtonIcon: Icon(
+                  sendButtonIcon: const Icon(
                     Icons.arrow_downward,
                     color: Colors.white,
                   ),
                   encode: AudioEncoderType.AAC,
                   sendRequestFunction: (File soundFile, String time) {
-                    print(soundFile.path);
+                    if (kDebugMode) {
+                      print(soundFile.path);
+                    }
                   },
                 ),
               ),
