@@ -45,7 +45,7 @@ class ForGotPasswordController extends GetxController {
         print("Error sending reset password email: ${e.code}");
       } else {
         // Handle other types of exceptions or errors
-        showMessage("Error sending reset password email: $e");
+        showMessage("Something Went Wrong");
         print("Error sending reset password email: $e");
       }
     }

@@ -35,19 +35,19 @@ class LogInController extends GetxController {
         loading = false;
         print('No user found for that email.');
       } else if (e.code == 'wrong-password') {
-        //showMessage('Wrong password provided for that user.');
+        showMessage('Wrong password provided for that user.');
         loading = false;
         print('Wrong password provided for that user.');
       } else {
         print('Error signing in: ${e.message}');
         loading = false;
-        showMessage('Error signing in: ${e.message}');
+        showMessage("Something Went Wrong");
         update();
       }
     } catch (e) {
       print('Error: $e');
       loading = false;
-      print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+      showMessage("Something Went Wrong");
       print(e);
       showMessage('Error: $e');
       update();

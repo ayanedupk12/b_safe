@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:b_safe/GlobalWidget/MyButton.dart';
 import 'package:b_safe/Screens/HomeMainScreen/MyJournalScreen/MyJournalController.dart';
 import 'package:b_safe/Utils/AppConstants/English/MyJournalConstantsE.dart';
@@ -14,7 +13,6 @@ import 'JournalWidget.dart';
 class MyJournalScreen extends StatelessWidget {
   MyJournalScreen({super.key});
   final controller = Get.put(MyJournalController());
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -124,12 +122,14 @@ class MyJournalScreen extends StatelessWidget {
                     content: Column(
                       children: [
                         MyTextField(),
+                        height2(),
                         MyButton(
                             title: 'Send',
                             height: Get.height * .05,
                             onPress: () {
                               Get.back();
                             }),
+                        height2(),
                         MyButton(
                             title: 'Cancel',
                             height: Get.height * .05,

@@ -58,6 +58,7 @@ class SignUpController extends GetxController {
         update();
       } else {
         print('Error creating user: ${e.message}');
+        showMessage("Something Went Wrong");
         isLoading=false;
         update();
       }
