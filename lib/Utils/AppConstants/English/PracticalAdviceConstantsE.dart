@@ -31,7 +31,7 @@ class SGBVFormsConstantsE {
   static const domesticVoilenceDes ="Violence that occurs within intimate partner relationships, often involving physical, emotional, psychological, or economic abuse.";
   static const genderBVoilencedDes ="Acts of violence that are rooted in gender inequalities and discrimination, targeting individuals based on their gender identity or expression.";
   static const harmfulTraditionDes ="Practices like female genital mutilation/cutting, child marriage, and honor killings, often carried out as a result of traditional beliefs and societal norms.";
-  static const descriminationDes ="Any form of discrimination or harassment based on gender or sexual orientation. ${'"Which can include workplace discrimination, cyber bullying hate crime"'}.";
+  static const descriminationDes ="Any form of discrimination or harassment based on gender or sexual orientation, which can include workplace discrimination, cyber bullying and hate crime.";
 
 }
 
@@ -45,7 +45,7 @@ class PracTicalAdviceConstantsE{
   static const titleE6="Don't let it go";
   static const descriptionE1="Try to avoid further contact alone with the perpetrator if possible.";
   static const descriptionE2="Seek support from close friends, family, or a therapist. Talking about the traumatic experience can help in the healing process.";
-  static const descriptionE3="It's important to see a gynecologists', even though it may be difficult. Reasons include treatment of possible physical injuries, consultation regarding pregnancy prevention and prevention of sexually transmitted diseases.";
+  static const descriptionE3="It's important to see a gynecologist even though it may be difficult. Reasons include treatment of possible physical injuries, consultation regarding pregnancy prevention and prevention of sexually transmitted diseases.";
   static const descriptionE4="The decision to report to the police is very personal. If you choose to do so, you will undergo questioning, which can be challenging. If you decide to report, evidence such as clothing and other items the perpetrator came into contact with may help in the criminal investigation.";
   static const descriptionE5="Many people need support and understanding from professionals such as sexologists and psychologists to cope with the consequences of sexual violence or rape.";
   static const descriptionE6="Even if sexual abuse occurred in the past, it is still possible to take steps toward healing and potential prosecution of the perpetrator.";

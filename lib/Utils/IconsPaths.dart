@@ -15,4 +15,5 @@ class AppIcons{
   static const privacypolicyicon ="assets/icons/privacypolicyicon.png";
   static const termsandconditionsicon ="assets/icons/termsandconditionsicon.png";
   static const languageicon ="assets/icons/languageicon.png";
+  static const logouticon ="assets/icons/logout.png";
 }

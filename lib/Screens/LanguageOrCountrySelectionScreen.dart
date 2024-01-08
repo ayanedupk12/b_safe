@@ -5,6 +5,7 @@ import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../GlobalWidget/DropDownField.dart';
 import '../Utils/AppConstants/English/LanguageAndCountrySelectionConstantsE.dart';
 
@@ -77,8 +78,8 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                     MyButton(
                       borderRadios: 5,
                       height: Get.height * .05,
-                      onPress: () {
-                        Get.offAllNamed(RouteNames.loginScreen);
+                      onPress: ()  {
+                       __.languageButton();
                       },
                       title: LCscreenConstantsE.buttonText.tr,
                     )

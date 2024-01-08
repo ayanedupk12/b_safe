@@ -19,12 +19,19 @@ class CustomTextStyles {
 
 
 ///ok///
-  static TextStyle topicTextStyle =
-  GoogleFonts.montserrat(
+  static TextStyle topicTextStyle = GoogleFonts.montserrat(
       textStyle:
     const TextStyle(
       fontSize: 17,
       fontWeight: FontWeight.w500,
+      color: Colors.black,
+    )
+  );
+  static TextStyle subtopicTextStyle = GoogleFonts.montserrat(
+      textStyle:
+    const TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.w600,
       color: Colors.black,
     )
   );
@@ -44,8 +51,8 @@ class CustomTextStyles {
   GoogleFonts.montserrat(
       textStyle:
       const TextStyle(
-        fontSize: 15,
-        fontWeight: FontWeight.w500,
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
         color: Colors.black,
       )
   );

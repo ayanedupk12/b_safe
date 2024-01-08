@@ -28,19 +28,23 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPress,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 10),
-        child: Container(
-          height: height,
-          width: width,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(borderRadios),
-            color: color,
-          ),
-          child: Center(child: loading
-              ? const CircularProgressIndicator()
-              : Text(title,style:  CustomTextStyles.buttonTextStyle,),
-          ),
+      child: Container(
+        height: height,
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(borderRadios),
+          color: color,
+        ),
+        child: Center(child: loading
+            ? const SizedBox(
+          height: 18,
+              width: 18,
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+                        color: Colors.white,
+                      ),
+            )
+            : Text(title,style:  CustomTextStyles.buttonTextStyle,),
         ),
       ),
     );

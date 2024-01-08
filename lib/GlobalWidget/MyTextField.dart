@@ -9,10 +9,12 @@ class MyTextField extends StatelessWidget {
   Widget? suffixIcon;
   double height;
   bool obSecure;
+  TextInputType? keyboardType;
   final ValueChanged<String>? onChanged;
   final TextEditingController? controller;
   MyTextField({
     super.key,
+    this.keyboardType,
      this.prefixIcon,
     this.suffixIcon,
     this.onChanged,
@@ -28,6 +30,7 @@ class MyTextField extends StatelessWidget {
     return SizedBox(
       height: height,
       child: TextFormField(
+        keyboardType: keyboardType,
         onChanged: onChanged,
         controller: controller,
         obscureText: obSecure,

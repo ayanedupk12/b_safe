@@ -19,6 +19,7 @@ class SignUpController extends GetxController {
 
   Future<void> confirmEmailAndCreateUser() async {
     isLoading = true;
+    update();
     try {
       var methods = await _auth.fetchSignInMethodsForEmail(sEmail.text);
       if (methods.isNotEmpty) {
@@ -32,23 +33,37 @@ class SignUpController extends GetxController {
         if (userCredential.user != null) {
           print('User created successfully.');
           showMessage('User created successfully.');
+          isLoading=false;
+          update();
           Get.to(HomeMainScreen());
         } else {
           print('Failed to create user.');
+          showMessage('Failed to create user.');
+          isLoading=false;
+          update();
         }
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
+        isLoading=false;
+        update();
         print('The password provided is too weak.');
+        showMessage('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
         print(e);
         Get.to(LogInScreen());
         print('The account already exists for that email.');
+        showMessage('The account already exists for that email please login to continue.');
+        isLoading=false;
+        update();
       } else {
         print('Error creating user: ${e.message}');
+        isLoading=false;
+        update();
       }
     } catch (e) {
       print('Error: $e');
+      showMessage(e.toString());
     } finally {
       isLoading = false;
       sEmail.clear();

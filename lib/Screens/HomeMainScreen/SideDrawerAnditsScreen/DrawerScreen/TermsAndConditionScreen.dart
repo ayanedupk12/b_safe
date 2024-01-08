@@ -68,11 +68,14 @@ class TermsAndConditionScreen extends StatelessWidget {
                 title: TermANdCondConstantsE.Title7.tr,
                 description: TermANdCondConstantsE.d7.tr,
                 link: "projectbsafe@hotmail.com",
+                 onTap: (){
+                  print('Email Tapped');
+                 },
               ),
                TermsAndConditionScreenWidget(
                   number: '8',
                   title: TermANdCondConstantsE.Title8.tr,
-                  description: TermANdCondConstantsE.d8.tr),
+                  description: TermANdCondConstantsE.d8.tr,),
                TermsAndConditionScreenWidget(
                   number: '9',
                   title: TermANdCondConstantsE.Title9.tr,
@@ -103,6 +106,7 @@ class TermsAndConditionScreen extends StatelessWidget {
 class TermsAndConditionScreenWidget extends StatelessWidget {
   final String title;
   final String number;
+  final GestureTapCallback? onTap;
   final String? link;
   final String description;
   const TermsAndConditionScreenWidget(
@@ -110,7 +114,10 @@ class TermsAndConditionScreenWidget extends StatelessWidget {
       required this.title,
       required this.description,
       required this.number,
-      this.link});
+      this.link,
+      this.onTap,
+
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -123,16 +130,14 @@ class TermsAndConditionScreenWidget extends StatelessWidget {
               children: [
             TextSpan(text: "${number}. ", style: CustomTextStyles.descriptionTextStyleB),
             TextSpan(text: title, style: CustomTextStyles.descriptionTextStyleB),
-            TextSpan(text: ': ', style: CustomTextStyles.descriptionTextStyleB),
+            TextSpan(text: ' : ', style: CustomTextStyles.descriptionTextStyleB),
             TextSpan(text: description, style: CustomTextStyles.descriptionTextStyle),
             TextSpan(
               text: link,
               style: CustomTextStyles.buttonTextStyleB
                   .copyWith(color: const Color(0xff009FFF)),
               recognizer: TapGestureRecognizer()
-                ..onTap = () {
-                  print('Text span tapped!');
-                },
+                ..onTap = onTap,
             ),
           ])),
     );

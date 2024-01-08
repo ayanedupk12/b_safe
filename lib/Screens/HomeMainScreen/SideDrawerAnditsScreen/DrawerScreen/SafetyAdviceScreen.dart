@@ -43,15 +43,15 @@ class SafetyAdviceScreen extends StatelessWidget {
               size(),
               Text(SafetyAdviceConstatntsE.text1.tr,style: CustomTextStyles.descriptionTextStyle),
               size(),
-              Text(SafetyAdviceConstatntsE.text1.tr,style: CustomTextStyles.descriptionTextStyle),
+              Text(SafetyAdviceConstatntsE.text2.tr,style: CustomTextStyles.descriptionTextStyle),
               size(),
-              Text(SafetyAdviceConstatntsE.mainTitle2.tr,style: CustomTextStyles.descriptionTextStyleB,),
+              Text(SafetyAdviceConstatntsE.mainTitle2.tr,style: CustomTextStyles.topicTextStyle,),
               size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText1.tr),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText2.tr),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText3.tr),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText4.tr),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText5.tr),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText1),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText2),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText3),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText4),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText5),size(),
               size(),
               size(),
             ],
@@ -82,6 +82,7 @@ class PrivacyBulletWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(width: 5,),
             Text(
               '\u2022',
               style: TextStyle(
@@ -89,7 +90,7 @@ class PrivacyBulletWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 5,
+              width: 10,
             ),
             Expanded(
               child: Container(

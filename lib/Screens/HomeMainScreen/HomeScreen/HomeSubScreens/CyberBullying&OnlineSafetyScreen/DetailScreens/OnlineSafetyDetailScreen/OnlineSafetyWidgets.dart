@@ -20,9 +20,9 @@ class OnlineSafetyWidget extends StatelessWidget {
               text: '',
               style: Theme.of(context).textTheme.displayMedium,
               children: [
-                TextSpan(text: "${number}. ", style: CustomTextStyles.descriptionTextStyleB),
-                TextSpan(text: title, style: CustomTextStyles.descriptionTextStyleB),
-                TextSpan(text: ':', style: CustomTextStyles.descriptionTextStyle),
+                TextSpan(text: "${number}. ", style: CustomTextStyles.topicTextStyle),
+                TextSpan(text: title, style: CustomTextStyles.topicTextStyle),
+                TextSpan(text: ' : ', style: CustomTextStyles.descriptionTextStyle),
               ])),
     );
   }

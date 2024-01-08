@@ -11,11 +11,9 @@ import '../../../GlobalWidget/MyTextField.dart';
 import '../../../Utils/Textstyles.dart';
 import 'JournalWidget.dart';
 
-
-
 class MyJournalScreen extends StatelessWidget {
   MyJournalScreen({super.key});
-  final controller=Get.put(MyJournalController());
+  final controller = Get.put(MyJournalController());
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +29,12 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Text(
               MyJournalConstantsE.title.tr,
-              style: CustomTextStyles.descriptionTextStyle,),
+              style: CustomTextStyles.descriptionTextStyle,
+            ),
             height2(),
             Text(
               MyJournalConstantsE.title1.tr,
-              style: CustomTextStyles.descriptionTextStyleB,
+              style: CustomTextStyles.topicTextStyle,
             ),
             height2(),
             JournalFormField(
@@ -44,7 +43,7 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Text(
               MyJournalConstantsE.title2.tr,
-              style: CustomTextStyles.descriptionTextStyleB,
+              style: CustomTextStyles.topicTextStyle,
             ),
             height2(),
             JournalFormField(
@@ -53,7 +52,7 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Text(
               MyJournalConstantsE.title3.tr,
-              style: CustomTextStyles.descriptionTextStyleB,
+              style: CustomTextStyles.topicTextStyle,
             ),
             height2(),
             JournalFormField(
@@ -62,7 +61,7 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Text(
               MyJournalConstantsE.title4.tr,
-              style: CustomTextStyles.descriptionTextStyleB,
+              style: CustomTextStyles.topicTextStyle,
             ),
             height2(),
             Container(
@@ -85,7 +84,7 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Text(
               MyJournalConstantsE.title5.tr,
-              style: CustomTextStyles.descriptionTextStyleB,
+              style: CustomTextStyles.topicTextStyle,
             ),
             // Center(
             //   child: Padding(
@@ -100,12 +99,16 @@ class MyJournalScreen extends StatelessWidget {
             height2(),
             Center(
               child: SizedBox(
-                width: Get.width*0.8,
+                width: Get.width * 0.8,
                 child: SocialMediaRecorder(
-                  sendButtonIcon:Icon(Icons.arrow_downward,color: Colors.white,),
-                  encode: AudioEncoderType.AAC, sendRequestFunction: (File soundFile, String time) {
+                  sendButtonIcon: Icon(
+                    Icons.arrow_downward,
+                    color: Colors.white,
+                  ),
+                  encode: AudioEncoderType.AAC,
+                  sendRequestFunction: (File soundFile, String time) {
                     print(soundFile.path);
-                },
+                  },
                 ),
               ),
             ),
@@ -123,13 +126,13 @@ class MyJournalScreen extends StatelessWidget {
                         MyTextField(),
                         MyButton(
                             title: 'Send',
-                            height: Get.height *.05,
+                            height: Get.height * .05,
                             onPress: () {
                               Get.back();
                             }),
                         MyButton(
                             title: 'Cancel',
-                            height: Get.height *.05,
+                            height: Get.height * .05,
                             color: Colors.grey,
                             onPress: () {
                               Get.back();

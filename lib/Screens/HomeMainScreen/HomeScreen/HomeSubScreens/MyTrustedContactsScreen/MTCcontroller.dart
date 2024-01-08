@@ -9,39 +9,125 @@ class MTCcontroller extends GetxController {
   FirebaseAuth auth = FirebaseAuth.instance;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   bool loading = false;
-
+  List<ContactModel> contactModelList = [];
   final TextEditingController name = TextEditingController();
   final TextEditingController phone = TextEditingController();
+  final TextEditingController newName = TextEditingController();
+  final TextEditingController newPhone = TextEditingController();
 
-  void addContact() async {
+  @override
+  void onInit() {
+    super.onInit();
+    fetchContacts();
+  }
+
+  Future<void> addContact() async {
     loading = true;
+    update();
     try {
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        await FirebaseFirestore.instance
-            .collection("User")
-            .doc(user.uid)
-            .collection('contacts')
-            .add({
-          'name': name.text,
-          'phoneNumber': phone.text,
-        });
-        loading = false;
-        // Clear text fields after successful addition
-        name.clear();
-        phone.clear();
-        // Show a success message or perform any necessary action
+        String phoneNumber = phone.text.trim();
+        if (name.text.isEmpty) {
+          name.text = 'Add Name'; // Set default text if name is empty
+        }
+        if (phoneNumber.isNotEmpty && phoneNumber.length >= 11 && int.tryParse(phoneNumber) != null) {
+          // Ensure phone is not empty, is at least 11 digits, and is a valid integer
+          await FirebaseFirestore.instance
+              .collection("User")
+              .doc(user.uid)
+              .collection('contacts')
+              .add({
+            'name': name.text,
+            'phoneNumber': phoneNumber,
+          });
+
+          await fetchContacts();
+          loading = false;
+          update();
+          Get.back();
+          name.clear();
+          phone.clear();
+        } else {
+          showMessage("Enter a valid 11-digit phone number");
+          loading = false;
+          update();
+        }
       } else {
-        // Handle case when user is not logged in
         print("User not authenticated");
         showMessage("User not authenticated");
         loading = false;
+        update();
       }
     } catch (e) {
       // Handle any errors that occur during the Firestore write operation
       print("Error adding contact: $e");
       showMessage("Error adding contact: $e");
       loading = false;
+      update();
     }
+    update();
   }
+
+  Future<void> fetchContacts() async {
+    try {
+      User? user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        QuerySnapshot<Map<String, dynamic>> querySnapshot = await FirebaseFirestore.instance
+            .collection("User")
+            .doc(user.uid)
+            .collection('contacts')
+            .get();
+
+        List<ContactModel> contacts = querySnapshot.docs.map((doc) {
+          return ContactModel.fromJson(doc.data());
+        }).toList();
+
+        // Assign fetched contacts to contactModelList
+        contactModelList = contacts; // Populate contactModelList with fetched data
+        update();
+
+        // Print contact details
+        contacts.forEach((contact) {
+          print('Name: ${contact.name}, Phone Number: ${contact.phoneNumber}');
+        });
+
+        // Notify listeners about the change in contactModelList
+        update();
+      } else {
+        print("User not authenticated");
+      }
+    } catch (e) {
+      print("Error fetching contacts: $e");
+    }
+    update();
+  }
+
+  Future<void> deleteContact(String contactId) async {
+  try {
+  User? user = FirebaseAuth.instance.currentUser;
+  if (user != null) {
+  await FirebaseFirestore.instance
+      .collection("User")
+      .doc(user.uid)
+      .collection('contacts')
+      .doc(contactId)
+      .delete();
+
+  await fetchContacts();
+  update();
+  } else {
+  print("User not authenticated");
+  showMessage("User not authenticated");
+  }
+  } catch (e) {
+  print("Error deleting contact: $e");
+  showMessage("Error deleting contact: $e");
+  }
+  }
+
 }
+
+
+
+

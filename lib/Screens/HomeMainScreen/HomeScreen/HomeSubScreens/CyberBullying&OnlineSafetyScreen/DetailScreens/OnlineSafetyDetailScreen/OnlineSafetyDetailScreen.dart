@@ -59,13 +59,13 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
               OnlineSafetBulletWidget(text: OSscreenConstantsE.socialMediaBulletText3.tr),
               OnlineSafetBulletWidget(text: OSscreenConstantsE.socialMediaBulletText4.tr),
               ///messegings//////
-              OnlineSafetyWidget(title: OSscreenConstantsE.messegingTitle.tr, number: '1',),
+              OnlineSafetyWidget(title: OSscreenConstantsE.messegingTitle.tr, number: '2',),
               size1(),
               Text(OSscreenConstantsE.messegingText.tr,
                 style: CustomTextStyles.descriptionTextStyle,),
               size1(),
               ///phone//////////
-              OnlineSafetyWidget(title: OSscreenConstantsE.phone.tr, number: '1',),
+              OnlineSafetyWidget(title: OSscreenConstantsE.phone.tr, number: '3',),
               size1(),
               Text(OSscreenConstantsE.phoneText1.tr,
                 style: CustomTextStyles.descriptionTextStyle,),

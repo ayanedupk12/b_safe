@@ -1,15 +1,10 @@
 import 'dart:async';
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
-import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpScreen.dart';
-import 'package:b_safe/Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
-import 'package:b_safe/Screens/LanguageOrCountrySelectionScreen.dart';
-import 'package:b_safe/Screens/SecurityScreen/SecurityScreen.dart';
 import 'package:b_safe/Utils/AppConstants/English/HomeMainScreenConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Utils/Textstyles.dart';
-import 'AuthScreens/LoginScreen/LoginScreen.dart';
 
 class SplashScreen extends StatefulWidget {
    const SplashScreen({super.key});
@@ -20,16 +15,13 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
 
   GlobalController globalController = Get.find();
- // SideDrawerController sideDrawerController = Get.find();
-
-
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      ///todo
-      Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
-   ///globalController.splashServices();
+
+     ///Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
+   globalController.splashServices();
     });
   }
 
@@ -38,6 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
               child: Hero(

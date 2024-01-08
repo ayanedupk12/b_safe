@@ -9,16 +9,14 @@ import 'GlobalController/GlobalController.dart';
 import 'Routs/RoutsNames.dart';
 import 'firebase_options.dart';
 
-bool switchValue = false;
-bool firstTime = false;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  switchValue = prefs.getBool('isSecure') ?? false;
-  switchValue = prefs.getBool('firstTime') ?? false;
+  prefs.getBool('isSecure') ?? false;
+  prefs.getBool('firstTime') ?? false;
   Get.put(GlobalController());
   Get.put(HomeMainScreenController());
   runApp(const MyApp());

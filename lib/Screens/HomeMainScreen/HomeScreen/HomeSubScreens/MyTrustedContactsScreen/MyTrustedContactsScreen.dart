@@ -1,3 +1,4 @@
+import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/GlobalWidget/MyButton.dart';
 import 'package:b_safe/GlobalWidget/MyTextField.dart';
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/MyTrustedContactsScreen/MTCscreenWidget.dart';
@@ -11,6 +12,7 @@ import 'MTCcontroller.dart';
 class MyTrustedContactsScreen extends StatelessWidget {
   MyTrustedContactsScreen({super.key});
   final MTCcontroller mtCcontroller = Get.put(MTCcontroller());
+  final GlobalController globalController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -29,40 +31,43 @@ class MyTrustedContactsScreen extends StatelessWidget {
               onPressed: () {
                 Get.offAllNamed(RouteNames.homeMainScreen);
               },
-              icon: Center(child: Icon(Icons.arrow_back_ios))),
+              icon: const Center(child: Icon(Icons.arrow_back_ios))),
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: Get.width * .05),
-          child: ListView.builder(
-              itemCount: 5,
+          child: __.contactModelList.isEmpty
+            ?const Center(child: CircularProgressIndicator(),)
+              :ListView.builder(
+              itemCount: __.contactModelList.length,
               itemBuilder: (context, index) {
                 return MTCscreenWidget(
-                  title: 'Lorem ipsum',
-                  subtitle: '093847474747',
+                  title: __.contactModelList[index].name,
+                  subtitle: __.contactModelList[index].phoneNumber,
                   onTap: () {
                     Get.defaultDialog(
-                        title: "Add My Trusted Contacts",
+                        title: "What do you want?",
                         titleStyle: CustomTextStyles.logoStyle,
-                        titlePadding:
-                            const EdgeInsets.only(left: 25, right: 25, top: 20),
-                        contentPadding: EdgeInsets.all(20),
+                        titlePadding: const EdgeInsets.only(left: 25, right: 25, top: 20),
+                        contentPadding: const EdgeInsets.all(20),
                         content: Column(
                           children: [
-                            MyTextField(
-                              controller: __.name,
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            MyTextField(
-                              controller: __.phone,
-                            ),
                             MyButton(
-                              loading: __.loading,
-                                title: 'Add',
-                                onPress: () {
-                                  __.addContact();
-                                })
+                                loading: __.loading,
+                                title: 'Delete', onPress: () {
+                                  Get.back();
+                            }),
+                            height2(),
+                            MyButton(
+                                loading: __.loading,
+                                title: 'Edit', onPress: () {
+                                  Get.back();
+                            }),
+                            height2(),
+                            MyButton(
+                                loading: __.loading,
+                                title: 'Cancel', onPress: () {
+                                  Get.back();
+                            }),
                           ],
                         ));
                   },
@@ -74,22 +79,44 @@ class MyTrustedContactsScreen extends StatelessWidget {
             Get.defaultDialog(
                 title: "Add My Trusted Contacts",
                 titleStyle: CustomTextStyles.logoStyle,
-                titlePadding: EdgeInsets.only(left: 25, right: 25, top: 20),
-                contentPadding: EdgeInsets.all(20),
+                titlePadding: const EdgeInsets.only(left: 25, right: 25, top: 20),
+                contentPadding: const EdgeInsets.all(20),
                 content: Column(
                   children: [
-                    MyTextField(),
-                    SizedBox(
-                      height: 5,
+                    MyTextField(
+                      controller: __.name,
+                      height: 50,
+                      hintText: 'Name i.e Alex...',
                     ),
-                    MyTextField(),
-                    MyButton(title: 'Add', onPress: () {})
+                    height2(),
+                    MyTextField(
+                      keyboardType: TextInputType.phone,
+                      controller: __.phone,
+                      height: 50,
+                      hintText: '03XXXXXXXXXX',
+                    ),
+                   height2(),
+                    MyButton(
+                        loading: __.loading,
+                        title: 'Add', onPress: () {
+                      __.addContact();
+                    })
                   ],
                 ));
           },
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
       );
     });
   }
+}
+
+
+
+
+height2(){
+  return SizedBox( height:  Get.height * .02,);
+}
+height5(){
+  return SizedBox( height:  Get.height * .05,);
 }

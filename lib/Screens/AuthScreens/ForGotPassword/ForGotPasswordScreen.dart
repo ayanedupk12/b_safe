@@ -9,16 +9,17 @@ import '../../../GlobalWidget/MyButton.dart';
 import '../../../GlobalWidget/MyTextField.dart';
 import '../../../Routs/RoutsNames.dart';
 import '../../../Utils/Colors.dart';
+import 'ForGotPasswordController.dart';
 
 class ForGotPasswordScreen extends StatelessWidget {
   ForGotPasswordScreen({super.key});
 
-  final LogInController logInController = Get.put(LogInController());
+  final ForGotPasswordController forGotPasswordController = Get.put(ForGotPasswordController());
 
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LogInController>(
+    return GetBuilder<ForGotPasswordController>(
         builder: (__) {
           return Scaffold(
             backgroundColor: AppColors.backGroundColor,
@@ -59,7 +60,7 @@ class ForGotPasswordScreen extends StatelessWidget {
                     style: CustomTextStyles.descriptionTextStyleB,
                   ),
                   MyTextField(
-                    controller: __.logEmail,
+                    controller: __.resetPassword,
                     height: Get.height * .06,
                     prefixIcon: const Icon(Icons.email_rounded),
                     hintText: 'Lorem@gmail.com',
@@ -71,8 +72,8 @@ class ForGotPasswordScreen extends StatelessWidget {
                     borderRadios: 5,
                     height: Get.height * .05,
                     onPress: () {
-                      Get.to(LogInScreen());
-                      ///__.loginUserWithEmailAndPassword();
+                      ///Get.to(LogInScreen());
+                      __.sendPasswordResetEmail();
                     },
                     title:"Send Reset Email",
                   ),

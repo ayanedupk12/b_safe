@@ -95,12 +95,12 @@ class LogInScreen extends StatelessWidget {
                 height5(),
                 height5(),
                 MyButton(
-                  loading: __.isLoading,
+                  loading: __.loading,
                   borderRadios: 5,
                   height: Get.height * .05,
                   onPress: () {
-                    Get.offAllNamed(RouteNames.homeMainScreen);
-                   /// __.loginUserWithEmailAndPassword();
+                    ///Get.offAllNamed(RouteNames.homeMainScreen);
+                    __.loginUserWithEmailAndPassword();
                   },
                   title:"LogIn",
                 ),

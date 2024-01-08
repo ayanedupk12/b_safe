@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 text: HomeScreenConstantsE.callPolice.tr,
                 iconPath: AppIcons.callicon,
                 onTap: () {
-                  globalController.callPolice();
+                  globalController.callPolice("112");
                 },
               ),
             ],
