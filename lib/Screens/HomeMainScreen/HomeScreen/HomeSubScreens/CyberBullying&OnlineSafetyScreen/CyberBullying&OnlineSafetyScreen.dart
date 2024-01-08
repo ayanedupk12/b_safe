@@ -40,6 +40,7 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
                 Text(
                   CB_OSmainScreenConstantsE.mainTitle.tr,
                   style: CustomTextStyles.descriptionTextStyleB,
+                  textAlign: TextAlign.justify,
                 ),
                 const SizedBox(
                   height: 20,
@@ -48,7 +49,7 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
                   onTap: () {
                     Get.toNamed(RouteNames.cybberbullyingDetailScreen);
                   },
-                  text: CB_OSmainScreenConstantsE.container1.tr,
+                  text: CB_OSmainScreenConstantsE.cyberBullyingInConnection.tr,
                   image: ImagesPaths.cybberbullyingimage,
                 ),
                 const SizedBox(
@@ -58,7 +59,7 @@ class CyberBullyingAndOnlineSafetyScreen extends StatelessWidget {
                   onTap: () {
                     Get.toNamed(RouteNames.onlineSafetyDetailScreen);
                   },
-                  text: CB_OSmainScreenConstantsE.container2.tr,
+                  text: CB_OSmainScreenConstantsE.onlineSafety.tr,
                   image: ImagesPaths.onlinesafetyimage,
                 ),
                 const SizedBox(

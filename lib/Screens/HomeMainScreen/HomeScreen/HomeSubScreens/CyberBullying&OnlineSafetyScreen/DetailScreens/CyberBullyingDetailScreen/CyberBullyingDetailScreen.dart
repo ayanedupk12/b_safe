@@ -20,9 +20,13 @@ class CyberBullyingDetailScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: Text(
-          "Cyber Bullying",
-          style: CustomTextStyles.appBarTextStyle,
+        title: SizedBox(
+          width: Get.width*0.6,
+          child: Text(
+            CB_OSmainScreenConstantsE.cyberBullyingInConnection.tr,
+            style: CustomTextStyles.appBarTextStyle,
+            textAlign: TextAlign.center,
+          ),
         ),
         leading: IconButton(
             onPressed: () {

@@ -6,6 +6,7 @@ import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Utils/Textstyles.dart';
+import 'SecurityScreen/SecurityScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,10 +20,19 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
+      if(globalController.switchValue){
+        Get.offAll(SecurityScreen())?.then((_) {
+          globalController.update();
+        });
+      }else{
+        Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
+      }
+
 
       ///globalController.splashServices();
     });
+
+
   }
 
   @override
@@ -36,23 +46,23 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Hero(
                   tag: 'awkyimage',
                   child: Image.asset(
-                    globalController.switchValue == true
-                        ? ImagesPaths.logoG
-                        : ImagesPaths.logoG1,
+                    globalController.switchValue
+                        ? ImagesPaths.logoG1
+                        : ImagesPaths.logoG,
                     height: 100,
                   ))),
           const SizedBox(
             height: 5,
           ),
-          globalController.switchValue == true
-              ? Center(
-                  child: Text(
-                  HomeMainScreenContantsE.splashscreenConstants.tr,
-                  style: CustomTextStyles.logoStyle,
-                ))
-              : const Center(
-                  child: Text('Today Weather'),
-                ),
+          globalController.switchValue
+              ? const Center(
+            child: Text(''),
+          )
+              : Center(
+              child: Text(
+                HomeMainScreenContantsE.splashscreenConstants.tr,
+                style: CustomTextStyles.logoStyle,
+              )),
         ],
       ),
     );

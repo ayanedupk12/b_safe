@@ -20,7 +20,7 @@ class SGBVDifferentFormsDetailScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          appBarText.tr,
+          PractivcalAdvsMainConstantsE.SGBVformButontext.tr,
           style: CustomTextStyles.appBarTextStyle,
         ),
         leading: IconButton(

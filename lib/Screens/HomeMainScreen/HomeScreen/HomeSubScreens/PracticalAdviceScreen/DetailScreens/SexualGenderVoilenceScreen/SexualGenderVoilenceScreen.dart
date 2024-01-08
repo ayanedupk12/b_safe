@@ -19,12 +19,14 @@ class SexualGenderVoilenceScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
       appBar: AppBar(
+        leadingWidth:30,
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
         title: Text(
-          appBarText,
-          style: CustomTextStyles.logoStyle.copyWith(fontSize: 20),
+          title,
+          style: CustomTextStyles.appBarTextStyle,
+          textAlign: TextAlign.center,
         ),
         leading: IconButton(
             onPressed: () {
@@ -38,10 +40,10 @@ class SexualGenderVoilenceScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                title.tr,
-                style: CustomTextStyles.topicTextStyle,
-              ),
+              // Text(
+              //   title.tr,
+              //   style: CustomTextStyles.topicTextStyle,
+              // ),
               SizedBox(
                 height: Get.height * .02,
               ),

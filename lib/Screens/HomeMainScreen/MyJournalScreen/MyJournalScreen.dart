@@ -29,6 +29,7 @@ class MyJournalScreen extends StatelessWidget {
             Text(
               MyJournalConstantsE.title.tr,
               style: CustomTextStyles.descriptionTextStyle,
+              textAlign: TextAlign.justify,
             ),
             height2(),
             Text(
@@ -86,9 +87,10 @@ class MyJournalScreen extends StatelessWidget {
               style: CustomTextStyles.topicTextStyle,
             ),
             height2(),
-            Center(
+            Align(
+              alignment: Alignment.centerRight,
               child: SizedBox(
-                width: Get.width * 0.8,
+                // width: Get.width * 0.8,
                 child: SocialMediaRecorder(
                   sendButtonIcon: const Icon(
                     Icons.arrow_downward,

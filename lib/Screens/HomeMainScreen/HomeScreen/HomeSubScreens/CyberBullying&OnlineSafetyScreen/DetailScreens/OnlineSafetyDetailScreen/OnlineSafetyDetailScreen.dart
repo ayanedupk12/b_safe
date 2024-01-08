@@ -26,7 +26,7 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          CB_OSmainScreenConstantsE.appBarText.tr,
+          CB_OSmainScreenConstantsE.onlineSafety.tr,
           style: CustomTextStyles.appBarTextStyle,
         ),
         leading: IconButton(

@@ -4,8 +4,8 @@
 class CB_OSmainScreenConstantsE{
   static const appBarText="Cyber Bullying";
   static const mainTitle="The internet is a vital part of our lives, often overlooked as we use it for everyday tasks.. But it's important to recognise that some types of abuse, known as tech-abuse, can occur through internet connected devices and apps. Here you have some advice on how to protect yourself";
-  static const container1="Cyber Bullying In Connection With Sexual Violence";
-  static const container2="Online Safety";
+  static const cyberBullyingInConnection="Cyber Bullying In Connection With Sexual Violence";
+  static const onlineSafety="Online Safety";
 }
 
 ///cb detaile screen ///

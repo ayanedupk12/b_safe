@@ -96,6 +96,15 @@ class CustomTextStyles {
         color: Colors.black,
       )
   );
+  // static TextStyle appBarSmallTextStyle =
+  // GoogleFonts.montserrat(
+  //     textStyle:
+  //     const TextStyle(
+  //       fontSize: 16,
+  //       fontWeight: FontWeight.bold,
+  //       color: Colors.black,
+  //     )
+  // );
 
   ///ok///
   static TextStyle buttonTextStyle =

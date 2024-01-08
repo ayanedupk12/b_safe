@@ -25,8 +25,8 @@ class Language extends Translations{
       ///CybberBullyingAnd Online Safety Screen Constants///
       CB_OSmainScreenConstantsE.appBarText:CB_OSmainScreenConstantsE.appBarText,
       CB_OSmainScreenConstantsE.mainTitle:CB_OSmainScreenConstantsE.mainTitle,
-      CB_OSmainScreenConstantsE.container1:CB_OSmainScreenConstantsE.container1,
-      CB_OSmainScreenConstantsE.container2:CB_OSmainScreenConstantsE.container2,
+      CB_OSmainScreenConstantsE.cyberBullyingInConnection:CB_OSmainScreenConstantsE.cyberBullyingInConnection,
+      CB_OSmainScreenConstantsE.onlineSafety:CB_OSmainScreenConstantsE.onlineSafety,
 
       ///cybber bullying detail///
       CBscreenConstantsE.title:CBscreenConstantsE.title,
@@ -190,8 +190,8 @@ class Language extends Translations{
       ///CybberBullyingAnd Online Safety Screen Constants///
       CB_OSmainScreenConstantsE.appBarText:CB_OSmainScreenConstantsP.appBarText,
       CB_OSmainScreenConstantsE.mainTitle:CB_OSmainScreenConstantsP.mainTitle,
-      CB_OSmainScreenConstantsE.container1:CB_OSmainScreenConstantsP.container1,
-      CB_OSmainScreenConstantsE.container2:CB_OSmainScreenConstantsP.container2,
+      CB_OSmainScreenConstantsE.cyberBullyingInConnection:CB_OSmainScreenConstantsP.container1,
+      CB_OSmainScreenConstantsE.onlineSafety:CB_OSmainScreenConstantsP.container2,
       ///cybber bullying detail///
       CBscreenConstantsE.title:CBscreenConstantsP.title,
       ///online safety detail///

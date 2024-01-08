@@ -16,15 +16,15 @@ class GlobalController extends GetxController {
   bool firstTime = false;
 
   @override
-  void onInit() {
+  void onInit() async{
     super.onInit();
-    swithboolFromSharedpreference();
+    switchValue = await checkSecurity();
     checkappOpenFirstTimeOrnot();
   }
 
-  void swithboolFromSharedpreference() async {
+   checkSecurity() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    switchValue = pref.getBool('isSecure') ?? false;
+    return pref.getBool('isSecure') ?? false;
   }
 
   void checkappOpenFirstTimeOrnot() async {
@@ -54,11 +54,11 @@ class GlobalController extends GetxController {
 
   void securityModeCheck() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    bool currentSwitchValue = pref.getBool('isSecure') ?? false;
+    switchValue = pref.getBool('isSecure') ?? false;
 
-    bool updatedSwitchValue = !currentSwitchValue;
+    bool updatedSwitchValue = !switchValue;
 
-    pref.setBool('isSecure', updatedSwitchValue);
+    await pref.setBool('isSecure', updatedSwitchValue);
 
     switchValue = updatedSwitchValue;
 

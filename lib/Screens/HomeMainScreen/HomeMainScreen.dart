@@ -18,9 +18,8 @@ class HomeMainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeMainScreenController>(builder: (__) {
       return WillPopScope(
-        onWillPop: () async {
-          await SystemNavigator.pop();
-          return true;
+        onWillPop: (){
+          return homeMainScreenController.onWillPop();
         },
         child: Scaffold(
           backgroundColor: AppColors.backGroundColor,
