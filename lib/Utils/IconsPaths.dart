@@ -16,4 +16,5 @@ class AppIcons{
   static const termsandconditionsicon ="assets/icons/termsandconditionsicon.png";
   static const languageicon ="assets/icons/languageicon.png";
   static const logouticon ="assets/icons/logout.png";
+  static const editicon ="assets/icons/edit.png";
 }

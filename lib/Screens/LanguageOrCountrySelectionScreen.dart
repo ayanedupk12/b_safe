@@ -78,9 +78,8 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                     MyButton(
                       borderRadios: 5,
                       height: Get.height * .05,
-                      onPress: ()  {
-                        Get.offAllNamed(RouteNames.loginScreen);
-                       ///__.languageButton();
+                      onPress: ()  async {
+                       __.languageButton();
                       },
                       title: LCscreenConstantsE.buttonText.tr,
                     )

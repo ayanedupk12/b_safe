@@ -7,6 +7,7 @@ import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/CyberBul
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/PracticalAdviceScreen/DetailScreens/PracticalAdviceDetailScreen/PracticalAdviceDetailScreen.dart';
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/PracticalAdviceScreen/DetailScreens/SGBVDifferentFormsDetailScreen/SGBVDifferentFormsDetailScreen.dart';
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/PracticalAdviceScreen/DetailScreens/SexualGenderVoilenceScreen/SexualGenderVoilenceScreen.dart';
+import 'package:b_safe/Screens/SecurityScreen/SecurityScreen.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../Screens/HomeMainScreen/HomeScreen/HomeSubScreens/CyberBullying&OnlineSafetyScreen/CyberBullying&OnlineSafetyScreen.dart';
@@ -65,5 +66,8 @@ class AppRouts {
                   title:
                       PractivcalAdvsMainConstantsE.sexualgebdebaseButontext.tr,
                 )),
+        GetPage(
+            name: RouteNames.securityScreen,
+            page: () => SecurityScreen()),
       ];
 }

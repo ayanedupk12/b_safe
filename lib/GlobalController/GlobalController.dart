@@ -22,7 +22,7 @@ class GlobalController extends GetxController {
     checkappOpenFirstTimeOrnot();
   }
 
-   checkSecurity() async {
+  checkSecurity() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     return pref.getBool('isSecure') ?? false;
   }
@@ -39,15 +39,18 @@ class GlobalController extends GetxController {
   }
 
   void splashServices() async {
-    SharedPreferences pref = await SharedPreferences.getInstance();
     if (firstTime == false) {
-      Get.to(const LanguageOrCountrySelectionScreen());
+      Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
+      update();
     } else if (auth.currentUser == null) {
-      Get.to(LogInScreen());
+      Get.offAllNamed(RouteNames.loginScreen);
+      update();
     } else if (switchValue == false) {
-      Get.to(HomeMainScreen());
+      Get.offAllNamed(RouteNames.homeMainScreen);
+      update();
     } else {
-      Get.to(SecurityScreen());
+      Get.offAllNamed(RouteNames.securityScreen);
+      update();
     }
     update();
   }
@@ -72,9 +75,9 @@ class GlobalController extends GetxController {
       });
     }
   }
-  Future<void> callPolice(String phone) async {
-     var phoneNumber = phone; // Your desired phone number
-     var url = 'tel:$phoneNumber';
+  Future<void> makeACall(String phone) async {
+    var phoneNumber = phone; // Your desired phone number
+    var url = 'tel:$phoneNumber';
     {
       final URL = Uri.parse(url);
       if (!await launchUrl(URL)) {

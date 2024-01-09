@@ -14,4 +14,5 @@ class RouteNames {
   static const String sGBVDifferentFormsDetailScreen ="/sGBVDifferentFormsDetailScreen";
   static const String practicalAdviceDetailScreen ="/practicalAdviceDetailScreen";
   static const String sexualGenderVoilenceScreen ="/sexualGenderVoilenceScreen";
+  static const String securityScreen ="/securityScreen";
 }

@@ -7,6 +7,7 @@ class MyTextField extends StatelessWidget {
   String? errorText;
   Widget? prefixIcon;
   Widget? suffixIcon;
+  int? maxLength;
   double height;
   bool obSecure;
   TextInputType? keyboardType;
@@ -22,6 +23,7 @@ class MyTextField extends StatelessWidget {
      this.errorText,
     this.controller,
     this.height=50,
+    this.maxLength,
     this.obSecure=false,
   });
 
@@ -32,6 +34,7 @@ class MyTextField extends StatelessWidget {
       child: TextFormField(
         keyboardType: keyboardType,
         onChanged: onChanged,
+        maxLength: maxLength,
         controller: controller,
         obscureText: obSecure,
         style: const TextStyle(color: Colors.black),

@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'package:b_safe/GlobalController/GlobalController.dart';
-import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Utils/AppConstants/English/HomeMainScreenConstantsE.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../Utils/Textstyles.dart';
-import 'SecurityScreen/SecurityScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,23 +14,13 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   GlobalController globalController = Get.find();
+
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      if(globalController.switchValue){
-        Get.offAll(SecurityScreen())?.then((_) {
-          globalController.update();
-        });
-      }else{
-        Get.offAllNamed(RouteNames.languageOrCountrySelectionScreen);
-      }
-
-
-      ///globalController.splashServices();
+      globalController.splashServices();
     });
-
-
   }
 
   @override

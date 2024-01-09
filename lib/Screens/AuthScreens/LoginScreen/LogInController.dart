@@ -1,4 +1,4 @@
-import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
+import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -25,7 +25,7 @@ class LogInController extends GetxController {
       if (userCredential.user != null) {
         print('User logged in successfully!');
         showMessage('User logged in successfully!');
-        Get.to(HomeMainScreen());
+        Get.offAllNamed(RouteNames.homeMainScreen);
         loading = false;
         update();
       }
@@ -39,9 +39,11 @@ class LogInController extends GetxController {
         loading = false;
         print('Wrong password provided for that user.');
       } else {
-        print('Error signing in: ${e.message}');
+        print('Error signing in ok: ${e.message}');
         loading = false;
         showMessage("Something Went Wrong");
+        print('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee');
+        print(e.code);
         update();
       }
     } catch (e) {

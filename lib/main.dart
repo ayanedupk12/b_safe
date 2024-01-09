@@ -14,11 +14,9 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  prefs.getBool('isSecure') ?? false;
-  prefs.getBool('firstTime') ?? false;
   Get.put(GlobalController());
   Get.put(HomeMainScreenController());
+
   runApp(const MyApp());
 }
 
@@ -27,6 +25,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return GetBuilder<GlobalController>(builder: (__) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,

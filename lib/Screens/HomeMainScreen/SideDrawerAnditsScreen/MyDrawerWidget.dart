@@ -57,7 +57,7 @@ class MyDrawerWidget extends StatelessWidget {
                   iconPath: AppIcons.callicon,
                   title: SideDrawerConstantsE.policeButton.tr,
                   onTap: () async {
-                    globalController.callPolice("112");
+                    globalController.makeACall("112");
                   },
                 ),
 

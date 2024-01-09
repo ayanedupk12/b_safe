@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import '../../../../../Utils/Colors.dart';
 import '../../../../../Utils/IconsPaths.dart';
@@ -9,12 +7,14 @@ class MTCscreenWidget extends StatelessWidget {
   final String title;
   final String subtitle;
   final GestureTapCallback? onTap;
-  MTCscreenWidget(
-      {super.key,
-        this.onTap,
-        required this.title,
-        required this.subtitle,
-      });
+  final GestureTapCallback? tapForCall;
+  MTCscreenWidget({
+    super.key,
+    this.onTap,
+    this.tapForCall,
+    required this.title,
+    required this.subtitle,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,7 @@ class MTCscreenWidget extends StatelessWidget {
           shadowColor: Colors.grey,
           child: Center(
             child: ListTile(
+              onTap: tapForCall,
               leading: CircleAvatar(
                 backgroundColor: AppColors.backGroundColor,
                 radius: 30,
@@ -45,7 +46,9 @@ class MTCscreenWidget extends StatelessWidget {
                 subtitle,
                 style: CustomTextStyles.hintTextStyle,
               ),
-              trailing: IconButton(onPressed: onTap, icon: Icon(Icons.edit_calendar_rounded)),
+              trailing: InkWell(
+                  onTap: onTap,
+                  child: Image.asset(AppIcons.editicon,height: 20,)),
             ),
           ),
         ),
