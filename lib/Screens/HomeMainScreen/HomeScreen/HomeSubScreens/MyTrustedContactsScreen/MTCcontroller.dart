@@ -6,21 +6,25 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'MTCmodel.dart';
 
 class MTCcontroller extends GetxController {
-  FirebaseAuth auth = FirebaseAuth.instance;
-  FirebaseFirestore firestore = FirebaseFirestore.instance;
-  bool loading = false;
-  List<ContactModel> contactModelList = [];
+
   final TextEditingController name = TextEditingController();
   final TextEditingController phone = TextEditingController();
   final TextEditingController newName = TextEditingController();
   final TextEditingController newPhone = TextEditingController();
+  FirebaseAuth auth = FirebaseAuth.instance;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  bool loading = false;
+  List<ContactModel> contactModelList = [];
+
+
+  bool isPressed = false;
+  late DateTime pressStartTime;
 
   @override
   void onInit() {
     super.onInit();
     fetchContacts();
   }
-
   Future<void> addContact() async {
     loading = true;
     update();
@@ -188,7 +192,7 @@ class MTCcontroller extends GetxController {
       showMessage("Error editing contact: $e");
     }
   }
-  
+
 }
 
 

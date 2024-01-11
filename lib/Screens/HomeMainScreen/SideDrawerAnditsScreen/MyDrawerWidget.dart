@@ -202,17 +202,8 @@ class MyDrawerWidget extends StatelessWidget {
                 ///logout
                 DrawerSubWidget(
                   onTap: () {
-                    // Get.defaultDialog(
-                    //   title: "Are You Sure?",
-                    //  content: Text(''),
-                    //   onCancel: ()async{
-                    //    Get.back();
-                    //   },
-                    //   onConfirm: (){
-                    //     FirebaseAuth.instance.signOut();
-                    //     Get.offAllNamed(RouteNames.loginScreen);
-                    //   }
-                    // );
+                    FirebaseAuth.instance.signOut();
+                    Get.offAllNamed(RouteNames.loginScreen);
                   },
                   iconPath: AppIcons.logouticon,
                   title: "Log out",

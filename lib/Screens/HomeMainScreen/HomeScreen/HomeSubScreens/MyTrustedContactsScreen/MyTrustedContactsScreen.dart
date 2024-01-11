@@ -44,55 +44,95 @@ class MyTrustedContactsScreen extends StatelessWidget {
                         style: CustomTextStyles.topicTextStyle,
                       ))
                     : ListView.builder(
-                  itemCount: __.contactModelList.length,
-                  itemBuilder: (context, index) {
-                    return MTCscreenWidget(
-                      title: __.contactModelList[index].name,
-                      subtitle: __.contactModelList[index].phoneNumber,
-                      tapForCall: (){
-                        globalController.makeACall(__.contactModelList[index].phoneNumber);
-                      },
-                      onTap: () {
-                        String contactId = __.contactModelList[index].id; // Assuming ContactModel has an 'id' field
-                        __.newName.text = __.contactModelList[index].name;
-                        __.newPhone.text = __.contactModelList[index].phoneNumber;
-                        Get.defaultDialog(
-                          title: "Edit my trusted contact?",
-                          titleStyle: CustomTextStyles.logoStyle,
-                          titlePadding: const EdgeInsets.only(left: 25, right: 25, top: 20),
-                          contentPadding: const EdgeInsets.all(20),
-                          content: Column(
-                            children: [
-                              MyTextField(
-                                controller: __.newName,
-                              ),
-                              height2(),
-                              MyTextField(
-                                controller: __.newPhone,
-                              ),
-                              height2(),
-                              MyButton(
-                                loading: __.loading,
-                                title: 'Edit',
-                                onPress: () {
-                                  // Check if changes have been made
-                                  if (__.newName.text != __.contactModelList[index].name ||
-                                      __.newPhone.text != __.contactModelList[index].phoneNumber) {
-                                    __.editContact(contactId); // Edit the contact using contactId
-                                  }
-                                  Get.back(); // Close the dialog after editing or no changes
-                                },
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    );
-                  },
-                ),
-
-
-        ),
+                        itemCount: __.contactModelList.length,
+                        itemBuilder: (context, index) {
+                          return MTCscreenWidget(
+                            title: __.contactModelList[index].name,
+                            subtitle: __.contactModelList[index].phoneNumber,
+                            tapForCall: () {
+                              globalController.makeACall(
+                                  __.contactModelList[index].phoneNumber);
+                            },
+                            // onLongPressStart: (ok) {
+                            //   __.pressStartTime = DateTime.now();
+                            //   __.isPressed = true;
+                            //   Get.defaultDialog(
+                            //       title: 'Hey ok',
+                            //       content: Column(
+                            //         children: [
+                            //           MyButton(
+                            //             title: 'Make a call',
+                            //             onPress: () {},
+                            //           ),
+                            //           height2(),
+                            //           MyButton(title: 'Delete', onPress: () {}),
+                            //         ],
+                            //       ));
+                            // },
+                            onTap: () {
+                              String contactId = __.contactModelList[index]
+                                  .id; // Assuming ContactModel has an 'id' field
+                              __.newName.text = __.contactModelList[index].name;
+                              __.newPhone.text =
+                                  __.contactModelList[index].phoneNumber;
+                              Get.defaultDialog(
+                                title: "Edit my trusted contact?",
+                                titleStyle: CustomTextStyles.logoStyle,
+                                titlePadding: const EdgeInsets.only(
+                                    left: 25, right: 25, top: 20),
+                                contentPadding: const EdgeInsets.all(20),
+                                content: Column(
+                                  children: [
+                                    MyTextField(
+                                      controller: __.newName,
+                                    ),
+                                    height2(),
+                                    MyTextField(
+                                      controller: __.newPhone,
+                                    ),
+                                    height2(),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: MyButton(
+                                            loading: __.loading,
+                                            title: 'Edit',
+                                            onPress: () {
+                                              // Check if changes have been made
+                                              if (__.newName.text !=
+                                                      __.contactModelList[index]
+                                                          .name ||
+                                                  __.newPhone.text !=
+                                                      __.contactModelList[index]
+                                                          .phoneNumber) {
+                                                __.editContact(
+                                                    contactId); // Edit the contact using contactId
+                                              }
+                                              Get.back(); // Close the dialog after editing or no changes
+                                            },
+                                          ),
+                                        ),
+                                        SizedBox(width: 10,),
+                                        Expanded(
+                                          child: MyButton(
+                                            loading: __.loading,
+                                            title: 'Delete',
+                                            onPress: () {
+                                              __.deleteContact(contactId);
+                                              Get.back(); // Close the dialog after editing or no changes
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
+                        },
+                      ),
+              ),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Get.defaultDialog(
@@ -124,14 +164,14 @@ class MyTrustedContactsScreen extends StatelessWidget {
                         })
                   ],
                 ));
-          }, label: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          },
+          label: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(Icons.add),
               Text('Add new Contact'),
             ],
           ),
-          
         ),
       );
     });
@@ -149,5 +189,3 @@ height5() {
     height: Get.height * .05,
   );
 }
-
-

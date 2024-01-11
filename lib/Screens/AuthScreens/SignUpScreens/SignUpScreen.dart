@@ -87,8 +87,7 @@ class SignUpScreen extends StatelessWidget {
                 borderRadios: 5,
                 height: Get.height * .05,
                 onPress: () {
-                  Get.offAllNamed(RouteNames.homeMainScreen);
-                 ///__.confirmEmailAndCreateUser();
+                 __.confirmEmailAndCreateUser();
                 },
                 title: "Signup",
               ),
