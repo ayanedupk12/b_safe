@@ -19,13 +19,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    globalController.getAccessMicrophone();
     globalController.getCurrentLocation();
     Timer(const Duration(seconds: 2), () {
       globalController.splashServices();
     });
   }
 
-  static const LatLng _initialPosition = LatLng(37.4223, -122.0848);
+
 
   @override
   Widget build(BuildContext context) {

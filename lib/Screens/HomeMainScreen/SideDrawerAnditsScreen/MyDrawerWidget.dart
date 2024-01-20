@@ -185,14 +185,17 @@ class MyDrawerWidget extends StatelessWidget {
                       title: CustomDropdownFormField(
                         width: Get.width,
                         height: Get.height * .05,
-                        text: SideDrawerConstantsE.chooseContry.tr,
+                        text: globalController.countryUsage!=null?globalController.countryUsage:SideDrawerConstantsE.chooseContry.tr,
                         actionsList: [
-                          LCscreenConstantsE.poland.tr,
-                          LCscreenConstantsE.zcechC.tr,
-                          LCscreenConstantsE.slovakia.tr,
+                          'Poland',
+                          "Czech Republic",
+                          "Slovakia"
+                          // LCscreenConstantsE.poland.tr,
+                          // LCscreenConstantsE.zcechC.tr,
+                          // LCscreenConstantsE.slovakia.tr,
                         ],
                         onChange: (val) {
-                          print(val);
+                          globalController.changeCountry(val!);
                         },
                       ),
                     ),

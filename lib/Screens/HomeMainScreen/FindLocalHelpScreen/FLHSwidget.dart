@@ -3,8 +3,8 @@ import '../../../Utils/Textstyles.dart';
 
 class FLHSwidget extends StatelessWidget {
   final String text;
-  final String number;
-  const FLHSwidget({super.key, required this.text, required this.number});
+  final String? position;
+  const FLHSwidget({super.key, required this.text,  this.position});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class FLHSwidget extends StatelessWidget {
       shadowColor: Colors.grey,
       child: ListTile(
         title: Text(text,style: CustomTextStyles.buttonTextStyleB,),
-        subtitle: Text(number,style: CustomTextStyles.hintTextStyle),
+        subtitle: Text(position??'',style: CustomTextStyles.hintTextStyle),
       ),
     );
   }
