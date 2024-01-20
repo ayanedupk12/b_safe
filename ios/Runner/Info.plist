@@ -9,6 +9,11 @@
 
 	<key>NSMicrophoneUsageDescription</key>
     <string>Some message to describe why you need this permission</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>We need your location for providing you with relevant services when the app is in use.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We need your location for providing continuous services, even when the app is not in use.</string>
+
 
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>

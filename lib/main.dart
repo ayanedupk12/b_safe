@@ -14,9 +14,9 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  // await dotenv.load(fileName: 'assets/config/.env');
   Get.put(GlobalController());
   Get.put(HomeMainScreenController());
-
   runApp(const MyApp());
 }
 
