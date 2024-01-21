@@ -7,12 +7,17 @@
 	<key>CFBundleDisplayName</key>
 	<string>B Safe</string>
 
-	<key>NSMicrophoneUsageDescription</key>
-    <string>Some message to describe why you need this permission</string>
+
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>We need your location for providing you with relevant services when the app is in use.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>We need your location for providing continuous services, even when the app is not in use.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>We need camera access for uploading file into my MY Journal</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library for uploading file into my MY Journal</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need microphone access for uploading file into my MY Journal</string>
 
 
 	<key>CFBundleExecutable</key>

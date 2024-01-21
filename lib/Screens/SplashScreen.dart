@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    globalController.getAccessMicrophone();
+    globalController.getAccessMicrophoneAndStorage();
     globalController.getCurrentLocation();
     Timer(const Duration(seconds: 2), () {
       globalController.splashServices();

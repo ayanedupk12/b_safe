@@ -41,6 +41,7 @@ class MyJournalScreen extends StatelessWidget {
                 height2(),
                 JournalFormField(
                   hintText: MyJournalConstantsE.hintText.tr,
+                  controller: controller.howDidItHappened,
                 ),
                 height2(),
                 Text(
@@ -50,6 +51,8 @@ class MyJournalScreen extends StatelessWidget {
                 height2(),
                 JournalFormField(
                   hintText: MyJournalConstantsE.hintText.tr,
+                  controller: controller.whatHappened,
+
                 ),
                 height2(),
                 Text(
@@ -59,6 +62,8 @@ class MyJournalScreen extends StatelessWidget {
                 height2(),
                 JournalFormField(
                   hintText: MyJournalConstantsE.hintText.tr,
+                  controller: controller.howDidItHappened,
+
                 ),
                 height2(),
                 Text(
@@ -72,14 +77,30 @@ class MyJournalScreen extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Center(
+                  child: controller.attachedFile!=null?Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(controller.attachedFile!.path.split('/').last),
+                        InkWell(
+                            onTap: (){
+                              controller.attachedFile=null;
+                              controller.update();
+                            },
+                            child: Icon(Icons.close)),
+                      ],
+                    ),
+                  ):Center(
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: Get.width * .25),
                       child: MyButton(
                           borderRadios: 10,
                           height: Get.height * .05,
                           title: MyJournalConstantsE.button1.tr,
-                          onPress: () {}),
+                          onPress: ()async {
+                            await controller.pickFile();
+                          }),
                     ),
                   ),
                 ),
@@ -91,7 +112,20 @@ class MyJournalScreen extends StatelessWidget {
                 height2(),
                 Align(
                   alignment: Alignment.centerRight,
-                  child: SizedBox(
+                  child: controller.soundFile!=null
+                      ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                       Text(controller.soundFile!.path.split('/').last),
+                       InkWell(
+                           onTap: (){
+                             controller.soundFile=null;
+                             controller.update();
+                           },
+                           child: Icon(Icons.close)),
+                    ],
+                  )
+                      :SizedBox(
                     // width: Get.width * 0.8,
                     child: SocialMediaRecorder(
                       sendButtonIcon: const Icon(
@@ -100,8 +134,9 @@ class MyJournalScreen extends StatelessWidget {
                       ),
                       encode: AudioEncoderType.AAC,
                       sendRequestFunction: (File soundFile, String time) {
-
-                        __.uploadAudioToFirebase(soundFile);
+                        controller.soundFile=soundFile;
+                        controller.update();
+                        // __.uploadAudioToFirebase(soundFile);
                       },
                     ),
                   ),
@@ -117,13 +152,16 @@ class MyJournalScreen extends StatelessWidget {
                         contentPadding: const EdgeInsets.all(20),
                         content: Column(
                           children: [
-                            MyTextField(),
+                            MyTextField(
+                              controller: controller.emailController,
+                              hintText: 'Email',
+                            ),
                             height2(),
                             MyButton(
                                 title: 'Send',
                                 height: Get.height * .05,
                                 onPress: () {
-                                  Get.back();
+                                  // Get.back();
                                 }),
                             height2(),
                             MyButton(

@@ -1,11 +1,19 @@
+import 'dart:developer';
 import 'dart:io';
+import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:social_media_recorder/screen/social_media_recorder.dart';
 
 class MyJournalController extends GetxController {
   final FirebaseStorage _storage = FirebaseStorage.instance;
-
+  File? soundFile;
+  File? attachedFile;
+  TextEditingController emailController=TextEditingController();
+  TextEditingController whatDidHappen=TextEditingController();
+  TextEditingController whatHappened=TextEditingController();
+  TextEditingController howDidItHappened=TextEditingController();
   Future<void> startRecordingAndUpload() async {
     try {
       final recorder = SocialMediaRecorder(
@@ -41,6 +49,20 @@ class MyJournalController extends GetxController {
       // Use the downloadURL as needed
     } catch (e) {
       print('Error uploading audio: $e');
+    }
+  }
+
+  pickFile()async{
+
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      File file = File(result.files.single.path!);
+      log(file.path);
+      attachedFile=file;
+      update();
+    } else {
+      // User canceled the picker
     }
   }
 }

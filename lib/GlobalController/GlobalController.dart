@@ -122,14 +122,28 @@ class GlobalController extends GetxController {
   List<List<LocationServices>>? servicesList;
   LatLng? currentPosition;
   Completer<GoogleMapController> mapController=Completer<GoogleMapController>();
-  getAccessMicrophone()async{
-    bool granted = await permission.Permission.microphone.isGranted;
-    if(!granted){
-      permission.Permission.microphone.request();
+  getAccessMicrophoneAndStorage()async{
+    bool microPhoneAccess = await permission.Permission.microphone.isGranted;
+    if(!microPhoneAccess){
+      await permission.Permission.microphone.request();
     }
+    bool cameraAccess = await permission.Permission.camera.isGranted;
+    if(!cameraAccess){
+      await permission.Permission.camera.request();
+    }
+    bool fileAccess = await permission.Permission.storage.isGranted;
 
+    if(!fileAccess){
+      await permission.Permission.storage.request();
+    }
     if(await permission.Permission.microphone.isPermanentlyDenied){
-      permission.openAppSettings();
+     await  permission.openAppSettings();
+    }
+    if(await permission.Permission.camera.isPermanentlyDenied){
+      await  permission.openAppSettings();
+    }
+    if(await permission.Permission.storage.isPermanentlyDenied){
+      await  permission.openAppSettings();
     }
   }
   void getCurrentLocation() async {
