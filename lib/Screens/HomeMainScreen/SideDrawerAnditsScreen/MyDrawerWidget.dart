@@ -1,7 +1,6 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/GlobalWidget/DropDownField.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
-import 'package:b_safe/Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/IconsPaths.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
@@ -195,7 +194,6 @@ class MyDrawerWidget extends StatelessWidget {
                 DrawerSubWidget(
                   onTap: () {
                     FirebaseAuth.instance.signOut();
-                    globalController.update();
                     Get.offAllNamed(RouteNames.loginScreen);
                   },
                   iconPath: AppIcons.logouticon,
