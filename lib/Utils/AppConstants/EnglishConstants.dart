@@ -73,7 +73,7 @@ class SafetyAdviceConstatntsE{
   static const bulletText1="If you plan to use the app's ${'"My Journal"'} feature, ensure that the email address you choose to send entries to is secure and not accessible to anyone else. If needed, create a new email address or use one from a trusted friend.";
   static const bulletText2="When adding content to ${'"My Journal,"'} make sure that any media sent is not saved in your photo gallery or album. Review your phone settings to ensure this.";
   static const bulletText3="Be aware that any calls made using the app, such as 112 or local support services, will appear in your mobile's call history. You can delete these calls from your phone's call history if you are worried about them being discovered.";
-  static const bulletText4="Be  services, will appear in your mobile's call history. You can delete these calls from your phone's call history if you are worried about them being discovered.";
+  static const bulletText4="Before visiting a support service, we recommend contacting them to verify their location and opening hours.";
   static const bulletText5="We advise that you activate the cover mode before exiting the app for added security.";
 }
 
@@ -135,20 +135,20 @@ class SGBVFormsConstantsE {
 
 ///practical advice detail screen ///k
 
-class PracTicalAdviceConstantsE{
-  static const mainTitleE="If you are a victim of sexual violence here are some steps you can take:";
-  static const titleE1="Stay in a safe place";
-  static const titleE2="Contact a trusted person";
-  static const titleE3="Visit a gynecologist";
-  static const titleE4="Consider reporting to the police";
-  static const titleE5="Seek professional help";
-  static const titleE6="Don't let it go";
-  static const descriptionE1="Try to avoid further contact alone with the perpetrator if possible.";
-  static const descriptionE2="Seek support from close friends, family, or a therapist. Talking about the traumatic experience can help in the healing process.";
-  static const descriptionE3="It's important to see a gynecologist even though it may be difficult. Reasons include treatment of possible physical injuries, consultation regarding pregnancy prevention and prevention of sexually transmitted diseases.";
-  static const descriptionE4="The decision to report to the police is very personal. If you choose to do so, you will undergo questioning, which can be challenging. If you decide to report, evidence such as clothing and other items the perpetrator came into contact with may help in the criminal investigation.";
-  static const descriptionE5="Many people need support and understanding from professionals such as sexologists and psychologists to cope with the consequences of sexual violence or rape.";
-  static const descriptionE6="Even if sexual abuse occurred in the past, it is still possible to take steps toward healing and potential prosecution of the perpetrator.";
+class PracTicalAdviceConstantsE {
+  static const mainTitle="If you are a victim of sexual violence here are some steps you can take:";
+  static const title1="Stay in a safe place";
+  static const title2="Contact a trusted person";
+  static const title3="Visit a gynecologist";
+  static const title4="Consider reporting to the police";
+  static const title5="Seek professional help";
+  static const title6="Don't let it go";
+  static const description1="Try to avoid further contact alone with the perpetrator if possible.";
+  static const description2="Seek support from close friends, family, or a therapist. Talking about the traumatic experience can help in the healing process.";
+  static const description3="It's important to see a gynecologist even though it may be difficult. Reasons include treatment of possible physical injuries, consultation regarding pregnancy prevention and prevention of sexually transmitted diseases.";
+  static const description4="The decision to report to the police is very personal. If you choose to do so, you will undergo questioning, which can be challenging. If you decide to report, evidence such as clothing and other items the perpetrator came into contact with may help in the criminal investigation.";
+  static const description5="Many people need support and understanding from professionals such as sexologists and psychologists to cope with the consequences of sexual violence or rape.";
+  static const description6="Even if sexual abuse occurred in the past, it is still possible to take steps toward healing and potential prosecution of the perpetrator.";
 }
 
 ///types of suppoert screen

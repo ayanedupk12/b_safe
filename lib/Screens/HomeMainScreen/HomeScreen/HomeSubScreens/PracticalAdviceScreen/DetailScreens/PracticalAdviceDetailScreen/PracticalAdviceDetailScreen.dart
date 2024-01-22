@@ -7,11 +7,12 @@ import '../../../../../../../Utils/Textstyles.dart';
 import 'PADSWidget.dart';
 
 class PracticalAdviceDetailScreen extends StatelessWidget {
-  const PracticalAdviceDetailScreen({super.key,});
+  const PracticalAdviceDetailScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
       appBar: AppBar(
@@ -19,7 +20,7 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-         " appBarText.tr",
+          HomeScreenConstantsE.practicalAdvice.tr,
           style: CustomTextStyles.logoStyle.copyWith(fontSize: 20),
         ),
         leading: IconButton(
@@ -35,18 +36,40 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Text(
-                PracTicalAdviceConstantsE.mainTitleE,
+                PracTicalAdviceConstantsE.mainTitle.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
-              PADSWidget(title: PracTicalAdviceConstantsE.titleE1.tr, description: PracTicalAdviceConstantsE.descriptionE1.tr,),
-              PADSWidget(title: PracTicalAdviceConstantsE.titleE2.tr, description: PracTicalAdviceConstantsE.descriptionE2.tr,),
-              PADSWidget(title: PracTicalAdviceConstantsE.titleE3.tr, description: PracTicalAdviceConstantsE.descriptionE3.tr,),
-              PADSWidget(title: PracTicalAdviceConstantsE.titleE4.tr, description: PracTicalAdviceConstantsE.descriptionE4.tr,),
-              PADSWidget(title: PracTicalAdviceConstantsE.titleE5.tr, description: PracTicalAdviceConstantsE.descriptionE5.tr,),
-              PADSWidget(title: PracTicalAdviceConstantsE.titleE6.tr, description: PracTicalAdviceConstantsE.descriptionE5.tr,),
-              const SizedBox(height: 20,),
+              PADSWidget(
+                title: PracTicalAdviceConstantsE.title1,
+                description: PracTicalAdviceConstantsE.description1,
+              ),
+              PADSWidget(
+                title: PracTicalAdviceConstantsE.title2.tr,
+                description: PracTicalAdviceConstantsE.description2,
+              ),
+              PADSWidget(
+                title: PracTicalAdviceConstantsE.title3.tr,
+                description: PracTicalAdviceConstantsE.description3,
+              ),
+              PADSWidget(
+                title: PracTicalAdviceConstantsE.title4.tr,
+                description: PracTicalAdviceConstantsE.description4.tr,
+              ),
+              PADSWidget(
+                title: PracTicalAdviceConstantsE.title5.tr,
+                description: PracTicalAdviceConstantsE.description5,
+              ),
+              PADSWidget(
+                title: PracTicalAdviceConstantsE.title6.tr,
+                description: PracTicalAdviceConstantsE.description5,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
@@ -54,4 +77,3 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
     );
   }
 }
-

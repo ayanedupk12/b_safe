@@ -35,7 +35,7 @@ class SGBVDifferentFormsDetailScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 10,),
               Text(
-                "SGBVFormsConstantsE.maintitle.tr",
+                SGBVFormsConstantsE.SGBVencompasses.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
               const SizedBox(height: 10,),

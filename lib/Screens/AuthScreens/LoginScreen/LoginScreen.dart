@@ -1,14 +1,13 @@
 import 'package:b_safe/Routs/RoutsNames.dart';
-import 'package:b_safe/Screens/AuthScreens/ForGotPassword/ForGotPasswordScreen.dart';
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LogInController.dart';
-import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpScreen.dart';
-import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
+import 'package:b_safe/Utils/AppConstants/UkranianConstants.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:b_safe/Utils/TextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../GlobalWidget/MyButton.dart';
 import '../../../GlobalWidget/MyTextField.dart';
+import '../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../Utils/Colors.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -30,7 +29,7 @@ class LogInScreen extends StatelessWidget {
           elevation: 0,
           centerTitle: true,
           title: Text(
-            "Log In",
+            LoginSignUpConstantsE.loginText.tr,
             style: CustomTextStyles.appBarTextStyle,
           ),
         ),
@@ -49,13 +48,13 @@ class LogInScreen extends StatelessWidget {
               height2(),
               Center(
                 child: Text(
-                  'Sign In To Continue',
+                  LoginSignUpConstantsE.signintocontinueText.tr,
                   style: CustomTextStyles.appBarTextStyle,
                 ),
               ),
               height5(),
               Text(
-                'Enter Email',
+                LoginSignUpConstantsE.enterEmailText.tr,
                 style: CustomTextStyles.descriptionTextStyleB,
               ),
               MyTextField(
@@ -66,7 +65,7 @@ class LogInScreen extends StatelessWidget {
               ),
               height2(),
               Text(
-                'Enter Password',
+                LoginSignUpConstantsE.enterPasswordText.tr,
                 style: CustomTextStyles.descriptionTextStyleB,
               ),
               MyTextField(
@@ -88,7 +87,7 @@ class LogInScreen extends StatelessWidget {
                     Get.toNamed(RouteNames.forgotPasswordScreen);
                   },
                   child: Text(
-                    'Forgot Password?',
+                    LoginSignUpConstantsE.forgotpassText.tr,
                     textAlign: TextAlign.end,
                     style: CustomTextStyles.descriptionTextStyleB
                         .copyWith(color: AppColors.main2Coclor),
@@ -105,7 +104,7 @@ class LogInScreen extends StatelessWidget {
                   ///Get.offAllNamed(RouteNames.homeMainScreen);
                   __.loginUserWithEmailAndPassword();
                 },
-                title: "LogIn",
+                title: LoginSignUpConstantsE.loginText.tr,
               ),
               height2(),
               Center(
@@ -115,11 +114,11 @@ class LogInScreen extends StatelessWidget {
                   },
                   child: RichText(
                     text: TextSpan(
-                        text: "Don't have an account? ",
+                        text: LoginSignUpConstantsE.dontHaveAccountText.tr,
                         style: Theme.of(context).textTheme.bodyMedium,
                         children: [
                           TextSpan(
-                            text: 'Sign up',
+                            text: LoginSignUpConstantsE.signUpText.tr,
                             style: CustomTextStyles.topicTextStyle
                                 .copyWith(color: AppColors.main2Coclor),
                           )

@@ -38,10 +38,10 @@ class CyberBullyingDetailScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 10,),
-              Text(
-                "CBscreenConstantsE.mainTitle.tr",
-                style: CustomTextStyles.topicTextStyle,
-              ),
+              // Text(
+              //   "CBscreenConstantsE.mainTitle.tr",
+              //   style: CustomTextStyles.topicTextStyle,
+              // ),
               SizedBox(
                 height: Get.height * .02,
               ),

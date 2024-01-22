@@ -14,12 +14,12 @@ import 'DrawerScreen/AboutBesafeScreen.dart';
 import 'DrawerScreen/PrivacyPolicyScreen.dart';
 import 'DrawerScreen/SafetyAdviceScreen.dart';
 import 'DrawerScreen/TermsAndConditionScreen.dart';
+import 'SideDrawerWidget.dart';
 
 class MyDrawerWidget extends StatelessWidget {
   MyDrawerWidget({super.key});
 
   GlobalController globalController = Get.find<GlobalController>();
-  /// SideDrawerController sideDrawerController = Get.put(SideDrawerController());
 
   @override
   Widget build(BuildContext context) {
@@ -170,7 +170,7 @@ class MyDrawerWidget extends StatelessWidget {
                   child: Card(
                     color: Colors.white,
                     child: ListTile(
-                      leading: Icon(
+                      leading: const Icon(
                         Icons.language,
                         color: AppColors.main2Coclor,
                         size: 25,
@@ -191,15 +191,15 @@ class MyDrawerWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 ///logout
                 DrawerSubWidget(
                   onTap: () {
                     FirebaseAuth.instance.signOut();
+                    globalController.update();
                     Get.offAllNamed(RouteNames.loginScreen);
                   },
                   iconPath: AppIcons.logouticon,
-                  title: "Log out",
+                  title: SideDrawerConstantsE.logout.tr,
                 ),
                 height5(),
               ],
@@ -223,37 +223,4 @@ height5() {
   );
 }
 
-class DrawerSubWidget extends StatelessWidget {
-  final String iconPath;
-  final String title;
-  final Widget? trailing;
-  final GestureTapCallback? onTap;
-  const DrawerSubWidget(
-      {super.key,
-      this.trailing,
-      required this.iconPath,
-      required this.title,
-      this.onTap});
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      child: Center(
-        child: ListTile(
-          onTap: onTap,
-          leading: Image.asset(
-            iconPath,
-            color: AppColors.main2Coclor,
-            height: 25,
-          ),
-          title: Text(
-            title,
-            style: CustomTextStyles.buttonTextStyleB,
-          ),
-          trailing: trailing,
-        ),
-      ),
-    );
-  }
-}

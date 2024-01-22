@@ -130,19 +130,19 @@ class SGBVFormsConstantsS {
 ///practical advice detail screen ///k
 
 class PracTicalAdviceConstantsS {
-  static const mainTitleE="Ak ste obeťou sexuálneho násilia, tu sú kroky, ktoré môžete podniknúť:";
-  static const titleE1="Zostaňte na bezpečnom mieste";
-  static const titleE2="Kontaktujte dôveryhodnú osobu";
-  static const titleE3="Navštívte gynekológa";
-  static const titleE4="Zvážte nahlásenie polícii";
-  static const titleE5="Hľadajte odbornú pomoc";
-  static const titleE6="Nenechajte to byť";
-  static const descriptionE1="Snažte sa minimalizovať kontakt s páchateľom, ak je to možné.";
-  static const descriptionE2="Hľadajte podporu od blízkych priateľov, rodiny alebo terapeuta. Rozprávanie o traumatickej skúsenosti môže pomôcť v procese hojenia.";
-  static const descriptionE3="Je dôležité navštíviť gynekológa, hoci to môže byť náročné. Dôvody zahŕňajú liečbu možných fyzických zranení, poradenstvo ohľadom prevencie tehotenstva a prevenciu sexuálne prenosných chorôb.";
-  static const descriptionE4="Rozhodnutie podať oznámenie na polícii je veľmi osobné. Ak sa tak rozhodnete, budete musieť absolvovať výsluch, ktorý môže byť náročný. Ak sa rozhodnete podať oznámenie na polícii, vyšetrovaniu môžu pomôcť dôkazy, ako napríklad oblečenie a iné predmety, s ktorými páchateľ prišiel do kontaktu.";
-  static const descriptionE5="Mnohí ľudia potrebujú podporu a pochopenie odborníkov, ako sú sexuológovia a psychológovia, aby im pomohli vyrovnať sa s následkami sexuálneho násilia alebo znásilnenia. ";
-  static const descriptionE6="Aj keď k sexuálnemu zneužívaniu došlo v minulosti, je možné podniknúť kroky na následné zotavenie a prípadné trestné stíhanie páchateľa";
+  static const mainTitle="Ak ste obeťou sexuálneho násilia, tu sú kroky, ktoré môžete podniknúť:";
+  static const title1="Zostaňte na bezpečnom mieste";
+  static const title2="Kontaktujte dôveryhodnú osobu";
+  static const title3="Navštívte gynekológa";
+  static const title4="Zvážte nahlásenie polícii";
+  static const title5="Hľadajte odbornú pomoc";
+  static const title6="Nenechajte to byť";
+  static const description1="Snažte sa minimalizovať kontakt s páchateľom, ak je to možné.";
+  static const description2="Hľadajte podporu od blízkych priateľov, rodiny alebo terapeuta. Rozprávanie o traumatickej skúsenosti môže pomôcť v procese hojenia.";
+  static const description3="Je dôležité navštíviť gynekológa, hoci to môže byť náročné. Dôvody zahŕňajú liečbu možných fyzických zranení, poradenstvo ohľadom prevencie tehotenstva a prevenciu sexuálne prenosných chorôb.";
+  static const description4="Rozhodnutie podať oznámenie na polícii je veľmi osobné. Ak sa tak rozhodnete, budete musieť absolvovať výsluch, ktorý môže byť náročný. Ak sa rozhodnete podať oznámenie na polícii, vyšetrovaniu môžu pomôcť dôkazy, ako napríklad oblečenie a iné predmety, s ktorými páchateľ prišiel do kontaktu.";
+  static const description5="Mnohí ľudia potrebujú podporu a pochopenie odborníkov, ako sú sexuológovia a psychológovia, aby im pomohli vyrovnať sa s následkami sexuálneho násilia alebo znásilnenia. ";
+  static const description6="Aj keď k sexuálnemu zneužívaniu došlo v minulosti, je možné podniknúť kroky na následné zotavenie a prípadné trestné stíhanie páchateľa";
 }
 
 ///types of suppoert screen

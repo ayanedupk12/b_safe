@@ -127,19 +127,19 @@ class SGBVFormsConstantsP {
 ///practical advice detail screen ///k
 
 class PracTicalAdviceConstantsP{
-  static const mainTitleE="Jeśli jesteś ofiarą przemocy seksualnej, oto kilka kroków, które możesz podjąć:";
-  static const titleE1="Pozostań w bezpiecznym miejscu";
-  static const titleE2="Skontaktuj się z zaufaną osobą";
-  static const titleE3="Wizyta u ginekologa";
-  static const titleE4="Rozważ zgłoszenie się na policję";
-  static const titleE5="Poszukaj profesjonalnej pomocy";
-  static const titleE6="Nie odpuszczaj";
-  static const descriptionE1="Jeśli to możliwe, staraj się unikać dalszego kontaktu ze sprawcą.";
-  static const descriptionE2="Poszukaj wsparcia u bliskich przyjaciół, rodziny lub terapeuty. Rozmowa o traumatycznym doświadczeniu może pomóc w procesie leczenia.";
-  static const descriptionE3="Ważne jest, aby odwiedzić ginekologa, nawet jeśli może to być trudne. Powody obejmują leczenie ewentualnych urazów fizycznych, doradztwo w zakresie zapobiegania ciąży i zapobieganie chorobom przenoszonym drogą płciową.";
-  static const descriptionE4="Decyzja o zgłoszeniu się na policję jest bardzo indywidualna. Jeśli się na to zdecydujesz, będziesz musiał przejść przesłuchanie, które może być trudne. Jeśli zdecydujesz się zgłosić na policję, dowody takie jak odzież i inne przedmioty, z którymi miał kontakt sprawca, mogą pomóc w dochodzeniu.";
-  static const descriptionE5="Wiele osób potrzebuje wsparcia i zrozumienia ze strony profesjonalistów, takich jak seksuolodzy i psycholodzy, aby pomóc im poradzić sobie ze skutkami przemocy seksualnej lub gwałtu. ";
-  static const descriptionE6="nawet jeśli wykorzystywanie seksualne (lub niewłaściwe zachowanie) miało miejsce w przeszłości, nadal możliwe jest podjęcie kroków w celu odzyskania i ewentualnego ścigania sprawcy. ";
+  static const mainTitle="Jeśli jesteś ofiarą przemocy seksualnej, oto kilka kroków, które możesz podjąć:";
+  static const title1="Pozostań w bezpiecznym miejscu";
+  static const title2="Skontaktuj się z zaufaną osobą";
+  static const title3="Wizyta u ginekologa";
+  static const title4="Rozważ zgłoszenie się na policję";
+  static const title5="Poszukaj profesjonalnej pomocy";
+  static const title6="Nie odpuszczaj";
+  static const description1="Jeśli to możliwe, staraj się unikać dalszego kontaktu ze sprawcą.";
+  static const description2="Poszukaj wsparcia u bliskich przyjaciół, rodziny lub terapeuty. Rozmowa o traumatycznym doświadczeniu może pomóc w procesie leczenia.";
+  static const description3="Ważne jest, aby odwiedzić ginekologa, nawet jeśli może to być trudne. Powody obejmują leczenie ewentualnych urazów fizycznych, doradztwo w zakresie zapobiegania ciąży i zapobieganie chorobom przenoszonym drogą płciową.";
+  static const description4="Decyzja o zgłoszeniu się na policję jest bardzo indywidualna. Jeśli się na to zdecydujesz, będziesz musiał przejść przesłuchanie, które może być trudne. Jeśli zdecydujesz się zgłosić na policję, dowody takie jak odzież i inne przedmioty, z którymi miał kontakt sprawca, mogą pomóc w dochodzeniu.";
+  static const description5="Wiele osób potrzebuje wsparcia i zrozumienia ze strony profesjonalistów, takich jak seksuolodzy i psycholodzy, aby pomóc im poradzić sobie ze skutkami przemocy seksualnej lub gwałtu. ";
+  static const description6="nawet jeśli wykorzystywanie seksualne (lub niewłaściwe zachowanie) miało miejsce w przeszłości, nadal możliwe jest podjęcie kroków w celu odzyskania i ewentualnego ścigania sprawcy. ";
 }
 
 ///types of suppoert screen

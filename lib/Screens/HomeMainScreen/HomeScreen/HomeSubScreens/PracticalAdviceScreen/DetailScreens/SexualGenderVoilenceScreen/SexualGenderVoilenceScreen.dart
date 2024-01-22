@@ -19,7 +19,7 @@ class SexualGenderVoilenceScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          "title",
+          HomeScreenConstantsE.practicalAdvice.tr,
           style: CustomTextStyles.appBarTextStyle,
           textAlign: TextAlign.center,
         ),
@@ -35,10 +35,10 @@ class SexualGenderVoilenceScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Text(
-              //   title.tr,
-              //   style: CustomTextStyles.topicTextStyle,
-              // ),
+              Text(
+                PractivcalAdvsMainConstantsE.sexualgebdebaseButontext.tr,
+                style: CustomTextStyles.topicTextStyle,
+              ),
               SizedBox(
                 height: Get.height * .02,
               ),

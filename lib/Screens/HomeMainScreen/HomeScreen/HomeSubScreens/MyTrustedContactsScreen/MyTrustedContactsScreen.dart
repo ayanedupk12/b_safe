@@ -7,6 +7,7 @@ import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../Routs/RoutsNames.dart';
+import '../../../../../Utils/AppConstants/EnglishConstants.dart';
 import 'MTCcontroller.dart';
 
 class MyTrustedContactsScreen extends StatelessWidget {
@@ -24,7 +25,7 @@ class MyTrustedContactsScreen extends StatelessWidget {
           elevation: 0,
           centerTitle: true,
           title: Text(
-            "My Trusted Contacts",
+            HomeScreenConstantsE.myTrustedContacts.tr,
             style: CustomTextStyles.appBarTextStyle,
           ),
           leading: IconButton(
@@ -133,13 +134,13 @@ class MyTrustedContactsScreen extends StatelessWidget {
                         },
                       ),
               ),
-        floatingActionButton: FloatingActionButton.extended(
+        floatingActionButton: FloatingActionButton(
           onPressed: () {
             Get.defaultDialog(
-                title: "Add My Trusted Contacts",
+                title: HomeScreenConstantsE.myTrustedContacts.tr,
                 titleStyle: CustomTextStyles.logoStyle,
                 titlePadding:
-                    const EdgeInsets.only(left: 25, right: 25, top: 20),
+                const EdgeInsets.only(left: 25, right: 25, top: 20),
                 contentPadding: const EdgeInsets.all(20),
                 content: Column(
                   children: [
@@ -158,20 +159,14 @@ class MyTrustedContactsScreen extends StatelessWidget {
                     height2(),
                     MyButton(
                         loading: __.loading,
-                        title: 'Add',
+                        title: MyTrustedContactsConstantsE.saveText.tr,
                         onPress: () {
                           __.addContact();
                         })
                   ],
                 ));
           },
-          label: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Icon(Icons.add),
-              Text('Add new Contact'),
-            ],
-          ),
+          child: Icon(Icons.add),
         ),
       );
     });
