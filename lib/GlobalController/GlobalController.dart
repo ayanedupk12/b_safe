@@ -1,8 +1,5 @@
 import 'dart:async';
-
 import 'package:b_safe/Globalmodels/ServicesModel.dart';
-import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
-import 'package:b_safe/Screens/LanguageOrCountrySelectionScreen.dart';
 import 'package:b_safe/Utils/locationServices.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -23,6 +20,7 @@ class GlobalController extends GetxController {
   bool switchValue = false;
   bool firstTime = false;
   String? countryUsage;
+
   // String? language;
 
   @override
@@ -31,9 +29,7 @@ class GlobalController extends GetxController {
     switchValue = await checkSecurity();
     checkappOpenFirstTimeOrnot();
     SharedPreferences pref = await SharedPreferences.getInstance();
-
     String tempCountry= pref.getString('country')??'Poland';
-
     changeCountry(tempCountry);
   }
 
@@ -50,6 +46,7 @@ class GlobalController extends GetxController {
   languageButton() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     pref.setBool('firstTime', true);
+    print(pref.setBool('firstTime', true));
     Get.offAllNamed(RouteNames.loginScreen);
   }
 

@@ -1,15 +1,13 @@
-import 'package:b_safe/Utils/AppConstants/English/PracticalAdviceConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../../../Routs/RoutsNames.dart';
+import '../../../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../../../../Utils/Colors.dart';
 import '../../../../../../../Utils/Textstyles.dart';
-import '../../../../../HomeMainScreen.dart';
 import 'PADSWidget.dart';
 
 class PracticalAdviceDetailScreen extends StatelessWidget {
-  final String appBarText;
-  const PracticalAdviceDetailScreen({super.key, required this.appBarText});
+  const PracticalAdviceDetailScreen({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +19,7 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          appBarText.tr,
+         " appBarText.tr",
           style: CustomTextStyles.logoStyle.copyWith(fontSize: 20),
         ),
         leading: IconButton(

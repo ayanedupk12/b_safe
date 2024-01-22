@@ -1,11 +1,7 @@
-
-
 import 'package:b_safe/Routs/RoutsNames.dart';
-import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/CyberBullying&OnlineSafetyScreen/CyberBullying&OnlineSafetyScreen.dart';
-import 'package:b_safe/Utils/AppConstants/English/CyberBullyingAndOnlineSafetyConstantsE.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../../../../Utils/Colors.dart';
 import '../../../../../../../Utils/Textstyles.dart';
 
@@ -43,7 +39,7 @@ class CyberBullyingDetailScreen extends StatelessWidget {
             children: [
               SizedBox(height: 10,),
               Text(
-                CBscreenConstantsE.mainTitle.tr,
+                "CBscreenConstantsE.mainTitle.tr",
                 style: CustomTextStyles.topicTextStyle,
               ),
               SizedBox(

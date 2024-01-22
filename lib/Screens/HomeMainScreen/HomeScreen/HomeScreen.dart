@@ -1,11 +1,11 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
-import 'package:b_safe/Utils/AppConstants/English/HomeScreenContantsE.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/IconsPaths.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../Utils/AppConstants/EnglishConstants.dart';
 import '../HomeMainScreenController.dart';
 
 class HomeScreen extends StatelessWidget {

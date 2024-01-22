@@ -1,10 +1,10 @@
-import 'package:b_safe/Utils/AppConstants/English/CyberBullyingAndOnlineSafetyConstantsE.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../Routs/RoutsNames.dart';
+import '../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../HomeMainScreenController.dart';
 import 'C_BandO_Swidget.dart';
 

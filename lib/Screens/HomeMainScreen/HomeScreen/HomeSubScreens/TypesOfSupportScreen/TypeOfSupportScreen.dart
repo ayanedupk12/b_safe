@@ -1,11 +1,10 @@
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/TypesOfSupportScreen/TOSWidget.dart';
-import 'package:b_safe/Utils/AppConstants/English/TypesOfSupportScreenConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../../Utils/Colors.dart';
 import '../../../../../../Utils/Textstyles.dart';
 import '../../../../../Routs/RoutsNames.dart';
-import '../../../HomeMainScreen.dart';
+import '../../../../../Utils/AppConstants/EnglishConstants.dart';
 
 class TypeOfSupportScreen extends StatelessWidget {
   const TypeOfSupportScreen({super.key});

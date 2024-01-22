@@ -1,6 +1,6 @@
-import 'package:b_safe/Utils/AppConstants/English/PrivacyPolicyScreenConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../Utils/Colors.dart';
 import '../../../../Utils/Textstyles.dart';
 

@@ -1,13 +1,12 @@
 import 'dart:io';
 import 'package:b_safe/GlobalWidget/MyButton.dart';
 import 'package:b_safe/Screens/HomeMainScreen/MyJournalScreen/MyJournalController.dart';
-import 'package:b_safe/Utils/AppConstants/English/MyJournalConstantsE.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:social_media_recorder/audio_encoder_type.dart';
 import 'package:social_media_recorder/screen/social_media_recorder.dart';
 import '../../../GlobalWidget/MyTextField.dart';
+import '../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../Utils/Textstyles.dart';
 import 'JournalWidget.dart';
 

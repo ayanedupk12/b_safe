@@ -1,13 +1,9 @@
-
-
-import 'package:b_safe/Utils/AppConstants/English/AboutConstantsE.dart';
-import 'package:b_safe/Utils/IconsPaths.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../Utils/Colors.dart';
 import '../../../../Utils/Textstyles.dart';
-import '../../HomeMainScreen.dart';
 
 class AboutBeSafeScreen extends StatelessWidget {
   final String image;
