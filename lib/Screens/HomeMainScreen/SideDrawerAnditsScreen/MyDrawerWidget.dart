@@ -14,7 +14,7 @@ import 'DrawerScreen/AboutBesafeScreen.dart';
 import 'DrawerScreen/PrivacyPolicyScreen.dart';
 import 'DrawerScreen/SafetyAdviceScreen.dart';
 import 'DrawerScreen/TermsAndConditionScreen.dart';
-import 'SideDrawerWidget.dart';
+import 'SideDrawerSubWidget.dart';
 
 class MyDrawerWidget extends StatelessWidget {
   MyDrawerWidget({super.key});
