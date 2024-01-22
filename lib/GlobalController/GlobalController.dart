@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 import 'package:b_safe/Globalmodels/ServicesModel.dart';
 import 'package:b_safe/Utils/locationServices.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -13,7 +14,10 @@ import '../Screens/HomeMainScreen/HomeMainScreen.dart';
 import '../Screens/SecurityScreen/SecurityScreen.dart';
 import 'dart:math' as Math;
 
+import '../Utils/AppConstants/EnglishConstants.dart';
+
 class GlobalController extends GetxController {
+
 
   FirebaseAuth auth = FirebaseAuth.instance;
 
@@ -21,27 +25,78 @@ class GlobalController extends GetxController {
   bool firstTime = false;
   String? countryUsage;
 
-  // String? language;
+  List<String> languageList = [
+    LCscreenConstantsE.english,
+    LCscreenConstantsE.polish,
+    LCscreenConstantsE.czcechL,
+    LCscreenConstantsE.slovakia,
+    LCscreenConstantsE.ukrain,
+  ];
 
+  List<String> countryList = [
+    LCscreenConstantsE.poland,
+    LCscreenConstantsE.zcechC,
+    LCscreenConstantsE.slovakia,
+  ];
+  String selectedCountry = "English";
   @override
   void onInit() async{
     super.onInit();
-    switchValue = await checkSecurity();
+    switchValue = await checkSecurity() ?? false;
+    selectedCountry = await checkSelectedLan() ?? LCscreenConstantsE.english;
+    updateLocale(selectedCountry);
     checkappOpenFirstTimeOrnot();
     SharedPreferences pref = await SharedPreferences.getInstance();
     String tempCountry= pref.getString('country')??'Poland';
     changeCountry(tempCountry);
   }
 
+  void updateLocale(String selectedCountry) async {
+    final SharedPreferences preferences = await SharedPreferences.getInstance();
+    switch (selectedCountry) {
+      case LCscreenConstantsE.polish:
+        Get.updateLocale(const Locale('pl', 'PL'));
+        preferences.setString("selectedCountry", LCscreenConstantsE.polish);
+        break;
+      case LCscreenConstantsE.english:
+        Get.updateLocale(const Locale('en', 'US'));
+        preferences.setString("selectedCountry", LCscreenConstantsE.english);
+        break;
+      case LCscreenConstantsE.czcechL:
+        Get.updateLocale(const Locale('cs', 'CZ'));
+        preferences.setString("selectedCountry", LCscreenConstantsE.czcechL);
+        break;
+      case LCscreenConstantsE.slovak:
+        Get.updateLocale(const Locale('sk', 'SK'));
+        preferences.setString("selectedCountry", LCscreenConstantsE.slovak);
+        break;
+      case LCscreenConstantsE.ukrain:
+        Get.updateLocale(const Locale('uk', 'UA'));
+        preferences.setString("selectedCountry", LCscreenConstantsE.ukrain);
+        break;
+      default:
+        Get.updateLocale(const Locale('en', 'US'));
+        break;
+    }
+
+    update();
+  }
+
   checkSecurity() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    return pref.getBool('isSecure') ?? false;
+    return pref.getBool('isSecure');
+  }
+  checkSelectedLan() async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    return pref.getString('selectedCountry');
   }
 
   void checkappOpenFirstTimeOrnot() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     firstTime = pref.getBool('firstTime') ?? false;
   }
+
+
 
   languageButton() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
@@ -134,7 +189,7 @@ class GlobalController extends GetxController {
       await permission.Permission.storage.request();
     }
     if(await permission.Permission.microphone.isPermanentlyDenied){
-     await  permission.openAppSettings();
+      await  permission.openAppSettings();
     }
     if(await permission.Permission.camera.isPermanentlyDenied){
       await  permission.openAppSettings();

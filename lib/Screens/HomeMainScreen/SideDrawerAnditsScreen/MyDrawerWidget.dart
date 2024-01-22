@@ -1,6 +1,7 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/GlobalWidget/DropDownField.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
+import 'package:b_safe/Screens/HomeMainScreen/SideDrawerAnditsScreen/SideDrawerAnditsScreenController.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/IconsPaths.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
@@ -17,7 +18,8 @@ import 'DrawerScreen/TermsAndConditionScreen.dart';
 class MyDrawerWidget extends StatelessWidget {
   MyDrawerWidget({super.key});
 
-  final GlobalController globalController = Get.find<GlobalController>();
+  GlobalController globalController = Get.find<GlobalController>();
+  /// SideDrawerController sideDrawerController = Get.put(SideDrawerController());
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,7 @@ class MyDrawerWidget extends StatelessWidget {
                 ///Call Police/////////////
                 DrawerSubWidget(
                   iconPath: AppIcons.callicon,
-                  title: SideDrawerConstantsE.policeButton.tr,
+                  title: HomeScreenConstantsE.callPolice.tr,
                   onTap: () async {
                     globalController.makeACall("112");
                   },
@@ -127,7 +129,7 @@ class MyDrawerWidget extends StatelessWidget {
                       trailing: Transform.scale(
                         scale: .7,
                         child: CupertinoSwitch(
-                          value: __.switchValue,
+                          value: globalController.switchValue,
                           activeColor: Colors.grey,
                           onChanged: (value) {
                             globalController.securityModeCheck();
@@ -149,16 +151,13 @@ class MyDrawerWidget extends StatelessWidget {
                         height: 25,
                       ),
                       title: CustomDropdownFormField(
-                        onChange: (val) {
+                        onChange: (selectedIndex) {
+                          globalController.updateLocale(selectedIndex.toString());
                         },
-                        text: SideDrawerConstantsE.chooseLan.tr,
-                        actionsList: [
-                          LCscreenConstantsE.english.tr,
-                          LCscreenConstantsE.polish.tr,
-                          LCscreenConstantsE.czcechL.tr,
-                          LCscreenConstantsE.slovak.tr,
-                          LCscreenConstantsE.ukrain.tr,
-                        ],
+                        text:__.selectedCountry.isNotEmpty
+                            ? __.selectedCountry.tr
+                            : LCscreenConstantsE.languageHintText.tr,
+                        actionsList: globalController.languageList,
                         width: Get.width,
                         height: Get.height * .05,
                       ),
@@ -179,14 +178,11 @@ class MyDrawerWidget extends StatelessWidget {
                       title: CustomDropdownFormField(
                         width: Get.width,
                         height: Get.height * .05,
-                        text: globalController.countryUsage!=null?globalController.countryUsage:SideDrawerConstantsE.chooseContry.tr,
+                        text: globalController.countryUsage ?? SideDrawerConstantsE.chooseContry.tr,
                         actionsList: [
-                          'Poland',
-                          "Czech Republic",
-                          "Slovakia"
-                          // LCscreenConstantsE.poland.tr,
-                          // LCscreenConstantsE.zcechC.tr,
-                          // LCscreenConstantsE.slovakia.tr,
+                          LCscreenConstantsE.poland.tr,
+                          LCscreenConstantsE.zcechC.tr,
+                          LCscreenConstantsE.slovakia.tr,
                         ],
                         onChange: (val) {
                           globalController.changeCountry(val!);

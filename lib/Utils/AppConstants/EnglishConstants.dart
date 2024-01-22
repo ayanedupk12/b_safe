@@ -22,11 +22,11 @@ class LCscreenConstantsE{
   static const buttonText="Done";
   static const poland="Poland";
   static const zcechC="Czech Republic";
-  static const slovakia="Slovakia";
+  static const slovakia="Slovakia";///country
   static const english="English";
   static const polish="Polish";
   static const czcechL="Czech";
-  static const slovak="Slovak";
+  static const slovak="Slovak";///lamguage
   static const ukrain="Ukrainian";
 }
 

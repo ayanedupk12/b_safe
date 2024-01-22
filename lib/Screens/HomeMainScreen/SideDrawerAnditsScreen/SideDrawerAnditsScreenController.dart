@@ -1,44 +1,60 @@
-// import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
-// import 'package:b_safe/Screens/SecurityScreen/SecurityScreen.dart';
+// import 'dart:ui';
+//
 // import 'package:get/get.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 //
 // class SideDrawerController extends GetxController {
-//   bool switchValue = false;
-//   bool firstTime = false;
+//
+//
+//
+//   List<String> countryList = [
+//     "English",
+//     "Polish",
+//     "Czech Republic",
+//     "Slovak",
+//     "Ukrainian",
+//   ];
+//
+//   String selectedCountry = "English";
 //
 //   @override
-//   void onInit() {
+//   void onInit() async {
 //     super.onInit();
-//     swithboolFromSharedpreference();
-//     checkappOpenFirstTimeOrnot();
+//     initPreferences();
+//     updateLocale(selectedCountry);
+//   }
+//   Future<void> initPreferences() async {
+//     SharedPreferences pref = await SharedPreferences.getInstance();
+//     selectedCountry = pref.getString('selectedCountry') ?? selectedCountry;
 //   }
 //
-//   void swithboolFromSharedpreference() async {
-//     SharedPreferences pref = await SharedPreferences.getInstance();
-//     switchValue = pref.getBool('isSecure') ?? false;
-//   }
-//
-//   void checkappOpenFirstTimeOrnot() async {
-//     SharedPreferences pref = await SharedPreferences.getInstance();
-//     switchValue = pref.getBool('firstTime') ?? false;
-//   }
-//
-//   void splashSerVices() async {
-//     SharedPreferences pref = await SharedPreferences.getInstance();
-//     switchValue = !switchValue;
-//     if (switchValue == false) {
-//       pref.setBool('isSecure', true);
-//       Get.offAll(HomeMainScreen());
-//       print("Switch value set to false");
-//       print(switchValue);
-//     } else {
-//       pref.setBool('isSecure', false);
-//       Get.offAll(SecurityScreen());
-//       print("Switch value set to true");
-//       print(switchValue);
+//   void updateLocale(String selectedCountry) async{
+//     final SharedPreferences preferences = await SharedPreferences.getInstance();
+//     switch (selectedCountry) {
+//       case "Polish":
+//         Get.updateLocale(const Locale('pl', 'PL'));
+//         await preferences.setString("selectedCountry", selectedCountry);
+//         break;
+//       case "English":
+//         Get.updateLocale(const Locale('en', 'US'));
+//         await preferences.setString("selectedCountry", selectedCountry);
+//         break;
+//       case "Czech Republic":
+//         Get.updateLocale(const Locale('cs', 'CZ'));
+//         await preferences.setString("selectedCountry", selectedCountry);
+//         break;
+//       case "Slovak":
+//         Get.updateLocale(const Locale('sk', 'SK'));
+//         await preferences.setString("selectedCountry", selectedCountry);
+//         break;
+//       case "Ukrainian":
+//         Get.updateLocale(const Locale('uk', 'UA'));
+//         await preferences.setString("selectedCountry", selectedCountry);
+//         break;
+//       default:
+//         Get.updateLocale(const Locale('en', 'US'));
+//         break;
 //     }
-//
 //     update();
 //   }
 // }

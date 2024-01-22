@@ -13,6 +13,7 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+
     return GetBuilder<GlobalController>(builder: (__) {
       return Scaffold(
         backgroundColor: AppColors.mainColor,
@@ -61,15 +62,13 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                       height: Get.height * .07,
                     ),
                     CustomDropdownFormField(
-                      onChange: (val) {},
-                      text: LCscreenConstantsE.languageHintText.tr,
-                      actionsList: [
-                        LCscreenConstantsE.english.tr,
-                        LCscreenConstantsE.polish.tr,
-                        LCscreenConstantsE.czcechL.tr,
-                        LCscreenConstantsE.slovak.tr,
-                        LCscreenConstantsE.ukrain.tr,
-                      ],
+                      onChange: (val) {
+                        __.updateLocale(val.toString());
+                      },
+                      text: __.selectedCountry.isNotEmpty
+                          ? __.selectedCountry
+                          : LCscreenConstantsE.languageHintText.tr,
+                      actionsList: __.languageList,
                       width: Get.width,
                       height: Get.height * .08,
                     ),

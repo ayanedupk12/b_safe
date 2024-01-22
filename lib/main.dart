@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     return GetBuilder<GlobalController>(builder: (__) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        fallbackLocale: const Locale("en_US"),
+        fallbackLocale:  Locale(__.selectedCountry),
         translations: Language(),
         locale: const Locale("us", "US"),
         initialRoute: RouteNames.splashScreen,
