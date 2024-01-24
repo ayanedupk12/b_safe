@@ -16,7 +16,7 @@ import '../Screens/HomeMainScreen/HomeScreen/HomeSubScreens/PracticalAdviceScree
 import '../Screens/HomeMainScreen/HomeScreen/HomeSubScreens/TypesOfSupportScreen/TypeOfSupportScreen.dart';
 import '../Screens/LanguageOrCountrySelectionScreen.dart';
 import '../Screens/SplashScreen.dart';
-import '../Utils/AppConstants/English/PracticalAdviceConstantsE.dart';
+import '../Utils/AppConstants/EnglishConstants.dart';
 import 'RoutsNames.dart';
 
 class AppRouts {
@@ -51,21 +51,13 @@ class AppRouts {
             page: () => OnlineSafetyDetailScreen()),
         GetPage(
             name: RouteNames.sGBVDifferentFormsDetailScreen,
-            page: () => SGBVDifferentFormsDetailScreen(
-                  appBarText: PractivcalAdvsMainConstantsE.appBarText.tr,
-                )),
+            page: () => SGBVDifferentFormsDetailScreen()),
         GetPage(
             name: RouteNames.practicalAdviceDetailScreen,
-            page: () => PracticalAdviceDetailScreen(
-                  appBarText: PractivcalAdvsMainConstantsE.appBarText.tr,
-                )),
+            page: () => PracticalAdviceDetailScreen()),
         GetPage(
             name: RouteNames.sexualGenderVoilenceScreen,
-            page: () => SexualGenderVoilenceScreen(
-                  appBarText: PractivcalAdvsMainConstantsE.appBarText.tr,
-                  title:
-                      PractivcalAdvsMainConstantsE.sexualgebdebaseButontext.tr,
-                )),
+            page: () => SexualGenderVoilenceScreen()),
         GetPage(
             name: RouteNames.securityScreen,
             page: () => SecurityScreen()),

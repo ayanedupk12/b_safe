@@ -1,15 +1,13 @@
-import 'package:b_safe/Utils/AppConstants/English/PracticalAdviceConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../../../Routs/RoutsNames.dart';
+import '../../../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../../../../Utils/Colors.dart';
 import '../../../../../../../Utils/Textstyles.dart';
-import '../../../../../HomeMainScreen.dart';
 import 'SGBVWidget.dart';
 
 class SGBVDifferentFormsDetailScreen extends StatelessWidget {
-  final String appBarText;
-  const SGBVDifferentFormsDetailScreen({super.key, required this.appBarText});
+  const SGBVDifferentFormsDetailScreen({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,7 @@ class SGBVDifferentFormsDetailScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 10,),
               Text(
-                SGBVFormsConstantsE.maintitle.tr,
+                SGBVFormsConstantsE.SGBVencompasses.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
               const SizedBox(height: 10,),

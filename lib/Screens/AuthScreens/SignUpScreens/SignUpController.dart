@@ -1,3 +1,5 @@
+import 'package:b_safe/Routs/Routs.dart';
+import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
 import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
 import 'package:flutter/cupertino.dart';
@@ -35,7 +37,7 @@ class SignUpController extends GetxController {
           showMessage('User created successfully.');
           isLoading=false;
           update();
-          Get.to(HomeMainScreen());
+          Get.offAllNamed(RouteNames.homeMainScreen);
         } else {
           print('Failed to create user.');
           showMessage('Failed to create user.');
@@ -51,7 +53,7 @@ class SignUpController extends GetxController {
         showMessage('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
         print(e);
-        Get.to(LogInScreen());
+        Get.offAllNamed(RouteNames.loginScreen);
         print('The account already exists for that email.');
         showMessage('The account already exists for that email please login to continue.');
         isLoading=false;

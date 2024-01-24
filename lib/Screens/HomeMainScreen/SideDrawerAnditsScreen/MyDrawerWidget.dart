@@ -1,6 +1,5 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/GlobalWidget/DropDownField.dart';
-import 'package:b_safe/GlobalWidget/MyButton.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/IconsPaths.dart';
@@ -9,19 +8,17 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import '../../../Utils/AppConstants/English/LanguageAndCountrySelectionConstantsE.dart';
-import '../../../Utils/AppConstants/English/SideDrawerConstantsE.dart';
+import '../../../Utils/AppConstants/EnglishConstants.dart';
 import 'DrawerScreen/AboutBesafeScreen.dart';
 import 'DrawerScreen/PrivacyPolicyScreen.dart';
 import 'DrawerScreen/SafetyAdviceScreen.dart';
 import 'DrawerScreen/TermsAndConditionScreen.dart';
-import 'SideDrawerAnditsScreenController.dart';
+import 'SideDrawerSubWidget.dart';
 
 class MyDrawerWidget extends StatelessWidget {
   MyDrawerWidget({super.key});
 
-  final GlobalController globalController = Get.find<GlobalController>();
+  GlobalController globalController = Get.find<GlobalController>();
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +52,7 @@ class MyDrawerWidget extends StatelessWidget {
                 ///Call Police/////////////
                 DrawerSubWidget(
                   iconPath: AppIcons.callicon,
-                  title: SideDrawerConstantsE.policeButton.tr,
+                  title: HomeScreenConstantsE.callPolice.tr,
                   onTap: () async {
                     globalController.makeACall("112");
                   },
@@ -131,7 +128,7 @@ class MyDrawerWidget extends StatelessWidget {
                       trailing: Transform.scale(
                         scale: .7,
                         child: CupertinoSwitch(
-                          value: __.switchValue,
+                          value: globalController.switchValue,
                           activeColor: Colors.grey,
                           onChanged: (value) {
                             globalController.securityModeCheck();
@@ -153,18 +150,13 @@ class MyDrawerWidget extends StatelessWidget {
                         height: 25,
                       ),
                       title: CustomDropdownFormField(
-                        onChange: (val) {
-                          print("value");
-                          print(val);
+                        onChange: (selectedIndex) {
+                          globalController.updateLocale(selectedIndex.toString());
                         },
-                        text: SideDrawerConstantsE.chooseLan.tr,
-                        actionsList: [
-                          LCscreenConstantsE.english.tr,
-                          LCscreenConstantsE.polish.tr,
-                          LCscreenConstantsE.czcechL.tr,
-                          LCscreenConstantsE.slovak.tr,
-                          LCscreenConstantsE.ukrain.tr,
-                        ],
+                        text:__.selectedCountry.isNotEmpty
+                            ? __.selectedCountry.tr
+                            : LCscreenConstantsE.languageHintText.tr,
+                        actionsList: globalController.languageList,
                         width: Get.width,
                         height: Get.height * .05,
                       ),
@@ -177,7 +169,7 @@ class MyDrawerWidget extends StatelessWidget {
                   child: Card(
                     color: Colors.white,
                     child: ListTile(
-                      leading: Icon(
+                      leading: const Icon(
                         Icons.language,
                         color: AppColors.main2Coclor,
                         size: 25,
@@ -185,14 +177,11 @@ class MyDrawerWidget extends StatelessWidget {
                       title: CustomDropdownFormField(
                         width: Get.width,
                         height: Get.height * .05,
-                        text: globalController.countryUsage!=null?globalController.countryUsage:SideDrawerConstantsE.chooseContry.tr,
+                        text: globalController.countryUsage ?? SideDrawerConstantsE.chooseContry.tr,
                         actionsList: [
-                          'Poland',
-                          "Czech Republic",
-                          "Slovakia"
-                          // LCscreenConstantsE.poland.tr,
-                          // LCscreenConstantsE.zcechC.tr,
-                          // LCscreenConstantsE.slovakia.tr,
+                          LCscreenConstantsE.poland.tr,
+                          LCscreenConstantsE.zcechC.tr,
+                          LCscreenConstantsE.slovakia.tr,
                         ],
                         onChange: (val) {
                           globalController.changeCountry(val!);
@@ -201,7 +190,6 @@ class MyDrawerWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 ///logout
                 DrawerSubWidget(
                   onTap: () {
@@ -209,7 +197,7 @@ class MyDrawerWidget extends StatelessWidget {
                     Get.offAllNamed(RouteNames.loginScreen);
                   },
                   iconPath: AppIcons.logouticon,
-                  title: "Log out",
+                  title: SideDrawerConstantsE.logout.tr,
                 ),
                 height5(),
               ],
@@ -233,37 +221,4 @@ height5() {
   );
 }
 
-class DrawerSubWidget extends StatelessWidget {
-  final String iconPath;
-  final String title;
-  final Widget? trailing;
-  final GestureTapCallback? onTap;
-  const DrawerSubWidget(
-      {super.key,
-      this.trailing,
-      required this.iconPath,
-      required this.title,
-      this.onTap});
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      child: Center(
-        child: ListTile(
-          onTap: onTap,
-          leading: Image.asset(
-            iconPath,
-            color: AppColors.main2Coclor,
-            height: 25,
-          ),
-          title: Text(
-            title,
-            style: CustomTextStyles.buttonTextStyleB,
-          ),
-          trailing: trailing,
-        ),
-      ),
-    );
-  }
-}

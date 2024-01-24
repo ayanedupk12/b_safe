@@ -1,13 +1,11 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/GlobalWidget/MyButton.dart';
-import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../GlobalWidget/DropDownField.dart';
-import '../Utils/AppConstants/English/LanguageAndCountrySelectionConstantsE.dart';
+import '../Utils/AppConstants/EnglishConstants.dart';
 
 class LanguageOrCountrySelectionScreen extends StatelessWidget {
   const LanguageOrCountrySelectionScreen({
@@ -15,6 +13,7 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+
     return GetBuilder<GlobalController>(builder: (__) {
       return Scaffold(
         backgroundColor: AppColors.mainColor,
@@ -48,7 +47,7 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      LCscreenConstantsE.title.tr,
+                      LCscreenConstantsE.selectCountryandlanguage.tr,
                       style: CustomTextStyles.topicTextStyle,
                     ),
                     CustomDropdownFormField(
@@ -63,15 +62,13 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                       height: Get.height * .07,
                     ),
                     CustomDropdownFormField(
-                      onChange: (val) {},
-                      text: LCscreenConstantsE.languageHintText.tr,
-                      actionsList: [
-                        LCscreenConstantsE.english.tr,
-                        LCscreenConstantsE.polish.tr,
-                        LCscreenConstantsE.czcechL.tr,
-                        LCscreenConstantsE.slovak.tr,
-                        LCscreenConstantsE.ukrain.tr,
-                      ],
+                      onChange: (val) {
+                        __.updateLocale(val.toString());
+                      },
+                      text: __.selectedCountry.isNotEmpty
+                          ? __.selectedCountry
+                          : LCscreenConstantsE.languageHintText.tr,
+                      actionsList: __.languageList,
                       width: Get.width,
                       height: Get.height * .08,
                     ),

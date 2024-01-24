@@ -1,6 +1,4 @@
-import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
 import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpController.dart';
-import 'package:b_safe/Screens/HomeMainScreen/HomeMainScreen.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:b_safe/Utils/TextStyles.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +6,8 @@ import 'package:get/get.dart';
 import '../../../GlobalWidget/MyButton.dart';
 import '../../../GlobalWidget/MyTextField.dart';
 import '../../../Routs/RoutsNames.dart';
+import '../../../Utils/AppConstants/CzechConstants.dart';
+import '../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../Utils/Colors.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -25,7 +25,7 @@ class SignUpScreen extends StatelessWidget {
           elevation: 0,
           centerTitle: true,
           title: Text(
-            "Sign Up",
+            LoginSignUpConstantsE.signUpText.tr,
             style: CustomTextStyles.appBarTextStyle,
           ),
           leading: IconButton(
@@ -47,14 +47,14 @@ class SignUpScreen extends StatelessWidget {
               height2(),
               Center(
                 child: Text(
-                  'Welcome to BSafe',
+                  LoginSignUpConstantsE.welcomText.tr,
                   style: CustomTextStyles.appBarTextStyle,
                 ),
               ),
               height5(),
               height5(),
               Text(
-                'Email',
+                LoginSignUpConstantsE.emailText.tr,
                 style: CustomTextStyles.descriptionTextStyleB,
               ),
               MyTextField(
@@ -65,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               height2(),
               Text(
-                'Password',
+                LoginSignUpConstantsE.passwordText.tr,
                 style: CustomTextStyles.descriptionTextStyleB,
               ),
               MyTextField(
@@ -89,7 +89,7 @@ class SignUpScreen extends StatelessWidget {
                 onPress: () {
                  __.confirmEmailAndCreateUser();
                 },
-                title: "Signup",
+                title: LoginSignUpConstantsE.signUpText.trim().tr,
               ),
               height2(),
               Center(
@@ -99,11 +99,11 @@ class SignUpScreen extends StatelessWidget {
                   },
                   child: RichText(
                     text: TextSpan(
-                        text: "Already have an account? ",
+                        text: LoginSignUpConstantsE.alreadyHaveAccountText.tr,
                         style: Theme.of(context).textTheme.bodyMedium,
                         children: [
                           TextSpan(
-                            text: 'Login',
+                            text: LoginSignUpConstantsE.loginText.trim().tr,
                             style: CustomTextStyles.topicTextStyle
                                 .copyWith(color: AppColors.main2Coclor),
                           )

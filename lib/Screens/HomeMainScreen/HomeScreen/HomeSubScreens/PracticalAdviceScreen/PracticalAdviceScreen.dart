@@ -1,13 +1,10 @@
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:flutter/material.dart';
 import '../../../../../Routs/RoutsNames.dart';
-import '../../../../../Utils/AppConstants/English/PracticalAdviceConstantsE.dart';
+import '../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../../Utils/Colors.dart';
 import 'package:get/get.dart';
 import '../../../../../Utils/Textstyles.dart';
-import 'DetailScreens/PracticalAdviceDetailScreen/PracticalAdviceDetailScreen.dart';
-import 'DetailScreens/SGBVDifferentFormsDetailScreen/SGBVDifferentFormsDetailScreen.dart';
-import 'DetailScreens/SexualGenderVoilenceScreen/SexualGenderVoilenceScreen.dart';
 import 'PAscreenWidget.dart';
 
 class PracticalAdviceScreen extends StatelessWidget {
@@ -22,7 +19,7 @@ class PracticalAdviceScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          PractivcalAdvsMainConstantsE.appBarText.tr,
+          HomeScreenConstantsE.practicalAdvice.tr,
           style: CustomTextStyles.logoStyle.copyWith(fontSize: 20),
         ),
         leading: IconButton(
@@ -39,7 +36,7 @@ class PracticalAdviceScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                PractivcalAdvsMainConstantsE.mainTitle.tr,
+                PractivcalAdvsMainConstantsE.selectAnyOption.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
               SizedBox(
@@ -63,7 +60,7 @@ class PracticalAdviceScreen extends StatelessWidget {
                 onTap: () {
                   Get.toNamed(RouteNames.practicalAdviceDetailScreen);
                 },
-                text: PractivcalAdvsMainConstantsE.appBarText.tr,
+                text: PractivcalAdvsMainConstantsE.practicalAdvice.tr,
                 image: ImagesPaths.practicalAdviceImage3,
               ),
             ],

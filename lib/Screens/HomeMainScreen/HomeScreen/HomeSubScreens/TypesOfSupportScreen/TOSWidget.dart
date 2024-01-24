@@ -44,7 +44,7 @@ class TOSWidget extends StatelessWidget {
                             style: Theme.of(context).textTheme.headlineLarge,
                             children: [
                               TextSpan(text: title, style: CustomTextStyles.descriptionTextStyleB),
-                              TextSpan(text: ':', style: CustomTextStyles.descriptionTextStyleB),
+                              TextSpan(text: ': ', style: CustomTextStyles.descriptionTextStyleB),
                               TextSpan(text: description, style: CustomTextStyles.descriptionTextStyle)
                             ])),
                   ),

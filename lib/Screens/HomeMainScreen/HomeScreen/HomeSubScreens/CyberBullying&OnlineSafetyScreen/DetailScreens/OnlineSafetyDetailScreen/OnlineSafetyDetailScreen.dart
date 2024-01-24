@@ -1,17 +1,12 @@
 
 
 import 'package:b_safe/Screens/HomeMainScreen/HomeScreen/HomeSubScreens/CyberBullying&OnlineSafetyScreen/DetailScreens/OnlineSafetyDetailScreen/OnlineSafetBulletWidget.dart';
-import 'package:b_safe/Utils/AppConstants/English/CyberBullyingAndOnlineSafetyConstantsE.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import '../../../../../../../Routs/RoutsNames.dart';
+import '../../../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../../../../Utils/Colors.dart';
 import '../../../../../../../Utils/Textstyles.dart';
-import '../../../../../HomeMainScreen.dart';
-import '../../CyberBullying&OnlineSafetyScreen.dart';
 import 'OnlineSafetyWidgets.dart';
 
 class OnlineSafetyDetailScreen extends StatelessWidget {
@@ -70,7 +65,7 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
               Text(OSscreenConstantsE.phoneText1.tr,
                 style: CustomTextStyles.descriptionTextStyle,),
               size1(),
-              Text(OSscreenConstantsE.phoneBulluetTitle,
+              Text(OSscreenConstantsE.phoneBulluetTitle.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
               ///phoneBullet////

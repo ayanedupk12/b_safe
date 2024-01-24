@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import '../../GlobalWidget/toastMessage.dart';
-import '../../Utils/AppConstants/English/HomeMainScreenConstantsE.dart';
+import '../../Utils/AppConstants/EnglishConstants.dart';
 import 'FindLocalHelpScreen/FindLocalHelpScreen.dart';
 import 'HomeScreen/HomeScreen.dart';
 import 'MyJournalScreen/MyJournalScreen.dart';

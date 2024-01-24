@@ -29,7 +29,7 @@ class HomeMainScreen extends StatelessWidget {
           appBar: AppBar(
             automaticallyImplyLeading: __.initialIndex == 0 ? true : false,
             title: Text(
-              __.pageTitle[__.initialIndex],
+              __.pageTitle[__.initialIndex].tr,
               style: CustomTextStyles.appBarTextStyle,
             ),
             centerTitle: true,

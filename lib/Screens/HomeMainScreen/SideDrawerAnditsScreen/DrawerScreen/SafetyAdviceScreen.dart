@@ -1,11 +1,10 @@
 
 
-import 'package:b_safe/Utils/AppConstants/English/SafetyAdviceConstatntsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../Utils/Colors.dart';
 import '../../../../Utils/Textstyles.dart';
-import '../../HomeMainScreen.dart';
 
 class SafetyAdviceScreen extends StatelessWidget {
   final String appBartext;
@@ -47,11 +46,11 @@ class SafetyAdviceScreen extends StatelessWidget {
               size(),
               Text(SafetyAdviceConstatntsE.mainTitle2.tr,style: CustomTextStyles.topicTextStyle,),
               size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText1),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText2),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText3),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText4),size(),
-              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText5),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText1.tr),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText2.tr),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText3.tr),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText4.tr),size(),
+              PrivacyBulletWidget(SafetyAdviceConstatntsE.bulletText5.tr),size(),
               size(),
               size(),
             ],

@@ -1,18 +1,13 @@
-
-
-
-
 import 'package:b_safe/Routs/RoutsNames.dart';
-import 'package:b_safe/Utils/AppConstants/English/PracticalAdviceConstantsE.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../../../../../Utils/Colors.dart';
 import '../../../../../../../Utils/Textstyles.dart';
 
 class SexualGenderVoilenceScreen extends StatelessWidget {
-  final String appBarText;
-  final String title;
-  const SexualGenderVoilenceScreen({super.key, required this.appBarText, required this.title});
+
+  const SexualGenderVoilenceScreen({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +19,7 @@ class SexualGenderVoilenceScreen extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          title,
+          HomeScreenConstantsE.practicalAdvice.tr,
           style: CustomTextStyles.appBarTextStyle,
           textAlign: TextAlign.center,
         ),
@@ -40,10 +35,10 @@ class SexualGenderVoilenceScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Text(
-              //   title.tr,
-              //   style: CustomTextStyles.topicTextStyle,
-              // ),
+              Text(
+                PractivcalAdvsMainConstantsE.sexualgebdebaseButontext.tr,
+                style: CustomTextStyles.topicTextStyle,
+              ),
               SizedBox(
                 height: Get.height * .02,
               ),
