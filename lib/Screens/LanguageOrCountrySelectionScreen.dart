@@ -53,11 +53,7 @@ class LanguageOrCountrySelectionScreen extends StatelessWidget {
                     CustomDropdownFormField(
                       onChange: (val) {},
                       text: LCscreenConstantsE.countryHintText.tr,
-                      actionsList: [
-                        LCscreenConstantsE.poland.tr,
-                        LCscreenConstantsE.zcechC.tr,
-                        LCscreenConstantsE.slovakia.tr,
-                      ],
+                      actionsList: __.countryList,
                       width: Get.width,
                       height: Get.height * .07,
                     ),
