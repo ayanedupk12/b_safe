@@ -81,7 +81,6 @@ class MyJournalController extends GetxController {
     try {
       final fileName = 'audio_${DateTime.now().millisecondsSinceEpoch}.aac';
       final reference = _storage.ref().child('audio').child(fileName);
-
       final uploadTask = reference.putFile(audioFile);
       final taskSnapshot = await uploadTask;
       final downloadURL = await taskSnapshot.ref.getDownloadURL();
