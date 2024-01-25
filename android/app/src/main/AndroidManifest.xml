@@ -17,7 +17,7 @@
 <!--    </queries>-->
 
     <application
-        android:label="b_safe"
+        android:label="Bsafe4u"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
