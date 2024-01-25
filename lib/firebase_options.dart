@@ -50,19 +50,19 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDsq9rdPS0EhgEq8KKpoDZlonbXFYwUuZU',
-    appId: '1:632177005268:android:93996cb93b844aa0a02141',
-    messagingSenderId: '632177005268',
-    projectId: 'b-safe-app',
-    storageBucket: 'b-safe-app.appspot.com',
+    apiKey: 'AIzaSyCa3Zxpl0ICpvoIMb0gi1jGRvS4pIYVc2Y',
+    appId: '1:826321754483:android:5665bdaea658740a69cd06',
+    messagingSenderId: '826321754483',
+    projectId: 'b-safe-4u',
+    storageBucket: 'b-safe-4u.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC86RJoR3nThMVrvUnPKMsdNTkpiJSldDY',
-    appId: '1:632177005268:ios:d2b7434286d6bc1fa02141',
-    messagingSenderId: '632177005268',
-    projectId: 'b-safe-app',
-    storageBucket: 'b-safe-app.appspot.com',
+    apiKey: 'AIzaSyCq6JG60bOSG_V94AxSrBy4Qwp03S7nj9k',
+    appId: '1:826321754483:ios:0e9ceae4a26fa33869cd06',
+    messagingSenderId: '826321754483',
+    projectId: 'b-safe-4u',
+    storageBucket: 'b-safe-4u.appspot.com',
     iosBundleId: 'com.example.bSafe',
   );
 }

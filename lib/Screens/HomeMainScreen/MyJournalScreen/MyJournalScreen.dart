@@ -8,16 +8,31 @@ import 'package:social_media_recorder/screen/social_media_recorder.dart';
 import '../../../GlobalWidget/MyTextField.dart';
 import '../../../Utils/AppConstants/EnglishConstants.dart';
 import '../../../Utils/Textstyles.dart';
+import '../../../validatorS.dart';
 import 'JournalWidget.dart';
 
 class MyJournalScreen extends StatelessWidget {
   MyJournalScreen({super.key});
   MyJournalController controller = Get.put(MyJournalController());
+  final validator=Get.put(ValidatorController());
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MyJournalController>(
       builder: (__) {
-        return Padding(
+        return controller.uploading?SizedBox(
+            height: Get.height,
+            width: Get.width,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+
+                Center(child: CircularProgressIndicator()),
+                SizedBox(height: 20,),
+                Center(child: Text('Please Wait...')),
+              ],
+            )):Padding(
           padding: EdgeInsets.symmetric(
             horizontal: Get.width * .05,
           ),
@@ -40,7 +55,7 @@ class MyJournalScreen extends StatelessWidget {
                 height2(),
                 JournalFormField(
                   hintText: MyJournalConstantsE.hintText.tr,
-                  controller: controller.howDidItHappened,
+                  controller: controller.whenDidItHappen,
                 ),
                 height2(),
                 Text(
@@ -151,15 +166,21 @@ class MyJournalScreen extends StatelessWidget {
                         contentPadding: const EdgeInsets.all(20),
                         content: Column(
                           children: [
-                            MyTextField(
-                              controller: controller.emailController,
-                              hintText: 'Email',
+                            Form(
+                              key: controller.globalKey,
+                              child: MyTextField(
+                                validator: validator.emailValidator,
+                                controller: controller.emailController,
+                                hintText: 'Email',
+                              ),
                             ),
                             height2(),
                             MyButton(
                                 title: 'Send',
                                 height: Get.height * .05,
-                                onPress: () {
+                                onPress: () async{
+                                  await controller.uploadMedia();
+                                  // await controller.sendEmail();
                                   // Get.back();
                                 }),
                             height2(),

@@ -18,8 +18,8 @@ class LogInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<LogInController>(builder: (__) {
-      logInController.logEmail.text='pk12@gmail.com';
-      logInController.logPassword.text='11111111';
+      logInController.logEmail.text='ayan.edu.pk13@gmail.com';
+      logInController.logPassword.text='123456789';
       return Scaffold(
         backgroundColor: AppColors.backGroundColor,
         resizeToAvoidBottomInset: false,

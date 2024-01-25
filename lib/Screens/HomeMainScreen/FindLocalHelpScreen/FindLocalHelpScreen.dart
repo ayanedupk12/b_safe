@@ -54,8 +54,8 @@ class FindLocalHelpScreen extends StatelessWidget {
                               (LocationsList().czechRepublicServices[index] as List<LocationServices>),
                                   // .expand((list) => list)
                                   // .toList(),
-                              globalController.currentPosition!.latitude,
-                              globalController.currentPosition!.longitude,
+                              globalController.currentPosition?.latitude??0,
+                              globalController.currentPosition?.longitude??0,
                             );
                           }else{
                             nearestLocation=__.servicesList![index].first;

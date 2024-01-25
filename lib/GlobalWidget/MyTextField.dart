@@ -10,6 +10,8 @@ class MyTextField extends StatelessWidget {
   int? maxLength;
   double height;
   bool obSecure;
+  String? Function(String?)? validator;
+
   TextInputType? keyboardType;
   final ValueChanged<String>? onChanged;
   final TextEditingController? controller;
@@ -24,6 +26,7 @@ class MyTextField extends StatelessWidget {
     this.controller,
     this.height=50,
     this.maxLength,
+    this.validator,
     this.obSecure=false,
   });
 
@@ -32,6 +35,7 @@ class MyTextField extends StatelessWidget {
     return SizedBox(
       height: height,
       child: TextFormField(
+        validator:validator,
         keyboardType: keyboardType,
         onChanged: onChanged,
         maxLength: maxLength,
