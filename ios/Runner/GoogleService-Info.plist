@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyC86RJoR3nThMVrvUnPKMsdNTkpiJSldDY</string>
+	<string>AIzaSyCq6JG60bOSG_V94AxSrBy4Qwp03S7nj9k</string>
 	<key>GCM_SENDER_ID</key>
-	<string>632177005268</string>
+	<string>826321754483</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.bSafe</string>
+	<string>com.victoria.bsafe4u</string>
 	<key>PROJECT_ID</key>
-	<string>b-safe-app</string>
+	<string>b-safe-4u</string>
 	<key>STORAGE_BUCKET</key>
-	<string>b-safe-app.appspot.com</string>
+	<string>b-safe-4u.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:632177005268:ios:d2b7434286d6bc1fa02141</string>
+	<string>1:826321754483:ios:914ef743fce5f1bf69cd06</string>
 </dict>
 </plist>

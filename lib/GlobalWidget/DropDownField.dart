@@ -32,7 +32,6 @@ class CustomDropdownFormField<T> extends StatelessWidget {
           style: CustomTextStyles.hintTextStyle,
         ),
         elevation: 3,
-
         onChanged: onChange,
         items:
         // controller.states.length==0?controller.tempListForNoItems:
