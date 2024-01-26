@@ -58,7 +58,7 @@ class MTCscreenWidget extends StatelessWidget {
                 ),
                 trailing: InkWell(
                     onTap: onTap,
-                    child: Image.asset(AppIcons.editicon,height: 20,)),
+                    child: Image.asset(AppIcons.editicon,height: 25,)),
               ),
             ),
           ),

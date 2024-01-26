@@ -96,13 +96,13 @@ class MyJournalScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(controller.attachedFile!.path.split('/').last),
+                        Text(controller.attachedFile!.path.split('/').last.substring(0,25)),
                         InkWell(
                             onTap: (){
                               controller.attachedFile=null;
                               controller.update();
                             },
-                            child: Icon(Icons.close)),
+                            child: const Icon(Icons.close)),
                       ],
                     ),
                   ):Center(

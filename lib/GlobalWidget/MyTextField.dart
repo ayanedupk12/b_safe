@@ -24,7 +24,7 @@ class MyTextField extends StatelessWidget {
      this.hintText,
      this.errorText,
     this.controller,
-    this.height=50,
+    this.height=40,
     this.maxLength,
     this.validator,
     this.obSecure=false,
@@ -41,6 +41,7 @@ class MyTextField extends StatelessWidget {
         maxLength: maxLength,
         controller: controller,
         obscureText: obSecure,
+
         style: const TextStyle(color: Colors.black),
         decoration: InputDecoration(
           errorText: errorText,

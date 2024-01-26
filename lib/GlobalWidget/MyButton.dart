@@ -18,7 +18,7 @@ class MyButton extends StatelessWidget {
     this.loading = false,
     required this.onPress,
     this.title='Login',
-    this.height = 50,
+    this.height = 40,
     this.width = double.infinity,
     this.borderRadios =10.0,
     this.color = AppColors.main2Coclor

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "826321754483",
+    "project_id": "b-safe-4u",
+    "storage_bucket": "b-safe-4u.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826321754483:android:4f43498f439ef72a69cd06",
+        "android_client_info": {
+          "package_name": "com.example.b_safe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa3Zxpl0ICpvoIMb0gi1jGRvS4pIYVc2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826321754483:android:1d8b62e5cc7c55da69cd06",
+        "android_client_info": {
+          "package_name": "com.victoria.bsafe4u"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa3Zxpl0ICpvoIMb0gi1jGRvS4pIYVc2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

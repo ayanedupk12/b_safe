@@ -85,13 +85,19 @@ class MyTrustedContactsScreen extends StatelessWidget {
                                 content: Column(
                                   children: [
                                     MyTextField(
+                                      height: 60,
                                       controller: __.newName,
+                                      hintText: "Enter Name",
+                                      maxLength: 20,
                                     ),
                                     height2(),
                                     MyTextField(
+                                      maxLength: 11,
+                                      hintText: "+92XXXXXXXX",
+                                      height: 60,
                                       controller: __.newPhone,
                                     ),
-                                    height2(),
+                                    height5(),
                                     Row(
                                       children: [
                                         Expanded(
@@ -99,7 +105,7 @@ class MyTrustedContactsScreen extends StatelessWidget {
                                             loading: __.loading,
                                             title: 'Edit',
                                             onPress: () {
-                                              // Check if changes have been made
+                                              /// Check if changes have been made
                                               if (__.newName.text !=
                                                       __.contactModelList[index]
                                                           .name ||
@@ -146,21 +152,25 @@ class MyTrustedContactsScreen extends StatelessWidget {
                   children: [
                     MyTextField(
                       controller: __.name,
-                      height: 50,
+                      height: 60,
+                      maxLength: 20,
                       hintText: 'Name i.e Alex...',
                     ),
                     height2(),
                     MyTextField(
                       keyboardType: TextInputType.phone,
                       controller: __.phone,
-                      height: 50,
-                      hintText: '03XXXXXXXXXX',
+                      height: 60,
+                      hintText: "+92XXXXXXXX",
+                      maxLength: 11,
                     ),
                     height2(),
                     MyButton(
-                        loading: __.loading,
+                      height: 40,
+                        width: Get.width * .35,
                         title: MyTrustedContactsConstantsE.saveText.tr,
                         onPress: () {
+                        Get.back();
                           __.addContact();
                         })
                   ],

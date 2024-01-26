@@ -13,9 +13,21 @@ class SignUpController extends GetxController {
 
 
   bool isLoading = false;
+  bool isPasswordObscured = true;
+  bool isConfirmPasswordObscured = true;
+
+  void togglePasswordVisibility() {
+    isPasswordObscured = !isPasswordObscured;
+    update();
+  }
+  void toggleConfirmPasswordVisibility() {
+    isConfirmPasswordObscured = !isConfirmPasswordObscured;
+    update();
+  }
 
   final TextEditingController sEmail = TextEditingController();
   final TextEditingController sPassword = TextEditingController();
+  final TextEditingController cPassword = TextEditingController();
 
 
 
@@ -23,7 +35,26 @@ class SignUpController extends GetxController {
     isLoading = true;
     update();
     try {
+      if (sPassword.text != cPassword.text) {
+        print('Passwords do not match.');
+        showMessage('Passwords do not match. Please make sure your passwords match.');
+        isLoading = false;
+        update();
+        return;
+      }
+
+      // Password must have at least one letter, at least one digit, and a minimum length of 7 characters.
+      RegExp passwordRegExp = RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$');
+      if (!passwordRegExp.hasMatch(sPassword.text)) {
+        print('Invalid password. Please use a stronger password.');
+        showMessage('Password must contain at least one letter, one digit, and be at least 6 characters long.');
+        isLoading = false;
+        update();
+        return;
+      }
+
       var methods = await _auth.fetchSignInMethodsForEmail(sEmail.text);
+
       if (methods.isNotEmpty) {
         print('The account already exists for that email.');
       } else {
@@ -33,47 +64,48 @@ class SignUpController extends GetxController {
         );
 
         if (userCredential.user != null) {
-          print('User created successfully.');
-          showMessage('User created successfully.');
-          isLoading=false;
+          print('Account created successfully.');
+          showMessage('Account created successfully. Welcome!');
+          isLoading = false;
+          sEmail.clear();
+          sPassword.clear();
           update();
           Get.offAllNamed(RouteNames.homeMainScreen);
         } else {
-          print('Failed to create user.');
-          showMessage('Failed to create user.');
-          isLoading=false;
+          print('Failed to create account.');
+          showMessage('Failed to create account. Please try again.');
+          isLoading = false;
           update();
         }
       }
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
-        isLoading=false;
+        isLoading = false;
         update();
         print('The password provided is too weak.');
-        showMessage('The password provided is too weak.');
+        showMessage('Please use a stronger password.');
       } else if (e.code == 'email-already-in-use') {
         print(e);
         Get.offAllNamed(RouteNames.loginScreen);
-        print('The account already exists for that email.');
-        showMessage('The account already exists for that email please login to continue.');
-        isLoading=false;
+        print('An account already exists for that email.');
+        showMessage('An account already exists for that email. Please login to continue.');
+        isLoading = false;
         update();
       } else {
-        print('Error creating user: ${e.message}');
-        showMessage("Something Went Wrong");
-        isLoading=false;
+        print('Error creating account: ${e.message}');
+        showMessage('Something went wrong. Please try again later.');
+        isLoading = false;
         update();
       }
     } catch (e) {
       print('Error: $e');
-      showMessage(e.toString());
+      showMessage('An unexpected error occurred. Please try again later.');
     } finally {
       isLoading = false;
-      sEmail.clear();
-      sPassword.clear();
       update();
     }
   }
+
 
 
 

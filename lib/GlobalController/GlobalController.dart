@@ -29,7 +29,7 @@ class GlobalController extends GetxController {
     LCscreenConstantsE.english,
     LCscreenConstantsE.polish,
     LCscreenConstantsE.czcechL,
-    LCscreenConstantsE.slovakia,
+    LCscreenConstantsE.slovak,
     LCscreenConstantsE.ukrain,
   ];
 

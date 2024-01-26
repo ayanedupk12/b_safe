@@ -11,6 +11,13 @@ class LogInController extends GetxController {
 
   bool loading = false;
 
+  bool isPasswordObscured = true;
+
+  void togglePasswordVisibility() {
+    isPasswordObscured = !isPasswordObscured;
+    update();
+  }
+
   Future<void> loginUserWithEmailAndPassword() async {
     loading = true;
     update();

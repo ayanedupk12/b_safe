@@ -178,11 +178,7 @@ class MyDrawerWidget extends StatelessWidget {
                         width: Get.width,
                         height: Get.height * .05,
                         text: globalController.countryUsage ?? SideDrawerConstantsE.chooseContry.tr,
-                        actionsList: [
-                          LCscreenConstantsE.poland.tr,
-                          LCscreenConstantsE.zcechC.tr,
-                          LCscreenConstantsE.slovakia.tr,
-                        ],
+                        actionsList: globalController.countryList,
                         onChange: (val) {
                           globalController.changeCountry(val!);
                         },

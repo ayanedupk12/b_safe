@@ -26,7 +26,6 @@ class MTCcontroller extends GetxController {
     fetchContacts();
   }
   Future<void> addContact() async {
-    loading = true;
     update();
 
     try {
@@ -34,15 +33,20 @@ class MTCcontroller extends GetxController {
       if (user != null) {
         String phoneNumber = phone.text.trim();
         if (name.text.isEmpty) {
-          name.text = 'Add Name'; // Set default text if name is empty
+          name.text = 'Add Name';
         }
 
-        // Regular expression for a valid 11-digit phone number
         RegExp phoneNumberRegExp = RegExp(r'^[0-9]{11}$');
-        if (phoneNumber.isNotEmpty && phoneNumberRegExp.hasMatch(phoneNumber)) {
+        if (phoneNumber.isEmpty) {
+          /// showMessage("Please enter a phone number");
+          update();
+          name.clear();
+          phone.clear();
+        } else if (phoneNumberRegExp.hasMatch(phoneNumber)) {
           ContactModel newContact = ContactModel(
             name: name.text,
-            phoneNumber: phoneNumber, id: DateTime.now().toString(),
+            phoneNumber: phoneNumber,
+            id: DateTime.now().toString(),
           );
 
           // Convert ContactModel to Map for Firestore
@@ -57,33 +61,25 @@ class MTCcontroller extends GetxController {
 
           // Fetch updated contacts after adding new contact
           await fetchContacts();
-
+          showMessage("New contact added successfully!");
           // Clear fields and update UI
-          loading = false;
           update();
-          Get.back();
           name.clear();
           phone.clear();
         } else {
-          showMessage("Enter a valid 11-digit phone number");
-          loading = false;
+          showMessage("Please enter a valid 11-digit phone number");
           update();
         }
       } else {
-        print("User not authenticated");
-        showMessage("User not authenticated");
-        loading = false;
+        showMessage("Authentication error. Please try again.");
         update();
       }
     } catch (e) {
       // Handle any errors that occur during the Firestore write operation
       print("Error adding contact: $e");
-      showMessage("Error adding contact: $e");
-      loading = false;
+      showMessage("Error adding contact. Please try again.");
       update();
     }
-
-    update();
   }
 
   Future<void> fetchContacts() async {
@@ -158,27 +154,40 @@ class MTCcontroller extends GetxController {
     try {
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        String phoneNumber = newPhone.text.trim();
+        String newPhoneNumber = newPhone.text.trim();
+        String newNameValue = newName.text.trim();
 
         // Regular expression for a valid 11-digit phone number
         RegExp phoneNumberRegExp = RegExp(r'^[0-9]{11}$');
 
         // Check if the phone number format is valid
-        if (phoneNumberRegExp.hasMatch(phoneNumber)) {
+        if (phoneNumberRegExp.hasMatch(newPhoneNumber)) {
           DocumentReference contactRef = FirebaseFirestore.instance
               .collection("User")
               .doc(user.uid)
               .collection('contacts')
               .doc(contactId);
 
-          await contactRef.update({
-            'name': newName.text,
-            'phoneNumber': phoneNumber,
-          });
+          // Fetch existing contact data
+          DocumentSnapshot contactSnapshot = await contactRef.get();
+          Map<String, dynamic> existingContactData = contactSnapshot.data() as Map<String, dynamic>;
 
-          // Fetch updated contacts after editing
-          await fetchContacts();
-          update();
+          // Check if there are changes
+          if (existingContactData['name'] != newNameValue || existingContactData['phoneNumber'] != newPhoneNumber) {
+            // Update contact only if there are changes
+            await contactRef.update({
+              'name': newNameValue,
+              'phoneNumber': newPhoneNumber,
+            });
+
+            showMessage("Done");
+            await fetchContacts();
+            update();
+          } else {
+            print("No changes occurred");
+            showMessage("No changes occurred");
+            update();
+          }
         } else {
           print("Invalid phone number format");
           showMessage("Invalid phone number format");
