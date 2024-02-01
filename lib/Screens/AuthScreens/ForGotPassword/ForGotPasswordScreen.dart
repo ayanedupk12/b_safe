@@ -67,7 +67,6 @@ class ForGotPasswordScreen extends StatelessWidget {
                     height2(),
                     MyTextField(
                       controller: __.resetPassword,
-                      height: Get.height * .06,
                       prefixIcon: const Icon(Icons.email_rounded),
                       hintText: 'Lorem@gmail.com',
                     ),

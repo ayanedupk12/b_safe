@@ -70,7 +70,6 @@ class LogInScreen extends StatelessWidget {
                   ),
                   MyTextField(
                     controller: __.logEmail,
-                    height: Get.height * .06,
                     prefixIcon: const Icon(Icons.email_rounded),
                     hintText: 'Lorem@gmail.com',
                   ),
@@ -82,7 +81,6 @@ class LogInScreen extends StatelessWidget {
                   MyTextField(
                     controller: __.logPassword,
                     obSecure: __.isPasswordObscured,
-                    height: Get.height * .06,
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: InkWell(
                       onTap: () {

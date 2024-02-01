@@ -62,7 +62,6 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 MyTextField(
                   controller: __.sEmail,
-                  height: Get.height * .06,
                   prefixIcon: const Icon(Icons.email_rounded),
                   hintText: 'Lorem@gmail.com',
                 ),
@@ -74,7 +73,6 @@ class SignUpScreen extends StatelessWidget {
                 MyTextField(
                   controller: __.sPassword,
                   obSecure: __.isPasswordObscured,
-                  height: Get.height * .06,
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: InkWell(
                     onTap: () {
@@ -92,7 +90,6 @@ class SignUpScreen extends StatelessWidget {
                 MyTextField(
                   controller: __.cPassword,
                   obSecure: __.isConfirmPasswordObscured,
-                  height: Get.height * .06,
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: InkWell(
                     onTap: () {

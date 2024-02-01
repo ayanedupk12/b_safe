@@ -36,12 +36,10 @@ class MTCcontroller extends GetxController {
           name.text = 'Add Name';
         }
 
-        RegExp phoneNumberRegExp = RegExp(r'^[0-9]{11}$');
+        RegExp phoneNumberRegExp = RegExp(r'^[0-9]+$');
         if (phoneNumber.isEmpty) {
-          /// showMessage("Please enter a phone number");
+          showMessage("Please enter a phone number");
           update();
-          name.clear();
-          phone.clear();
         } else if (phoneNumberRegExp.hasMatch(phoneNumber)) {
           ContactModel newContact = ContactModel(
             name: name.text,
@@ -67,7 +65,7 @@ class MTCcontroller extends GetxController {
           name.clear();
           phone.clear();
         } else {
-          showMessage("Please enter a valid 11-digit phone number");
+          showMessage("Please enter a valid phone number");
           update();
         }
       } else {
@@ -81,6 +79,7 @@ class MTCcontroller extends GetxController {
       update();
     }
   }
+
 
   Future<void> fetchContacts() async {
     loading = true;
@@ -158,7 +157,7 @@ class MTCcontroller extends GetxController {
         String newNameValue = newName.text.trim();
 
         // Regular expression for a valid 11-digit phone number
-        RegExp phoneNumberRegExp = RegExp(r'^[0-9]{11}$');
+        RegExp phoneNumberRegExp = RegExp(r'^[0-9]+$');
 
         // Check if the phone number format is valid
         if (phoneNumberRegExp.hasMatch(newPhoneNumber)) {

@@ -8,7 +8,6 @@ class MyTextField extends StatelessWidget {
   Widget? prefixIcon;
   Widget? suffixIcon;
   int? maxLength;
-  double height;
   bool obSecure;
   String? Function(String?)? validator;
 
@@ -24,7 +23,6 @@ class MyTextField extends StatelessWidget {
      this.hintText,
      this.errorText,
     this.controller,
-    this.height=40,
     this.maxLength,
     this.validator,
     this.obSecure=false,
