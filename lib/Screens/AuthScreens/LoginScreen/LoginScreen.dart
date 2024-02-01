@@ -49,7 +49,7 @@ class LogInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  height5(),
+                  height2(),
                   Center(
                     child: Image.asset(
                       ImagesPaths.logoG,
@@ -63,7 +63,6 @@ class LogInScreen extends StatelessWidget {
                       style: CustomTextStyles.appBarTextStyle,
                     ),
                   ),
-                  height2(),
                   height5(),
                   Text(
                     LoginSignUpConstantsE.enterEmailText.tr,

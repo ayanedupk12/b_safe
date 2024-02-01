@@ -41,7 +41,7 @@ class SignUpScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                height5(),
+                height2(),
                 Center(
                   child: Image.asset(
                     ImagesPaths.logoG,
@@ -86,7 +86,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 height2(),
                 Text(
-                  "Confirm Password",
+                  LoginSignUpConstantsE.confirmpassText.tr,
                   style: CustomTextStyles.descriptionTextStyleB,
                 ),
                 MyTextField(

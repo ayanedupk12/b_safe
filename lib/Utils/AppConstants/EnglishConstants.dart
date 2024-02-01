@@ -7,6 +7,7 @@ class LoginSignUpConstantsE{
   static const enterEmailText= "Enter Email";
   static const enterPasswordText= "Enter Password";
   static const forgotpassText= "Forgot Password?";
+  static const confirmpassText= "Confirm Password";
   static const dontHaveAccountText= "Don't have an account?";
   static const alreadyHaveAccountText= "Already have an account?";
   static const welcomText= "Welcome To BSafe";
@@ -219,13 +220,15 @@ class FLscreenConstantsE{
 
 ///my journal screen constants///
 class MyJournalConstantsE{
-  static const title="Welcome to ${'"My Journal."'} Keeping a journal is a valuable way to document any abuse you've experienced and these entries may be useful in supporting any legal actions you decide to pursue in the future. ${'"My Journal"'} is here to assist you in this process and it's important to know that nothing you record using this tool will be saved on your device, ensuring your privacy and security.";
+  static const title="Keeping a journal is a valuable way to document any abuse you've experienced and these entries may be useful in supporting any legal actions you decide to pursue in the future. ${'"My Journal"'} is here to assist you in this process and it's important to know that nothing you record using this tool will be saved on your device, ensuring your privacy and security.";
   static const hintText="Write Something...";
+  static const welcomText="Welcome to ${'"My Journal."'}";
   static const title1="When did it happen?";
   static const title2="What happened?";
   static const title3="How did it happen?";
   static const safetyEmail="Safety Email";
   static const sendText="Send";
+  static const cancelText="Cancel";
   ///double
   static const title4="Upload image or video";
   static const title5="Record audio";

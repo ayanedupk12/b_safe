@@ -39,7 +39,7 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
             children: [
               size2(),
               Text(
-                OSscreenConstantsE.mainTitle,
+                OSscreenConstantsE.mainTitle.tr,
                 style: CustomTextStyles.topicTextStyle,
               ),
               size2(),
@@ -72,6 +72,7 @@ class OnlineSafetyDetailScreen extends StatelessWidget {
               OnlineSafetBulletWidget(text: OSscreenConstantsE.phoneBulluetText1.tr),
               OnlineSafetBulletWidget(text: OSscreenConstantsE.phoneBulluetText2.tr),
               OnlineSafetBulletWidget(text: OSscreenConstantsE.phoneBulluetText3.tr),
+              size2(),
               size2(),
             ],
           ),

@@ -7,6 +7,7 @@ class LoginSignUpConstantsS{
   static const enterEmailText= "Zadajte Email";
   static const enterPasswordText= "Zadajte heslo";
   static const forgotpassText= "Zabudnuté heslo?";
+  static const confirmpassText= "Potvrďte heslo";
   static const dontHaveAccountText= "Nemáte účet?";
   static const alreadyHaveAccountText= "Máte už účet?";
   static const welcomText= "Vitajte v BSafe";
@@ -34,7 +35,7 @@ class LCscreenConstantsS{
 class HomeMainScreenContantsS{
   static const homeAppBarText="Domov";
   static const localSupportAppBarText="Local Support Services";
-  static const journalAppBarText="My Journal";
+  static const journalAppBarText="Môj denník";
   static const splashscreenConstants="Si silná.";
 }
 
@@ -214,17 +215,19 @@ class FLscreenConstantsS {
 class MyJournalConstantsS {
   static const title="Vedenie denníka je cenný spôsob, ako zdokumentovať akékoľvek zneužívanie, ktoré ste zažili. Tieto záznamy môžu byť užitočné pre prípadné právne kroky, ktoré sa rozhodnete podniknúť v budúcnosti. ${'"Môj denník"'} vám v tomto procese pomôže. A je dôležité vedieť, že nič, čo zaznamenáte pomocou tohto nástroja, nebude uložené vo vašom zariadení, čím sa zaistí vaše súkromie a bezpečnosť";
   static const hintText="Write Something...";
+  static const welcomText="Vitajte v ${"Môj Denník "}";
   static const title1="Kedy to nastalo?";
   static const title2="Čo sa stalo?";
   static const title3="Ako to sa stalo?";
   static const safetyEmail="Bezpečnostný e-mail";
-  static const sendText="Uložit";
+  static const sendText="Poslať";
+  static const cancelText="Zrušiť";
   ///double
-  static const title4="Upload image or video";
-  static const title5="Record audio";
-  static const button1="Upload";
+  static const title4="Odovzdať obrázok alebo video";
+  static const title5="Nahrávat zvuk";
+  static const button1="Nahrát";
   static const button2="Start";
-  static const button3="Submit";
+  static const button3="Uložit";
 }
 
 
@@ -255,7 +258,7 @@ class TermANdCondConstantsS {
   static const d4 ="Vaše súkromie je pre nás dôležité. Vaše osobné informácie neposkytujeme tretím stranám. Pre viac informácií si prečítajte našu Zásady ochrany súkromia.";
   static const d5 ="Pre vašu bezpečnosť je dôležité mať aplikáciu aktualizovanú na najnovšiu verziu. Pravidelne môžeme vydať aktualizácie s novými funkciami alebo zlepšeniami zabezpečenia.";
   static const d6 ="V prípade núdze vždy okamžite zavolajte číslo miestnych núdzových služieb. Naša aplikácia nie je náhradou za núdzovú pomoc.";
-  static const d7 ="Vaša spätná väzba je pre nás cenná, a preto, ak máte návrhy na zlepšenie, prosím, kontaktujte nás e-mailom na adrese projectbsafe@hotmail.com.";
+  static const d7 ="Vaša spätná väzba je pre nás cenná, a preto, ak máte návrhy na zlepšenie, prosím, kontaktujte nás e-mailom na adrese. ";
   static const d8 ="Vyhradzujeme si právo ukončiť váš prístup k aplikácii podľa našej ľubovôle, ak porušíte tieto podmienky alebo zneužijete aplikáciu.";
   static const d9 ="Súhlasíte s používaním aplikácie v súlade so všetkými platnými zákonnými a regulačnými ustanoveniami týkajúcimi sa násilia na základe pohlavia a osobnej bezpečnosti.";
   static const d10 ="Aj keď sa snažíme poskytovať presné a užitočné informácie, nemôžeme garantovať presnosť, spoľahlivosť ani účinnosť zdrojov poskytovaných v rámci aplikácie.";

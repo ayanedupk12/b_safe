@@ -44,16 +44,16 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
                 style: CustomTextStyles.topicTextStyle,
               ),
               PADSWidget(
-                title: PracTicalAdviceConstantsE.title1,
-                description: PracTicalAdviceConstantsE.description1,
+                title: PracTicalAdviceConstantsE.title1.tr,
+                description: PracTicalAdviceConstantsE.description1.tr,
               ),
               PADSWidget(
                 title: PracTicalAdviceConstantsE.title2.tr,
-                description: PracTicalAdviceConstantsE.description2,
+                description: PracTicalAdviceConstantsE.description2.tr,
               ),
               PADSWidget(
                 title: PracTicalAdviceConstantsE.title3.tr,
-                description: PracTicalAdviceConstantsE.description3,
+                description: PracTicalAdviceConstantsE.description3.tr,
               ),
               PADSWidget(
                 title: PracTicalAdviceConstantsE.title4.tr,
@@ -61,11 +61,11 @@ class PracticalAdviceDetailScreen extends StatelessWidget {
               ),
               PADSWidget(
                 title: PracTicalAdviceConstantsE.title5.tr,
-                description: PracTicalAdviceConstantsE.description5,
+                description: PracTicalAdviceConstantsE.description5.tr,
               ),
               PADSWidget(
                 title: PracTicalAdviceConstantsE.title6.tr,
-                description: PracTicalAdviceConstantsE.description5,
+                description: PracTicalAdviceConstantsE.description6.tr,
               ),
               const SizedBox(
                 height: 20,
