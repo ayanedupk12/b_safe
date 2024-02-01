@@ -13,6 +13,7 @@ class LoginSignUpConstantsE{
   static const welcomText= "Welcome To BSafe";
   static const emailText= "Email";
   static const passwordText= "Password";
+  static const sendResetEmailText= "Send Reset Email";
 }
 
 ///language or country selection screen constants///k

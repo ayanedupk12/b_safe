@@ -100,7 +100,7 @@ class LogInScreen extends StatelessWidget {
                         Get.toNamed(RouteNames.forgotPasswordScreen);
                       },
                       child: Text(
-                        LoginSignUpConstantsE.forgotpassText.tr,
+                        '${LoginSignUpConstantsE.forgotpassText.tr} ?',
                         textAlign: TextAlign.end,
                         style: CustomTextStyles.descriptionTextStyleB
                             .copyWith(color: AppColors.main2Coclor),

@@ -6,13 +6,14 @@ class LoginSignUpConstantsS{
   static const signintocontinueText= 'Prihlásiť sa';
   static const enterEmailText= "Zadajte Email";
   static const enterPasswordText= "Zadajte heslo";
-  static const forgotpassText= "Zabudnuté heslo?";
+  static const forgotpassText= "Zabudnuté heslo";
   static const confirmpassText= "Potvrďte heslo";
   static const dontHaveAccountText= "Nemáte účet?";
   static const alreadyHaveAccountText= "Máte už účet?";
   static const welcomText= "Vitajte v BSafe";
   static const emailText= "Email";
   static const passwordText= "Heslo";
+  static const sendResetEmailText= "Poslať resetovací email";
 }
 
 ///language or country selection screen constants///k
@@ -34,7 +35,7 @@ class LCscreenConstantsS{
 ///HomeMainScreenContantsE///
 class HomeMainScreenContantsS{
   static const homeAppBarText="Domov";
-  static const localSupportAppBarText="Local Support Services";
+  static const localSupportAppBarText="Miestne podporné služby";
   static const journalAppBarText="Môj denník";
   static const splashscreenConstants="Si silná.";
 }
@@ -215,7 +216,7 @@ class FLscreenConstantsS {
 class MyJournalConstantsS {
   static const title="Vedenie denníka je cenný spôsob, ako zdokumentovať akékoľvek zneužívanie, ktoré ste zažili. Tieto záznamy môžu byť užitočné pre prípadné právne kroky, ktoré sa rozhodnete podniknúť v budúcnosti. ${'"Môj denník"'} vám v tomto procese pomôže. A je dôležité vedieť, že nič, čo zaznamenáte pomocou tohto nástroja, nebude uložené vo vašom zariadení, čím sa zaistí vaše súkromie a bezpečnosť";
   static const hintText="Write Something...";
-  static const welcomText="Vitajte v ${"Môj Denník "}";
+  static const welcomText="Vitajte v ${'"Môj Denník"'}";
   static const title1="Kedy to nastalo?";
   static const title2="Čo sa stalo?";
   static const title3="Ako to sa stalo?";

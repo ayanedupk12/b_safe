@@ -28,8 +28,9 @@ class ForGotPasswordController extends GetxController {
         String errorMessage = e.toString();
         switch (e.code) {
           case 'user-not-found':
-            showMessage('No user found for that email.');
+            showMessage('No user found for ${resetPassword.text} please create an account first.');
             errorMessage = 'No user found for that email.';
+            Get.offAllNamed(RouteNames.signUpScreen);
             break;
           case 'invalid-email':
             showMessage('Invalid email address.');

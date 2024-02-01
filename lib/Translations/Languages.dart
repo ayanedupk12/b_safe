@@ -22,6 +22,7 @@ class Language extends Translations{
       LoginSignUpConstantsE.emailText : LoginSignUpConstantsE.emailText,
       LoginSignUpConstantsE.passwordText : LoginSignUpConstantsE.passwordText,
       LoginSignUpConstantsE.confirmpassText : LoginSignUpConstantsE.confirmpassText,
+      LoginSignUpConstantsE.sendResetEmailText : LoginSignUpConstantsE.sendResetEmailText,
       ///language or country selection screen constants///
       LCscreenConstantsE.selectCountryandlanguage:LCscreenConstantsE.selectCountryandlanguage,
       LCscreenConstantsE.countryHintText:LCscreenConstantsE.countryHintText,
@@ -195,6 +196,8 @@ class Language extends Translations{
       LoginSignUpConstantsE.welcomText : LoginSignUpConstantsC.welcomText,
       LoginSignUpConstantsE.emailText : LoginSignUpConstantsC.emailText,
       LoginSignUpConstantsE.passwordText : LoginSignUpConstantsC.passwordText,
+      LoginSignUpConstantsE.confirmpassText : LoginSignUpConstantsC.confirmpassText,
+      LoginSignUpConstantsE.sendResetEmailText : LoginSignUpConstantsC.sendResetEmailText,
       ///language or country selection screen constants///
       LCscreenConstantsE.selectCountryandlanguage:LCscreenConstantsC.selectCountryandlanguage,
       LCscreenConstantsE.countryHintText:LCscreenConstantsC.countryHintText,
@@ -326,6 +329,7 @@ class Language extends Translations{
       MyJournalConstantsE.button3:MyJournalConstantsC.button3,
       MyJournalConstantsE.safetyEmail:MyJournalConstantsC.safetyEmail,
       MyJournalConstantsE.sendText:MyJournalConstantsC.sendText,
+      MyJournalConstantsE.cancelText:MyJournalConstantsC.cancelText,
       ///PrivacyPolicy screen//////
       PrivacyPolicyConstantsE.text1:PrivacyPolicyConstantsC.text1,
       PrivacyPolicyConstantsE.text2:PrivacyPolicyConstantsC.text2,
@@ -366,6 +370,7 @@ class Language extends Translations{
       LoginSignUpConstantsE.welcomText : LoginSignUpConstantsS.welcomText,
       LoginSignUpConstantsE.emailText : LoginSignUpConstantsS.emailText,
       LoginSignUpConstantsE.passwordText : LoginSignUpConstantsS.passwordText,
+      LoginSignUpConstantsE.sendResetEmailText : LoginSignUpConstantsS.sendResetEmailText,
       LoginSignUpConstantsE.confirmpassText : LoginSignUpConstantsS.confirmpassText,
       ///language or country selection screen constants///
       LCscreenConstantsE.selectCountryandlanguage:LCscreenConstantsS.selectCountryandlanguage,
@@ -540,6 +545,8 @@ class Language extends Translations{
       LoginSignUpConstantsE.welcomText : LoginSignUpConstantsU.welcomText,
       LoginSignUpConstantsE.emailText : LoginSignUpConstantsU.emailText,
       LoginSignUpConstantsE.passwordText : LoginSignUpConstantsU.passwordText,
+      LoginSignUpConstantsE.confirmpassText : LoginSignUpConstantsU.confirmpassText,
+      LoginSignUpConstantsE.sendResetEmailText : LoginSignUpConstantsU.sendResetEmailText,
       ///language or country selection screen constants///
       LCscreenConstantsE.selectCountryandlanguage:LCscreenConstantsU.selectCountryandlanguage,
       LCscreenConstantsE.countryHintText:LCscreenConstantsU.countryHintText,
@@ -648,7 +655,7 @@ class Language extends Translations{
       OSscreenConstantsE.socialMediaBulletText2:OSscreenConstantsU.socialMediaBulletText2,
       OSscreenConstantsE.socialMediaBulletText3:OSscreenConstantsU.socialMediaBulletText3,
       OSscreenConstantsE.socialMediaBulletText4:OSscreenConstantsU.socialMediaBulletText4,
-      OSscreenConstantsE.messegingTitle:OSscreenConstantsU.mainTitle,
+      OSscreenConstantsE.messegingTitle:OSscreenConstantsU.messegingTitle,
       OSscreenConstantsE.messegingText:OSscreenConstantsU.messegingText,
       OSscreenConstantsE.phone:OSscreenConstantsU.phone,
       OSscreenConstantsE.phoneText1:OSscreenConstantsU.phoneText1,
@@ -671,6 +678,8 @@ class Language extends Translations{
       MyJournalConstantsE.button3:MyJournalConstantsU.button3,
       MyJournalConstantsE.safetyEmail:MyJournalConstantsU.safetyEmail,
       MyJournalConstantsE.sendText:MyJournalConstantsU.sendText,
+      MyJournalConstantsE.cancelText:MyJournalConstantsU.cancelText,
+      MyJournalConstantsE.welcomText:MyJournalConstantsU.welcomText,
       ///PrivacyPolicy screen//////
       PrivacyPolicyConstantsE.text1:PrivacyPolicyConstantsU.text1,
       PrivacyPolicyConstantsE.text2:PrivacyPolicyConstantsU.text2,
@@ -711,6 +720,8 @@ class Language extends Translations{
       LoginSignUpConstantsE.welcomText : LoginSignUpConstantsP.welcomText,
       LoginSignUpConstantsE.emailText : LoginSignUpConstantsP.emailText,
       LoginSignUpConstantsE.passwordText : LoginSignUpConstantsP.passwordText,
+      LoginSignUpConstantsE.sendResetEmailText : LoginSignUpConstantsP.sendResetEmailText,
+      LoginSignUpConstantsE.confirmpassText : LoginSignUpConstantsP.confirmpassText,
       ///language or country selection screen constants///
       LCscreenConstantsE.selectCountryandlanguage:LCscreenConstantsP.selectCountryandlanguage,
       LCscreenConstantsE.countryHintText:LCscreenConstantsP.countryHintText,
@@ -819,7 +830,7 @@ class Language extends Translations{
       OSscreenConstantsE.socialMediaBulletText2:OSscreenConstantsP.socialMediaBulletText2,
       OSscreenConstantsE.socialMediaBulletText3:OSscreenConstantsP.socialMediaBulletText3,
       OSscreenConstantsE.socialMediaBulletText4:OSscreenConstantsP.socialMediaBulletText4,
-      OSscreenConstantsE.messegingTitle:OSscreenConstantsP.mainTitle,
+      OSscreenConstantsE.messegingTitle:OSscreenConstantsP.messegingTitle,
       OSscreenConstantsE.messegingText:OSscreenConstantsP.messegingText,
       OSscreenConstantsE.phone:OSscreenConstantsP.phone,
       OSscreenConstantsE.phoneText1:OSscreenConstantsP.phoneText1,
@@ -842,6 +853,7 @@ class Language extends Translations{
       MyJournalConstantsE.safetyEmail:MyJournalConstantsP.safetyEmail,
       MyJournalConstantsE.sendText:MyJournalConstantsP.sendText,
       MyJournalConstantsE.title4:MyJournalConstantsP.title4,
+      MyJournalConstantsE.cancelText:MyJournalConstantsP.cancelText,
       ///PrivacyPolicy screen//////
       PrivacyPolicyConstantsE.text1:PrivacyPolicyConstantsP.text1,
       PrivacyPolicyConstantsE.text2:PrivacyPolicyConstantsP.text2,

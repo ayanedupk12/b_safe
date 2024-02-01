@@ -1,5 +1,6 @@
 import 'package:b_safe/GlobalController/GlobalController.dart';
 import 'package:b_safe/Routs/RoutsNames.dart';
+import 'package:b_safe/Screens/AuthScreens/ForGotPassword/ForGotPasswordScreen.dart';
 import 'package:b_safe/Utils/Colors.dart';
 import 'package:b_safe/Utils/IconsPaths.dart';
 import 'package:b_safe/Utils/Textstyles.dart';
@@ -28,6 +29,7 @@ class HomeScreen extends StatelessWidget {
                 style: CustomTextStyles.topicTextStyle,
               ),
               ///trusted contacts////
+              height2(),
               HomeScreenWidget(
                 text: HomeScreenConstantsE.myTrustedContacts.tr,
                 iconPath: AppIcons.trustedcontactIcon,

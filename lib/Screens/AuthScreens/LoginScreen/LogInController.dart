@@ -1,6 +1,7 @@
 import 'package:b_safe/Routs/RoutsNames.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import '../../../Utils/Colors.dart';
 
@@ -46,7 +47,9 @@ class LogInController extends GetxController {
         loading = false;
         print('Wrong password provided for that user.');
       } else {
-        print('Error signing in ok: ${e.message}');
+        if (kDebugMode) {
+          print('Error signing in ok: ${e.message}');
+        }
         loading = false;
         showMessage("Something Went Wrong");
         print('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee');
