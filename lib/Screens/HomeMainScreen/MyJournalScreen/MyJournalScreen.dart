@@ -43,9 +43,13 @@ class MyJournalScreen extends StatelessWidget {
               children: [
                 height2(),
                 Text(
+                  MyJournalConstantsE.welcomText.tr,
+                  style: CustomTextStyles.topicTextStyle,
+                ),
+                height2(),
+                Text(
                   MyJournalConstantsE.title.tr,
                   style: CustomTextStyles.descriptionTextStyle,
-                  textAlign: TextAlign.justify,
                 ),
                 height2(),
                 Text(
@@ -157,11 +161,11 @@ class MyJournalScreen extends StatelessWidget {
                 ),
                 height2(),
                 MyButton(
-                  title: "Submit",
+                  title: MyJournalConstantsE.button3.tr,
                   height: Get.height * .05,
                   onPress: () {
                     Get.defaultDialog(
-                        title: "Safety Email",
+                        title: MyJournalConstantsE.safetyEmail.tr,
                         titleStyle: CustomTextStyles.logoStyle,
                         contentPadding: const EdgeInsets.all(20),
                         content: Column(
@@ -176,7 +180,7 @@ class MyJournalScreen extends StatelessWidget {
                             ),
                             height2(),
                             MyButton(
-                                title: 'Send',
+                                title: MyJournalConstantsE.sendText.tr,
                                 height: Get.height * .05,
                                 onPress: () async{
                                   await controller.uploadMedia();
@@ -185,7 +189,7 @@ class MyJournalScreen extends StatelessWidget {
                                 }),
                             height2(),
                             MyButton(
-                                title: 'Cancel',
+                                title: MyJournalConstantsE.cancelText.tr,
                                 height: Get.height * .05,
                                 color: Colors.grey,
                                 onPress: () {
