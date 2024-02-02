@@ -51,7 +51,7 @@ class LogInScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  height5(),
+                  height2(),
                   Center(
                     child: Image.asset(
                       ImagesPaths.logoG,
@@ -65,7 +65,6 @@ class LogInScreen extends StatelessWidget {
                       style: CustomTextStyles.appBarTextStyle,
                     ),
                   ),
-                  height2(),
                   height5(),
                   Text(
                     LoginSignUpConstantsE.enterEmailText.tr,
@@ -73,7 +72,6 @@ class LogInScreen extends StatelessWidget {
                   ),
                   MyTextField(
                     controller: __.logEmail,
-                    height: Get.height * .06,
                     prefixIcon: const Icon(Icons.email_rounded),
                     hintText: 'Lorem@gmail.com',
                   ),
@@ -85,7 +83,6 @@ class LogInScreen extends StatelessWidget {
                   MyTextField(
                     controller: __.logPassword,
                     obSecure: __.isPasswordObscured,
-                    height: Get.height * .06,
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: InkWell(
                       onTap: () {
@@ -103,7 +100,7 @@ class LogInScreen extends StatelessWidget {
                         Get.toNamed(RouteNames.forgotPasswordScreen);
                       },
                       child: Text(
-                        LoginSignUpConstantsE.forgotpassText.tr,
+                        '${LoginSignUpConstantsE.forgotpassText.tr} ?',
                         textAlign: TextAlign.end,
                         style: CustomTextStyles.descriptionTextStyleB
                             .copyWith(color: AppColors.main2Coclor),

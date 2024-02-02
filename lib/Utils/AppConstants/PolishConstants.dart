@@ -1,17 +1,19 @@
 
 ///login and signup screen constants//
 class LoginSignUpConstantsP{
-  static const loginText= 'Już masz konto?';
+  static const loginText= 'Logowanie';
   static const signUpText= "Rejestracja";
   static const signintocontinueText= 'Zaloguj się';
-  static const enterEmailText= "Podaj Email";
-  static const enterPasswordText= "Podaj hasło";
-  static const forgotpassText= "Zapomniane hasło?";
+  static const enterEmailText= "Wprowadź e-mail";
+  static const enterPasswordText= "Wprowadź hasło";
+  static const forgotpassText= "Zapomniałeś hasła";
   static const dontHaveAccountText= "Nie masz konta?";
-  static const alreadyHaveAccountText= "Już masz konto?";
+  static const alreadyHaveAccountText= "Masz już konto?";
   static const welcomText= "Witamy w BSafe";
   static const emailText= "Email";
   static const passwordText= "Hasło";
+  static const sendResetEmailText= "Wyślij e-mail resetujący";
+  static const confirmpassText= "Potwierdź haslo";
 }
 
 ///language or country selection screen constants///k
@@ -34,29 +36,29 @@ class LCscreenConstantsP{
 class HomeMainScreenContantsP{
   static const homeAppBarText="Dom";
   static const localSupportAppBarText="Lokalne Usługi Wsparcia";
-  static const journalAppBarText="My Journal";
-  static const splashscreenConstants="Jesteś silna.";
+  static const journalAppBarText="Mój Dziennik";
+  static const splashscreenConstants="Jesteś silna/y";
 }
 
 ///HomeScreenConstantsE//
 class HomeScreenConstantsP{
   static const selectAnyOption="Wybierz dowolną opcję:";
-  static const myTrustedContacts="Moje Zaufane Kontakty";
-  static const practicalAdvice="Praktyczne Zalecenia";
-  static const typesOfSupport="Typy Wsparcia";
-  static const cyberBullying="Cyberprzemoc i Bezpieczeństwo Online";
-  static const callPolice="Zadzwoń Na Policję 112";
+  static const myTrustedContacts="Moje zaufane kontakty";
+  static const practicalAdvice="Praktyczne rady";
+  static const typesOfSupport="Typy wsparcia";
+  static const cyberBullying="Cyberprzemoc i bezpieczeństwo online";
+  static const callPolice="Zadzwoń na policję 112";
 }
 
 ///Side Drawer screen//k
 class SideDrawerConstantsP{
   static const seetingText="Ustawienia";
   static const aboutbutton="O BSafe";
-  static const privacybutton="Polityka Prywatności";
-  static const tandCbutton="Warunki i Zasady";
+  static const privacybutton="Polityka prywatności";
+  static const tandCbutton="Warunki i zasady";
   static const securitybutton="Tryb bezpieczeństwa";
   static const logout="Wyloguj się";
-  static const safetyButton="Zalecenia Dotyczące Bezpieczeństwa";
+  static const safetyButton="Zalecenia dotyczące bezpieczeństwa";
   ///double
   static const chooseLan="Choose Language";
   static const chooseContry="Choose Country";
@@ -67,19 +69,23 @@ class SideDrawerConstantsP{
 ///Safety Advice screeen//k
 class SafetyAdviceConstatntsP{
   static const mainTitle1="Ważne zasady bezpieczeństwa dotyczące korzystania z BSafe:";
-  static const text1="Jeśli w dowolnym momencie poczujesz się zagrożony, natychmiast zadzwoń pod numer 112. Możesz to zrobić za pomocą funkcji 112 w aplikacji lub za pomocą klawiatury telefonu komórkowego.";
-  static const text2="Ze względów bezpieczeństwa zalecamy pobieranie i korzystanie z aplikacji tylko wtedy, gdy uważasz, że jest to bezpieczne, na przykład jeśli nie mieszkasz ze sprawcą.  Jeśli doświadczasz jakiegokolwiek nadużycia, skontaktuj się z najbliższą agencją wsparcia za pomocą funkcji ${'"Znajdź lokalną pomoc"'} w aplikacji.";
+  static const text1="Jeśli w dowolnym momencie poczujesz się zagrożona/y  natychmiast zadzwoń pod numer 112. Możesz to zrobić za pomocą funkcji 112 w aplikacji lub za pomocą klawiatury telefonu komórkowego.";
+  static const text2="Ze względów bezpieczeństwa zalecamy pobieranie i korzystanie z aplikacji tylko wtedy, gdy uważasz, że jest to bezpieczne, na przykład jeśli nie mieszkasz ze sprawcą.  Jeśli doświadczasz jakiegokolwiek nadużycia, skontaktuj się z najbliższą wsparcia za pomocą funkcji ${'"Znajdź lokalną pomoc"'} w aplikacji.";
   static const mainTitle2="Należy pamiętać o następujących kwestiach :";
-  static const bulletText1="Jeśli planujesz korzystać z funkcji „Mój dziennik“, upewnij się, że adres e-mail wybrany do wysyłania wpisów jest bezpieczny i nikt inny nie może uzyskać do niego dostępu. W razie potrzeby utwórz nowy adres e-mail lub użyj adresu e-mail zaufanej bliskiej osoby. ";
+  static const bulletText1="Jeśli planujesz korzystać z funkcji „Mój dziennik“, upewnij się, że adres e-mail wybrany do wysyłania wpisów jest bezpieczny i nikt inny nie może uzyskać do niego dostępu. W razie potrzeby utwórz nowy adres e-mail lub użyj adresu e-mail zaufanej osoby. ";
   static const bulletText2="Podczas dodawania zawartości do ${'" Mój dziennik"'} upewnij się, że żadne przesłane pliki nie są przechowywane w galerii zdjęć lub albumie. ";
-  static const bulletText3="Należy pamiętać, że wszystkie połączenia wykonane za pomocą aplikacji, takich jak 112 lub lokalne usługi wsparcia, pojawią się w historii połączeń telefonu komórkowego. Jeśli obawiasz się, że połączenia te zostaną wykryte, możesz usunąć je z historii połączeń telefonu.";
-  static const bulletText4="Przed wizytą w usługach wsparcia zalecamy skontaktowanie się z nimi z wyprzedzeniem w celu sprawdzenia ich lokalizacji i godzin otwarcia.";
+  static const bulletText3="Należy pamiętać, że wszystkie połączenia wykonane za pomocą aplikacji, takich jak 112 lub lokalne wsparcia, pojawią się w historii połączeń telefonu komórkowego. Jeśli obawiasz się, że połączenia te zostaną wykryte, możesz usunąć je z historii połączeń telefonu.";
+  static const bulletText4="Przed wizytą w wsparcia zalecamy skontaktowanie się z nimi z wyprzedzeniem w celu sprawdzenia ich lokalizacji i godzin otwarcia.";
   static const bulletText5="Zalecamy aktywowanie trybu ekranu przed opuszczeniem aplikacji w celu zwiększenia bezpieczeństwa.";
 }
 
 ///about screen//k
 class AboutConstantsP {
-  static const aboutText="Nasz projekt BSAFE ma na celu zapobieganie i zwalczanie wszelkich form przemocy seksualnej i przemocy ze względu na płeć (SGBV) wobec kobiet znajdujących się w trudnej sytuacji, które zostały zmuszone do opuszczenia kraju pochodzenia z powodu konfliktu. Aplikacja mobilna Bsafe zapewnia praktyczne wsparcie i informacje na temat reagowania na SGBV oraz pomaga znaleźć bezpieczną drogę do wsparcia.Opracowana przez Podané Ruce we współpracy z organizacjami z Czech, Polski i Słowacji. Finansowana przez Unię Europejską. Więcej informacji można znaleźć na stronie";
+  static const aboutText="Nasz projekt BSAFE ma na celu zapobieganie i zwalczanie wszelkich form przemocy seksualnej "
+      "i przemocy ze względu na płeć (SGBV) wobec kobiet znajdujących się w trudnej sytuacji, które zostały zmuszone do "
+      "opuszczenia kraju pochodzenia z powodu konfliktu. Aplikacja mobilna Bsafe zapewnia praktyczne wsparcie i informacje "
+      "na temat reagowania na SGBV oraz pomaga znaleźć bezpieczny sposób w uzyskaniu wsparcia.Opracowana przez Podané Ruce we współpracy "
+      "z organizacjami z Czech, Polski i Słowacji. Finansowana przez Unię Europejską. Więcej informacji można znaleźć na stronie ";
   ///double//
   static const aboutLink="www.projectbsafe.eu";
 }
@@ -96,16 +102,23 @@ class MyTrustedContactsConstantsP{
 ///practical advice main screen ///k
 class PractivcalAdvsMainConstantsP{
 
-  static const practicalAdvice="Praktyczne Zalecenia";
+  static const practicalAdvice="Praktyczne rady";
   static const selectAnyOption="Wybierz dowolną opcję:";
-  static const sexualgebdebaseButontext="Przemoc Seksualna i Przemoc Ze Względu na Płeć";
-  static const SGBVformButontext="Różne Formy SGBV";
+  static const sexualgebdebaseButontext="Przemoc seksualna i przemoc ze względu na płeć";
+  static const SGBVformButontext="Różne formy SGBV";
 }
 
 ///Sexula Gender Based Violence screen constants///k
 
 class SGBVscreenConstantsP {
-  static const text ="SGBV oznacza przemoc seksualną i przemoc ze względu na płeć. Odnosi się do każdej formy przemocy lub krzywdy, która jest wymierzona w jednostkę lub grupę ze względu na ich płeć lub orientację seksualną. SGBV jest istotnym globalnym problemem, który dotyka ludzi wszystkich płci, ale w nieproporcjonalnie dużym stopniu dotyka kobiety i dziewczęta. Jest to naruszenie praw człowieka i zagrożenie dla zdrowia publicznego, a na całym świecie podejmowane są wysiłki w celu zapobiegania i przeciwdziałania SGBV, wspierania ofiar, promowania równości płci i poszanowania praw wszystkich osób.";
+  static const text ="SGBV oznacza przemoc seksualną i przemoc ze względu"
+      " na płeć. Odnosi się do każdej formy przemocy lub krzywdy, która jest "
+      "wymierzona w jednostkę lub grupę ze względu na ich płeć lub orientację"
+      " seksualną. SGBV jest istotnym globalnym problemem, który dotyka ludzi "
+      "wszystkich płci, ale w nieproporcjonalnie dużym stopniu dotyka kobiet i dziewcząt. "
+      "Jest to naruszenie praw człowieka i zagrożenie dla zdrowia publicznego, a na całym świecie"
+      " podejmowane są wysiłki w celu zapobiegania i przeciwdziałania SGBV, wspierania ofiar, "
+      "promowania równości płci i poszanowania praw wszystkich osób.";
 }
 
 ///Sexula Gender Based Violence different form screen constants///k
@@ -144,14 +157,14 @@ class PracTicalAdviceConstantsP{
 
 ///types of suppoert screen
 class TOSscreenConstantsP{
-  static const appBarTitle = "Typy Wsparcia";
-  static const mainTitle = "Dostępnych jest kilka rodzajów usług wspierających osoby doświadczające przemocy seksualnej i przemocy ze względu na płeć (SGBV), nie musisz przechodzić przez to sam. Dowiedz się, co jest dla Ciebie najlepsze.";
+  static const appBarTitle = "Typy wsparcia";
+  static const mainTitle = "Dostępnych jest kilka rodzajów usług wspierających osoby doświadczające przemocy seksualnej i przemocy ze względu na płeć (SGBV).Dowiedz się, co jest dla Ciebie najlepsze.";
   static const title1 = "Policja";
   static const title2 = "Zakwaterowanie w miejscu odosobnienia: ";
   static const title3 = "Terapia i doradztwo";
   static const title4 = "Wsparcie grupowe";
   static const description1 = "SGBV jest przestępstwem, a policja może zapewnić istotne wsparcie. Jeśli Ty lub ktoś, kogo znasz, znajduje się w bezpośrednim niebezpieczeństwie, policja często reaguje najszybciej. W takich sytuacjach należy zadzwonić pod numer 112. Wiele sił policyjnych posiada przeszkolony personel specjalizujący się w przypadkach GBV. ";
-  static const description2 = "Jest to bezpieczna przystań dla tych, którzy muszą opuścić swoje domy z powodu nadużyć. W ośrodkach mieszkalnych dostępni są profesjonaliści, którzy pomogą ci rozpocząć drogę do wyzdrowienia. Placówki te zatrudniają również wyspecjalizowany personel, który może pomóc w kwestiach praktycznych, takich jak wsparcie finansowe i znalezienie nowego zakwaterowania.  Mają również pracowników przeszkolonych do wsparcia dzieci.";
+  static const description2 = "Jest to bezpieczna przystań dla tych, którzy muszą opuścić swoje domy z powodu nadużyć. W ośrodkach mieszkalnych dostępni są profesjonaliści, którzy pomogą ci rozpocząć drogę do zdrowienia. Placówki te zatrudniają również wyspecjalizowany personel, który może pomóc w kwestiach praktycznych, takich jak wsparcie finansowe i znalezienie nowego zakwaterowania.  Mają również pracowników przeszkolonych do wsparcia dzieci.";
   static const description3 = "doświadczenie przemocy może mieć trwały wpływ na samopoczucie. Konsultacja z terapeutą może pomóc ci zrozumieć twoje doświadczenia i zapewnić praktyczne strategie powrotu do zdrowia. Bardzo ważne jest, aby szukać pomocy u wyszkolonego specjalisty, takiego jak doradca, psycholog lub psychoterapeuta.";
   static const description4 = "Niektóre usługi zapewniają sesje wsparcia grupowego, podczas których Ty i inne osoby możecie komunikować się w tym samym czasie z profesjonalistą specjalizującym się w temacie nadużyć. Takie podejście może być korzystne, ponieważ pozwala uzyskać wgląd od innych, którzy dzielą się swoimi doświadczeniami i tym, co im pomogło. ";
 }
@@ -168,7 +181,13 @@ class CB_OSmainScreenConstantsP{
 ///cyberbullying detaile screen ///
 
 class CBscreenConstantsP{
-  static const title="Mówiąc najprościej, chodzi o wysyłanie intymnych zdjęć. Przede wszystkim nigdy nie powinieneś wysyłać intymnych zdjęć nikomu, nawet przyjacielowi lub komuś, komu ufasz, na żadnej platformie mediów społecznościowych. Dlaczego? Ponieważ nigdy nie wiadomo, gdzie zdjęcie może trafić.Jeśli wysłałeś już zdjęcie, a teraz ktoś zmusza Cię do wysłania kolejnych lub zrobienia rzeczy, których nie chcesz robić, i istnieje groźba, że prześle Twoje zdjęcia innym, nie poddawaj się! Nie odpowiadaj na wiadomości i nie daj się szantażować.Zdecydowanie nie usuwaj rozmowy.  Zgłoś to natychmiast. Platformy mediów społecznościowych mają przyciski raportowania, które umożliwiają zgłaszanie nieodpowiednich treści.";
+  static const title="Mówiąc najprościej, chodzi o wysyłanie intymnych zdjęć. Przede wszystkim nigdy "
+      "nie powinnaś/nieneś wysyłać intymnych zdjęć nikomu, nawet przyjacielowi lub komuś, komu ufasz, na "
+      "żadnej platformie mediów społecznościowych. Dlaczego? Ponieważ nigdy nie wiadomo, gdzie zdjęcie"
+      " może trafić.Jeśli wysłałeś już zdjęcie, a teraz ktoś zmusza Cię do wysłania kolejnych lub zrobienia "
+      "rzeczy, których nie chcesz robić, i istnieje groźba, że prześle Twoje zdjęcia innym, nie poddawaj się! "
+      "Nie odpowiadaj na wiadomości i nie daj się szantażować.Zdecydowanie nie usuwaj rozmowy.  Zgłoś to natychmiast. "
+      "Platformy mediów społecznościowych mają opcje raportowania, które umożliwiają zgłaszanie nieodpowiednich treści.";
 }
 
 ///online safety detaile screen ///
@@ -209,19 +228,24 @@ class FLscreenConstantsP{
 
 ///my journal screen constants///
 class MyJournalConstantsP{
-  static const title="Witamy w ${'"Mój Dziennik"'} Prowadzenie dziennika jest cennym sposobem dokumentowania wszelkich nadużyć, których doświadczyłeś. Zapisy te mogą być przydatne w przypadku jakichkolwiek działań prawnych, które zdecydujesz się podjąć w przyszłości. ${'"Mój dziennik"'} pomoże ci w tym procesie. Ważne jest, aby wiedzieć, że nic, co zarejestrujesz za pomocą tego narzędzia, nie będzie przechowywane na Twoim urządzeniu, zapewniając Ci prywatność i bezpieczeństwo.";
+  static const title="Witamy w ${'"Mój Dziennik"'} Prowadzenie dziennika jest cennym sposobem dokumentowania "
+      "wszelkich nadużyć, których doświadczyłaś/eś. Zapisy te mogą być przydatne w przypadku jakichkolwiek działań"
+      " prawnych, które zdecydujesz się podjąć w przyszłości. ${'"Mój dziennik"'} pomoże ci w tym procesie. Ważne "
+      "jest, aby wiedzieć, że nic, co zarejestrujesz za pomocą tego narzędzia, nie będzie przechowywane na Twoim urządzeniu, "
+      "zapewniając Ci prywatność i bezpieczeństwo.";
   static const hintText="Write Something...";
   static const title1="Kiedy to się stało?";
   static const title2="Co się stało?";
   static const title3="Jak to się stało?";
   static const safetyEmail="E-mail Bezpieczeństwa";
   static const sendText="Wysłać";
+  static const cancelText="Anulować";
   ///double
-  static const title4="Upload image or video";
-  static const title5="Record audio";
-  static const button1="Upload";
+  static const title4="Prześlij zdjęcie lub film";
+  static const title5="Nagrać dźwięk";
+  static const button1="Wgrywać";
   static const button2="Start";
-  static const button3="Submit";
+  static const button3="Wyślij";
 }
 
 
@@ -236,23 +260,23 @@ class PrivacyPolicyConstantsP {
 ///terms & condition screen
 class TermANdCondConstantsP {
   static const MainTitle ="Zanim zaczniesz korzystać z aplikacji, proszę poświęć chwilę na przeczytanie poniższych warunków i zasad:";
-  static const Title1 ="Cel Aplikacji";
-  static const Title2 ="Środki Bezpieczeństwa";
-  static const Title3 ="Odpowiedzialność Użytkownika";
+  static const Title1 ="Cel aplikacji";
+  static const Title2 ="Środki bezpieczeństwa";
+  static const Title3 ="Odpowiedzialność użytkownika";
   static const Title4 ="Prywatność";
-  static const Title5 ="Aktualizacje Aplikacji";
-  static const Title6 ="Służby Ratunkowe";
+  static const Title5 ="Aktualizacje aplikacji";
+  static const Title6 ="Służby ratunkowe";
   static const Title7 ="Opinie";
-  static const Title8 ="Zakończenie Dostępu";
-  static const Title9 ="Zgodność z Prawem";
+  static const Title8 ="Zakończenie dostępu";
+  static const Title9 ="Zgodność z prawem";
   static const Title10 ="Oświadczenie";
   static const d1 ="Nasza aplikacja ma na celu wyłącznie udzielanie pomocy i świadczenie wsparcia dla kobiet doświadczających przemocy opartej na płci. Nie jest przeznaczona do użytku w innych celach.";
-  static const d2 ="Twoje bezpieczeństwo jest kluczowe. Korzystając z aplikacji w potencjalnie niebezpiecznych sytuacjach, upewnij się, że podejmujesz odpowiednie środki ostrożności w celu swojej ochrony. Aplikacja jest narzędziem służącym Ci pomocą, ale nie zastępuje uzyskania pomocy od organów ścigania lub innych odpowiednich władz.";
+  static const d2 ="Twoje bezpieczeństwo jest kluczowe. Korzystając z aplikacji w potencjalnie niebezpiecznych sytuacjach, upewnij się, że podejmujesz odpowiednie środki ostrożności w celu swojej ochrony. Aplikacja jest narzędziem służącym Ci pomocą, ale nie zastępuje uzyskania pomocy od organów ścigania lub innych odpowiednich służb.";
   static const d3 ="Jesteś odpowiedzialny/a za dostarczone informacje i podejmowane działania podczas korzystania z aplikacji.";
   static const d4 ="Traktujemy Twoją prywatność poważnie. Nie udostępniamy Twoich danych osobowych osobom trzecim. Prosimy o zapoznanie się z naszą Polityką Prywatności w celu uzyskania szczegółowych informacji.";
   static const d5 ="W celu zapewnienia Twojego bezpieczeństwa ważne jest, aby regularnie aktualizować aplikację do najnowszej wersji. Okresowo możemy wydawać aktualizacje z nowymi funkcjami lub ulepszeniami związanymi z bezpieczeństwem.";
   static const d6 ="W przypadku nagłego wypadku zawsze dzwoń natychmiast na numer miejscowych służb ratunkowych. Nasza aplikacja nie zastępuje pomocy w sytuacjach awaryjnych.";
-  static const d7 ="Cenimy Twoją opinię, dlatego jeśli masz sugestie dotyczące ulepszeń, prosimy o przesłanie ich na adres projektbsafe@hotmail.com.";
+  static const d7 ="Cenimy Twoją opinię, dlatego jeśli masz sugestie dotyczące ulepszeń, prosimy o przesłanie ich na adres ";
   static const d8 ="Zastrzegamy sobie prawo do zakończenia Twojego dostępu do aplikacji według naszego uznania, jeśli naruszysz te warunki i zasady lub źle wykorzystasz aplikację.";
   static const d9 ="Zgadzasz się używać aplikacji zgodnie z obowiązującymi prawami i regulacjami dotyczącymi przemocy opartej na płci i bezpieczeństwa osobistego.";
   static const d10 ="Chociaż dokładamy wszelkich starań, aby dostarczać dokładne i pomocne informacje, nie możemy zagwarantować dokładności, niezawodności ani skuteczności dostępnych zasobów w aplikacji.";

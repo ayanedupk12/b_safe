@@ -8,7 +8,6 @@ class MyTextField extends StatelessWidget {
   Widget? prefixIcon;
   Widget? suffixIcon;
   int? maxLength;
-  double height;
   bool obSecure;
   String? Function(String?)? validator;
 
@@ -24,7 +23,6 @@ class MyTextField extends StatelessWidget {
      this.hintText,
      this.errorText,
     this.controller,
-    this.height=40,
     this.maxLength,
     this.validator,
     this.obSecure=false,
@@ -32,34 +30,31 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: height,
-      child: TextFormField(
-        validator:validator,
-        keyboardType: keyboardType,
-        onChanged: onChanged,
-        maxLength: maxLength,
-        controller: controller,
-        obscureText: obSecure,
+    return TextFormField(
+      validator:validator,
+      keyboardType: keyboardType,
+      onChanged: onChanged,
+      maxLength: maxLength,
+      controller: controller,
+      obscureText: obSecure,
 
-        style: const TextStyle(color: Colors.black),
-        decoration: InputDecoration(
-          errorText: errorText,
-          errorStyle: const TextStyle(fontSize: 10,color: Colors.red),
-          filled: true,
-          fillColor: Colors.white,
-          hintText: hintText,
-          hintStyle: CustomTextStyles.hintTextStyle,
-          prefixIcon: prefixIcon,
-          suffixIcon: suffixIcon,
-          focusedBorder:  OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Colors.transparent),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(color: Colors.transparent),
-          ),
+      style: const TextStyle(color: Colors.black),
+      decoration: InputDecoration(
+        errorText: errorText,
+        errorStyle: const TextStyle(fontSize: 10,color: Colors.red),
+        filled: true,
+        fillColor: Colors.white,
+        hintText: hintText,
+        hintStyle: CustomTextStyles.hintTextStyle,
+        prefixIcon: prefixIcon,
+        suffixIcon: suffixIcon,
+        focusedBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: Colors.transparent),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(color: Colors.transparent),
         ),
       ),
     );

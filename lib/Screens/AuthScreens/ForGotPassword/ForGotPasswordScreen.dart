@@ -1,6 +1,7 @@
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LogInController.dart';
 import 'package:b_safe/Screens/AuthScreens/LoginScreen/LoginScreen.dart';
 import 'package:b_safe/Screens/AuthScreens/SignUpScreens/SignUpScreen.dart';
+import 'package:b_safe/Utils/AppConstants/EnglishConstants.dart';
 import 'package:b_safe/Utils/ImgesPaths.dart';
 import 'package:b_safe/Utils/TextStyles.dart';
 import 'package:flutter/material.dart';
@@ -23,13 +24,13 @@ class ForGotPasswordScreen extends StatelessWidget {
         builder: (__) {
           return Scaffold(
             backgroundColor: AppColors.backGroundColor,
-            resizeToAvoidBottomInset: false,
             appBar: AppBar(
+              scrolledUnderElevation: 0,
               backgroundColor: Colors.transparent,
               elevation: 0,
               centerTitle: true,
               title: Text(
-                "Forgot Password",
+                LoginSignUpConstantsE.forgotpassText.tr,
                 style: CustomTextStyles.appBarTextStyle,
               ),
               leading: IconButton(
@@ -40,45 +41,50 @@ class ForGotPasswordScreen extends StatelessWidget {
             ),
             body: Padding(
               padding: EdgeInsets.symmetric(horizontal: Get.width * .1),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Center(
-                    child: Image.asset(ImagesPaths.logoG,height: 100,),
-                  ),
-                  height2(),
-                  Center(
-                    child: Text(
-                      'Forgot password',
-                      style: CustomTextStyles.appBarTextStyle,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    height5(),
+                    height5(),
+                    Center(
+                      child: Image.asset(ImagesPaths.logoG,height: 100,),
                     ),
-                  ),
-                  height5(),
-                  Text(
-                    'Enter Email',
-                    style: CustomTextStyles.descriptionTextStyleB,
-                  ),
-                  MyTextField(
-                    controller: __.resetPassword,
-                    height: Get.height * .06,
-                    prefixIcon: const Icon(Icons.email_rounded),
-                    hintText: 'Lorem@gmail.com',
-                  ),
-                  height5(),
-                  height5(),
-                  MyButton(
-                    loading: __.isLoading,
-                    borderRadios: 5,
-                    height: Get.height * .05,
-                    onPress: () {
-                      Get.offAllNamed(RouteNames.loginScreen);
-                      ///__.sendPasswordResetEmail();
-                    },
-                    title:"Send Reset Email",
-                  ),
-                  height2(),
-                ],
+                    height5(),
+                    height5(),
+                    Center(
+                      child: Text(
+                        LoginSignUpConstantsE.forgotpassText.tr,
+                        style: CustomTextStyles.appBarTextStyle,
+                      ),
+                    ),
+                    height5(),
+                    Text(
+                      LoginSignUpConstantsE.enterEmailText.tr,
+                      style: CustomTextStyles.descriptionTextStyleB,
+                    ),
+                    height2(),
+                    MyTextField(
+                      controller: __.resetPassword,
+                      prefixIcon: const Icon(Icons.email_rounded),
+                      hintText: 'Lorem@gmail.com',
+                    ),
+                    height5(),
+                    height5(),
+                    MyButton(
+                      loading: __.isLoading,
+                      borderRadios: 5,
+                      height: Get.height * .05,
+                      onPress: () {
+                        __.sendPasswordResetEmail();
+                      },
+                      title: LoginSignUpConstantsE.sendResetEmailText.tr,
+                    ),
+                    height5(),
+                    height5(),
+                  ],
+                ),
               ),
             ),
           );

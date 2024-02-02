@@ -41,7 +41,7 @@ class SignUpScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                height5(),
+                height2(),
                 Center(
                   child: Image.asset(
                     ImagesPaths.logoG,
@@ -62,7 +62,6 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 MyTextField(
                   controller: __.sEmail,
-                  height: Get.height * .06,
                   prefixIcon: const Icon(Icons.email_rounded),
                   hintText: 'Lorem@gmail.com',
                 ),
@@ -74,7 +73,6 @@ class SignUpScreen extends StatelessWidget {
                 MyTextField(
                   controller: __.sPassword,
                   obSecure: __.isPasswordObscured,
-                  height: Get.height * .06,
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: InkWell(
                     onTap: () {
@@ -86,13 +84,12 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 height2(),
                 Text(
-                  "Confirm Password",
+                  LoginSignUpConstantsE.confirmpassText.tr,
                   style: CustomTextStyles.descriptionTextStyleB,
                 ),
                 MyTextField(
                   controller: __.cPassword,
                   obSecure: __.isConfirmPasswordObscured,
-                  height: Get.height * .06,
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: InkWell(
                     onTap: () {

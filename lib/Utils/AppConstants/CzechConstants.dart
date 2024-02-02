@@ -6,12 +6,14 @@ class LoginSignUpConstantsC{
   static const signintocontinueText= "Přihlásit se";
   static const enterEmailText= "Zadejte Email";
   static const enterPasswordText= "Zadejte heslo";
-  static const forgotpassText= "Zapomenuté heslo?";
+  static const forgotpassText= "Zapomenuté heslo";
   static const dontHaveAccountText= "Nemáte účet?";
   static const alreadyHaveAccountText= "Máte již účet?";
   static const welcomText= "Vítejte v BSafe";
   static const emailText= "Email";
   static const passwordText= "Heslo";
+  static const sendResetEmailText= "Odeslat resetovací email";
+  static const confirmpassText= "Potvrďte heslo";
 }
 
 ///language or country selection screen constants///k
@@ -215,12 +217,13 @@ class MyJournalConstantsC{
   static const title3="Jak se to stalo?";
   static const safetyEmail="Bezpečnostní email";
   static const sendText="Uložit";
+  static const cancelText="Zrušení";
   ///double
-  static const title4="Upload image or video";
-  static const title5="Record audio";
-  static const button1="Upload";
+  static const title4="Nahrát obrázek nebo video";
+  static const title5="Nahrávat zvuk";
+  static const button1="Nahrát";
   static const button2="Start";
-  static const button3="Submit";
+  static const button3="Uložit";
 }
 
 
@@ -251,7 +254,7 @@ class TermANdCondConstantsC {
   static const d4 ="Bereme vaše soukromí vážně. Vaše osobní údaje nebudeme sdílet s žádnými třetími stranami. Přečtěte si prosím naši zásadu ochrany osobních údajů pro více informací.";
   static const d5 ="Pro zajištění vaší bezpečnosti je důležité udržovat aplikaci aktualizovanou na nejnovější verzi. Pravidelně můžeme vydávat aktualizace s novými funkcemi nebo zvýšením zabezpečení.";
   static const d6 ="V případě nouze vždy okamžitě zavolejte místní číslo nouzových služeb. Naše aplikace nenahrazuje nouzovou pomoc.";
-  static const d7 ="Vaše zpětná vazba má pro nás hodnotu. Pokud máte návrhy na vylepšení, prosím napište na projektbsafe@hotmail.com.";
+  static const d7 ="Vaše zpětná vazba má pro nás hodnotu. Pokud máte návrhy na vylepšení, prosím napište na ";
   static const d8 ="Vyhrazujeme si právo ukončit váš přístup k aplikaci na našem uvážení, pokud porušíte tyto podmínky a ujednání nebo zneužijete aplikaci.";
   static const d9 ="Souhlasíte s tím, že budete aplikaci používat v souladu s všemi platnými zákony a předpisy týkajícími se násilí na základě pohlaví a osobní bezpečnosti.";
   static const d10 ="Ačkoli se snažíme poskytovat přesné a užitečné informace, nemůžeme garantovat přesnost, spolehlivost ani účinnost zdrojů poskytovaných v rámci aplikace.";

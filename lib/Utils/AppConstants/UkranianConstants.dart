@@ -6,12 +6,14 @@ class LoginSignUpConstantsU {
   static const signintocontinueText= 'Увійти';
   static const enterEmailText= "Введіть Email";
   static const enterPasswordText= "Введіть Пароль";
-  static const forgotpassText= "Забули пароль?";
+  static const forgotpassText= "Забули пароль";
   static const dontHaveAccountText= "Немає облікового запису?";
   static const alreadyHaveAccountText= "Вже є обліковий запис?";
   static const welcomText= "Ласкаво просимо до BSafe";
   static const emailText= "Email";
   static const passwordText= "Пароль";
+  static const confirmpassText= "Підтвердьте пароль";
+  static const sendResetEmailText= "Надіслати для скидання";
 }
 
 ///language or country selection screen constants///
@@ -33,8 +35,8 @@ class LCscreenConstantsU {
 ///HomeMainScreenContantsE///
 class HomeMainScreenContantsU {
   static const homeAppBarText="Додому";
-  static const localSupportAppBarText="Local Support Services";
-  static const journalAppBarText="My Journal";
+  static const localSupportAppBarText="Місцеві служби підтримки";
+  static const journalAppBarText="Мій журнал";
   static const splashscreenConstants="Ти сильна";
 }
 
@@ -214,17 +216,19 @@ class FLscreenConstantsU {
 class MyJournalConstantsU {
   static const title="Ведення щоденника - цінний спосіб задокументувати будь-яке насильство, якого ви зазнали. Ці записи можуть бути корисними для будь-яких юридичних дій, які ви вирішите здійснити в майбутньому.${'"Мій журнал"'} допоможе вам у цьому процесі. Важливо знати, що все, що ви записуєте за допомогою цього інструменту, не зберігається на вашому пристрої, що гарантує вашу конфіденційність і безпеку.";
   static const hintText="Write Something...";
+  static const welcomText="Ласкаво просимо до ${'"мій журнал"'}. ";
   static const title1="Коли це сталося?";
   static const title2="Що сталося?";
   static const title3="Як це сталося?";
   static const safetyEmail="Безпечний електронний лист";
   static const sendText="надіслати";
+  static const cancelText="Скасувати";
   ///double
-  static const title4="Upload image or video";
-  static const title5="Record audio";
-  static const button1="Upload";
+  static const title4="Завантажте зображення або відео";
+  static const title5="Запис звуку";
+  static const button1="Завантажити";
   static const button2="Start";
-  static const button3="Submit";
+  static const button3="Надіслати";
 }
 
 
@@ -255,7 +259,7 @@ class TermANdCondConstantsU {
   static const d4 ="Ми серйозно ставимося до вашої конфіденційності. Ми не передаємо вашу особисту інформацію третім сторонам. Будь ласка, ознайомтеся з нашою Політикою конфіденційності для отримання додаткових деталей.";
   static const d5 ="Для забезпечення вашої безпеки важливо регулярно оновлювати додаток до останньої версії. Ми можемо періодично випускати оновлення з новими функціями чи покращеннями безпеки.";
   static const d6 ="У разі аварійної ситуації завжди негайно дзвоніть на місцевий номер екстреної допомоги. Наш додаток не є заміною екстреної допомоги.";
-  static const d7 ="Ми цінуємо вашу думку, тому, якщо у вас є пропозиції щодо покращення, будь ласка, надсилайте їх на електронну адресу projectbsafe@hotmail.com.";
+  static const d7 ="Ми цінуємо вашу думку, тому, якщо у вас є пропозиції щодо покращення, будь ласка, надсилайте їх на електронну адресу ";
   static const d8 ="Ми залишаємо за собою право припинити ваш доступ до додатка за нашим розсудом, якщо ви порушите ці умови та положення або зловживаєте додатком.";
   static const d9 ="Ви погоджуєтеся використовувати додаток відповідно до всіх чинних законів і правил, що стосуються насильства на гендерній основі і особистої безпеки.";
   static const d10 ="Незважаючи на наші зусилля надати точну та корисну інформацію, ми не можемо гарантувати її точність, надійність або ефективність ресурсів, наданих в додатку.";

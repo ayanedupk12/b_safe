@@ -67,6 +67,7 @@ class MyApp extends StatelessWidget {
         locale: const Locale("us", "US"),
         initialRoute: RouteNames.splashScreen,
         getPages: AppRouts.appRoutes(),
+        ///defaultTransition: Transition.rightToLeftWithFade,
       );
     });
   }
