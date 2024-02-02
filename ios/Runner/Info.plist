@@ -18,7 +18,11 @@
     <string>We need access to your photo library for uploading file into my MY Journal</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>We need microphone access for uploading file into my MY Journal</string>
-
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>sms</string>
+      <string>tel</string>
+    </array>
 
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>

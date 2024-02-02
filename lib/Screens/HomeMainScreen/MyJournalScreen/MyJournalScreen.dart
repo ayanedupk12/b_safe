@@ -96,7 +96,11 @@ class MyJournalScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(controller.attachedFile!.path.split('/').last.substring(0,25)),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(8.0),
+                        //   child: Card(child: Image.file(controller.attachedFile!,fit: BoxFit.cover,)),
+                        // ),
+                        Text(controller.attachedFile!.path.split('/').last.substring(0,5)),
                         InkWell(
                             onTap: (){
                               controller.attachedFile=null;

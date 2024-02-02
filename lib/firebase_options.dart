@@ -59,10 +59,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCq6JG60bOSG_V94AxSrBy4Qwp03S7nj9k',
-    appId: '1:826321754483:ios:914ef743fce5f1bf69cd06',
+    appId: '1:826321754483:ios:7335cca443a3d21c69cd06',
     messagingSenderId: '826321754483',
     projectId: 'b-safe-4u',
     storageBucket: 'b-safe-4u.appspot.com',
-    iosBundleId: 'com.victoria.bsafe4u',
+    iosBundleId: 'com.victoria.bSafe',
   );
 }

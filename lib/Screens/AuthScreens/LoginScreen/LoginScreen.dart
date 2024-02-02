@@ -17,6 +17,8 @@ class LogInScreen extends StatelessWidget {
   DateTime? currentBackPressTime;
   @override
   Widget build(BuildContext context) {
+    logInController.logEmail.text='lpk13@gmail.com';
+    logInController.logPassword.text='abc11111111';
     return WillPopScope(
       onWillPop: () async {
         if (currentBackPressTime == null ||
